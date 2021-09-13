@@ -1,0 +1,98 @@
+footer .main-footer {
+  padding: 20px 0;
+  background: rgb(0, 0, 0);
+}
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/*==================== 
+  Widgets 
+====================== */
+.widget {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.widget.widget-last {
+  margin-bottom: 0px;
+}
+.widget.no-box {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 40px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  text-align: left;
+}
+.widget.subscribe p {
+  margin-bottom: 18px;
+  text-align: left;
+}
+.widget li a {
+  color: #fffeff;
+}
+.widget li a:hover {
+  text-decoration: underline;
+}
+.widget-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.widget-title span {
+  background: #839fad none repeat scroll 0 0;
+  display: block;
+  height: 1px;
+  margin-top: 25px;
+  position: relative;
+  width: 20%;
+}
+.widget-title span::after {
+  background: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  top: -4px;
+  width: 50%;
+}
+.widget-title.text-center span,
+.widget-title.text-center span::after {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+ul.social-footer2 {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+ul.social-footer2 li {
+  display: inline-block;
+  padding: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+ul.social-footer2 li a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+.footer-btn {
+  background-color: #f0e2eb !important;
+  color: rgb(0, 0, 0) !important;
+  border: none !important;
+}
+.footer__companyLink {
+  color: white;
+  text-decoration: none;
+}
+.footer__companyLink:hover {
+  text-decoration: underline;
+  color: white;
+}

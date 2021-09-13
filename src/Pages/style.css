@@ -1,0 +1,32 @@
+.h1tag {
+  font-size: 55px;
+  background: #f6b745;
+  -webkit-background-clip: text;
+  font-weight: 10px;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 650px;
+  background-color: rgba(5, 5, 0, 0.7);
+}
+.navbar-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-color: rgba(5, 5, 0, 0.7);
+}
+.color-header-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 350px;
+  background-color: rgba(5, 5, 0, 0.7);
+}

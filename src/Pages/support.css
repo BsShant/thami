@@ -1,0 +1,32 @@
+.pagination {
+  margin-bottom: 100px;
+}
+.pagination ul.pages {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination ul.pages li {
+  display: inline-block;
+  margin: 0px 2px;
+}
+
+.pagination ul.pages li a {
+  width: 66px;
+  height: 44px;
+  display: inline-block;
+  line-height: 42px;
+  border: 1px solid #f6b745;
+  font-size: 15px;
+  font-weight: 700;
+  color: #121212;
+  transition: all 0.3s;
+}
+
+.pagination ul.pages li a:hover,
+.pagination ul.pages li.active a {
+  background-color: #f6b745;
+  border-color: #f6b745;
+  color: #fff;
+  text-decoration: none;
+}
