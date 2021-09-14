@@ -12,6 +12,11 @@ import Events from "./Pages/Event";
 import News from "./Pages/news/news";
 import Blogs from "./Pages/blogs/blogs";
 import OurArticles from "./Pages/ourArticles/ourArticles";
+import OurStory from "./Pages/ourStory/ourStory";
+import VisionAndMission from "./Pages/visionAndMission/visionAndMission";
+import OurTeam from "./Pages/ourTeam/ourTeam";
+import OurGallery from "./Pages/ourGallery/ourGallery";
+
 
 
 import ResourcePreview from "./Pages/ResourcePreview";
@@ -26,7 +31,7 @@ function App() {
         <NavigationBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route exact path="/about" component={About} />
           <Route path="/publication" component={Publication} />
           <Route path="/getinvolved" component={GetInvolved} />
           <Route path="/resourcepreview" component={ResourcePreview} />
@@ -35,6 +40,14 @@ function App() {
           <Route path="/event/news" component={News} />
           <Route path="/event/blogs" component={Blogs} />
           <Route path="/event/our-articles" component={OurArticles} />
+          <Route path="/about/our-story" component={OurStory} />
+          <Route path="/about/vision-and-mission" component={VisionAndMission} />
+          <Route path="/about/our-team" component={OurTeam} />
+          <Route path="/about/our-gallery" component={OurGallery} />
+
+
+
+
 
 
 

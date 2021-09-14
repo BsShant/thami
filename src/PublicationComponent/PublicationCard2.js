@@ -7,6 +7,8 @@ import setodharti from "../assests/setodharti.jpg";
 import karnalibluz from "../assests/karnalibluz.jpg";
 import gulabiumer from "../assests/gulabiumer.jpg";
 import { Pagination } from "react-bootstrap";
+import "../Pages/style.css";
+
 import {
   MDBPagination,
   MDBPageItem,
@@ -18,16 +20,16 @@ const PubliciationCard2 = () => {
   return (
     <React.Fragment>
       <div className="text-center mt-5">
-        <p style={{ fontSize: "22px", color: "#f6b745", fontWeight: "bold" }}>
+        <h3 style={{color: "#f6b745", fontWeight: "bold" }}>
           Our Books
-        </p>
-        <p style={{ fontSize: "20px", marginTop: "-4px" }}>
+        </h3>
+        <p style={{ margin: "-4px 0 30px 0" }}>
           We are a social unit with commonality such as norms.
         </p>
         <div>
           <Container>
             <div className="row mt-5">
-              <div className="col-4">
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -45,10 +47,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Muna Madan
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p style={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -67,7 +69,7 @@ const PubliciationCard2 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -85,10 +87,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Palpasa Cafe
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p sstyle={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -107,7 +109,7 @@ const PubliciationCard2 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -125,10 +127,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{  fontWeight: "bold" }}>
                       Firfire
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p style={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -147,10 +149,8 @@ const PubliciationCard2 = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="row mt-5">
-              <div className="col-4">
+            
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -168,10 +168,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{fontWeight: "bold" }}>
                       Karnali Bluj
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p style={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -190,7 +190,7 @@ const PubliciationCard2 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -208,10 +208,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Seto Dharti
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p style={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -230,7 +230,7 @@ const PubliciationCard2 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -248,10 +248,10 @@ const PubliciationCard2 = () => {
                     </div>
                   </div>
                   <div className="col-5 text-left align-middle">
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Gulabi Umer
-                    </p>
-                    <p style={{ fontSize: "18px", marginTop: "-5px" }}>
+                    </h3>
+                    <p style={{}} className="bookWriter">
                       By LPD <br />
                       PRINT BOOK
                     </p>
@@ -269,8 +269,10 @@ const PubliciationCard2 = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              
             </div>
+            </div>
+
             <div className="d-flex justify-content-center mt-5">
               <MDBRow>
                 <MDBCol>

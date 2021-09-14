@@ -2,38 +2,37 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import card3image from "../assests/card3image.jpg";
 import { Link } from "react-router-dom";
+import "../Pages/style.css";
+
 const Card3 = () => {
   return (
     <React.Fragment>
       <div>
         <Container>
           <div
-            className="row"
-            style={{ marginTop: "150px", marginBottom: "150px" }}
+            className="row section"
+            
           >
-            <div className="col-1"></div>
-            <div className="col-5">
-              <p
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12"style={{margin:"30px 0"}}>
+              <h3
+                className="topTitle"
                 style={{
-                  fontWeight: "bold",
-                  color: "#f6b745",
-                  fontSize: "19px",
+                  marginTop:"50px", color:"#f6b745"
                 }}
               >
                 Be a Member
-              </p>
-              <h1
+              </h3>
+              <h2
+                className="middleTitle"
                 style={{
-                  fontWeight: "bold",
-                  marginTop: "15px",
                 }}
               >
                 Join the Build on Movement
-              </h1>
+              </h2>
               <p
+              className="paragraph"
                 style={{
-                  fontSize: "18px",
-                  marginTop: "30px",
+                  
                 }}
               >
                 Together, we can break the cycle of proverty, illiteracy, and
@@ -43,23 +42,14 @@ const Card3 = () => {
                 never miss a chance to make difference.
               </p>
               <button
-                style={{
-                  fontWeight: "bold",
-                  border: "none",
-                  background: "#f6b745",
-                  marginTop: "20px",
-                  padding: "15px",
-                  paddingLeft: "45px",
-                  paddingRight: "45px",
-                }}
+                className="buttonNormal"
               >
                 Join Now
               </button>
             </div>
-            <div className="col-5">
-              <img src={card3image} style={{ height: "110%", width: "100%" }} />
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <img src={card3image} style={{ height: "100%", width: "100%" }} />
             </div>
-            <div className="col-1"></div>
           </div>
         </Container>
       </div>

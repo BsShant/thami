@@ -7,9 +7,8 @@
 
 }
 .ant-drawer-top.ant-drawer-open {
-    position: absolute;
-    top: 75px;
-    height: auto;
+    
+    height: 100vh;
 }
 .ant-menu-vertical{
     background-color: black;
@@ -20,8 +19,33 @@
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
     background-color: inherit;
 }
+
+
+/* nav menu section */
+
+/* // nav menu item without dropdown in ful view*/
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item{
+    margin:  0 10px 0 10px;
+    font-size: 18px;
+    padding: 0;
+}
+
+/* ant menu item with dropdown in full width */
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
-    padding: 0 0 0 15px;
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+    padding: 0;
+}
+
+/* ant menu item dropdown bottom underline in full width */
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu::after{
+    width:100%!important;
+    left: 0!important;
+}
+/* ant menu item bottom underline in full width */
+.ant-menu-horizontal > .ant-menu-item::after{
+    width:100%!important;
+    left: 0!important;
 }
 .ant-menu{
     color: white;
@@ -47,8 +71,8 @@
 }
 .ant-drawer-top.ant-drawer-open{
 
-position: absolute;
-top:75px;
+/* position: absolute;
+top:75px; */
 }
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover{
     color: #f6b745!important;
@@ -102,9 +126,12 @@ visibility: hidden;    }
 }
   }
 
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item{
-      padding:  0 0 0 10px;
+  .ant-menu-title-content{
+      font-size: 18px;
   }
+
+
+
   .ant-btn-primary:active,
   .ant-btn-primary:focus,
   .ant-btn-primary{
@@ -127,3 +154,37 @@ border: #f6b745;
     
       color: white;
   }
+
+
+
+
+
+
+  .ant-menu-sub.ant-menu-inline {
+    padding: 0;
+    background: black;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ant-menu-submenu-selected {
+    color: #f6b745;
+}
+.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light{
+    background: black;
+}
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+    color: #f6b745;
+}
+.ant-menu-inline{
+    border: none;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: none;
+}

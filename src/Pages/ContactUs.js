@@ -1,12 +1,13 @@
 import React from "react";
+import style from "../Pages/style.css";
 import { Container, Form } from "react-bootstrap";
 const ContactUs = () => {
   return (
-    <div style={{ background: "#000000"}}>
+    <div style={{  margin:"0px 0px", paddingBottom:"40px"}} className="section contactImage">
       <Container>
       <div
         id="contact"
-        style={{ background: "#000000", padding: "50px 0 30px" }}
+        style={{ }}
         className="text-center .col-sm-12 .col-md-6 .offset-md-3"
       >
         <h2 style={{ color: "#f6b745" }}>Get in touch</h2>
@@ -15,7 +16,7 @@ const ContactUs = () => {
         </p>
         <Form
           className="container-sm"
-          style={{ paddingLeft: "120px", paddingRight: "120px" }}
+          style={{ width:"80%"}}
         >
           <input
             type="text"
@@ -23,6 +24,8 @@ const ContactUs = () => {
             id="exapleName"
             aria-describedby="NameHelp"
             placeholder="Enter a name"
+            style={{background:"rgba(255,255,255,0.5)",
+              color: "black"}}
           ></input>
           <input
             type="email"
@@ -30,12 +33,16 @@ const ContactUs = () => {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Enter email"
+            style={{background:"rgba(255,255,255,0.5)",
+              color: "black"}}
           ></input>
           <textarea
             class="form-control mt-3"
             id="exampleFormControlTextarea3"
             rows="7"
             placeholder="Write your message here."
+            style={{background:"rgba(255,255,255,0.5)",
+              color: "black"}}
           ></textarea>
           <button
             className="mt-3 p-2"
@@ -50,12 +57,13 @@ const ContactUs = () => {
             Send It Now
           </button>
         </Form>
-        <hr
-          className="col-md-12 mx-auto mb-5"
-          style={{ marginTop: "50px", background: "#FFFFFF" }}
-        ></hr>
+       
       </div>
       </Container>
+      <hr
+          className="col-md-12 mx-auto mb-5"
+          style={{ marginTop: "70px", background: "#FFFFFF" }}
+        ></hr>
     </div>
   );
 };

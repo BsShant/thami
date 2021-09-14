@@ -1,5 +1,6 @@
 import React from "react";
 import footerStyle from "../Pages/footerStyle.css";
+import style from "../Pages/style.css";
 import Logo from "../assests/Logo.png";
 import facebook from "../assests/facebook.png";
 import youtube from "../assests/youtube.png";
@@ -10,10 +11,10 @@ const Footer = () => {
     <React.Fragment>
       <footer
         id="footer"
-        className="footer-1"
-        style={{ backgroundColor: "black" }}
+        className="footer-1 section"
+        style={{ backgroundColor: "black", margin:"0px 0px" }}
       >
-        <div className="main-footer widgets-dark typo-light">
+        <div className="main-footer widgets-dark typo-light ">
           <div className="container">
             <div
               className="row"
@@ -22,7 +23,7 @@ const Footer = () => {
                 color: "white",
               }}
             >
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <img src={Logo} style={{ height: "12rem" }} />
                   <p style={{ fontSize: "20px" }}>
@@ -70,7 +71,7 @@ const Footer = () => {
                 </li>
               </ul>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <h2 className="title" style={{ color:"white" }}>
                     Navigation<span></span>
@@ -137,7 +138,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
 
                   <h2 className="title" style={{ color:"white" }}>
@@ -193,16 +194,7 @@ const Footer = () => {
                   <br />
                   <button
                     type="button"
-                    style={{
-                      backgroundColor: "#f6b745",
-                      padding: "8px",
-                      border: "none",
-                      width: "8rem",
-                      marginBottom: "170px",
-                      color: "black",
-                      fontSize: "15px",
-                      fontFamily: "sans-serif",
-                    }}
+                   className="buttonNormal"
                   >
                     Be a Member
                   </button>
@@ -214,9 +206,10 @@ const Footer = () => {
                 style={{ padding: "1.5px" }}
               ></hr>
             </div>
-            <hr class="col-md-12 mx-auto mb-5" style={{padding: "0.01rem", background: "rgb(255, 255, 255) none repeat scroll 0% 0%"}}/>
 
           </div>
+          <hr class="col-md-12 mx-auto mb-5" style={{padding: "0.01rem", background: "rgb(255, 255, 255) none repeat scroll 0% 0%"}}/>
+
         </div>
         <div className="footer-copyright" style={{ color: "white" }}>
           <div className="container">

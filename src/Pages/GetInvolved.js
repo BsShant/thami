@@ -4,6 +4,8 @@ import Card1 from "../GetInvolvedComponent/Card1";
 import Card2 from "../GetInvolvedComponent/Card2";
 import Card3 from "../GetInvolvedComponent/Card3";
 import Card4 from "../GetInvolvedComponent/Card4";
+import "../Pages/style.css";
+
 const GetInvolved = () => {
   return (
     <React.Fragment>

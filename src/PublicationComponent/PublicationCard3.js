@@ -6,6 +6,7 @@ import airpolution from "../assests/airpolution.jpg";
 import gralcier from "../assests/gralcier.jpg";
 import landpolutation from "../assests/landpolutation.jpg";
 import { Link } from "react-router-dom";
+import "../Pages/style.css";
 import {
   MDBPagination,
   MDBPageItem,
@@ -18,12 +19,15 @@ const PublicationCard3 = () => {
   return (
     <React.Fragment>
       <div className="text-center pt-5" style={{ background: "#f6b745" }}>
-        <p style={{ fontSize: "22px", fontWeight: "bold" }}>Our Resources</p>
-        <h2 style={{ marginTop: "-4px" }}>Enviromental Studies</h2>
+        <h3 style={{ marginBottom:"30px" }}>Our Resources</h3>
+        <h2 style={{ }}>Enviromental Studies</h2>
+        <p style={{ margin: "-4px 0 50px 0" }}>
+          We are a social unit with commonality such as norms.
+        </p>
         <div>
           <Container>
             <div className="row mt-5">
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
                   <div className="col-6">
                     <img
@@ -31,51 +35,29 @@ const PublicationCard3 = () => {
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                    
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
+
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
                   <div className="col-6">
                     <img
@@ -83,51 +65,29 @@ const PublicationCard3 = () => {
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                   
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
+
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
                   <div className="col-6">
                     <img
@@ -135,54 +95,30 @@ const PublicationCard3 = () => {
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                   
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
+
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="row mt-5">
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-6">
                     <img
@@ -190,51 +126,29 @@ const PublicationCard3 = () => {
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                    
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
+
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
                   <div className="col-6">
                     <img
@@ -242,99 +156,54 @@ const PublicationCard3 = () => {
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                    
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
+
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-6 ">
                     <img
                       src={landpolutation}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle">
-                    <p style={{ fontSize: "14px", fontWeight: "bold" }}>
+                  <div className="col-6 text-left align-middle" style={{}}>
+                    <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
-                    </p>
+                    </h3>
                     <p
-                      style={{
-                        fontSize: "12px",
-                        marginTop: "-10px",
-                        fontWeight: "bold",
-                      }}
+                      style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
                       breath in fresh air, our lungs absorb oxygen from the air
                       and pass it into our blood steam.
                     </p>
-                    <button
-                      style={{
-                        border: "none",
-                        background: "#000000",
-                        color: "#f6b745",
-                        fontSize: "16px",
-                        paddingLeft: "10px",
-                        fontWeight: "bold",
-                        paddingRight: "10px",
-                      }}
-                    >
+                   
                       <Link
                         to={"/resourcepreview"}
-                        style={{
-                          border: "none",
-                          background: "#000000",
-                          color: "#f6b745",
-                          fontSize: "16px",
-                          paddingLeft: "10px",
-                          fontWeight: "bold",
-                          paddingRight: "10px",
-                        }}
+                        className="newsButton"
                       >
                         Learn More
                       </Link>
-                    </button>
                   </div>
                 </div>
               </div>

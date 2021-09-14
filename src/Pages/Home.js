@@ -27,7 +27,7 @@ const Home = () => {
         style={{
           backgroundImage: `url(${slider})`,
           width: "100%",
-          height: "650px",
+          height: "100vh",
         }}
       >
         <div className="color-overlay">
@@ -44,7 +44,8 @@ const Home = () => {
                   style={{
                     color: "white",
                     fontWeight: "bold",
-                    fontSize: "20px",
+                    fontSize: "18px",
+                    marginBottom:"50px"
                   }}
                 >
                   Protect culture, protect ourselves
@@ -57,8 +58,7 @@ const Home = () => {
                     paddingLeft: "30px",
                     paddingRight: "30px",
                     fontWeight: "bold",
-                    marginLeft: "10px",
-                    marginTop: "10px",
+                 fontSize:"18px"
                   }}
                 >
                   Learn more
@@ -71,13 +71,13 @@ const Home = () => {
       <Container>
         <div
           style={{
-            marginTop: "2rem",
-            marginBottom: "2rem",
+          
           }}
+          className="section"
         >
           <div
             className="row"
-            style={{ paddingTop: "90px", paddingBottom: "90px" }}
+            
           >
             <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6">
                 <img
@@ -87,11 +87,11 @@ const Home = () => {
               
              
             </div>
-            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"30px 15px"}}>
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"0 15px", marginTop:"50px"}} >
               <h3
                 style={{
                   color: "#f6b745",
-                  fontWeight: "bold",
+                  fontWeight: "bold", marginBottom:"20px"
                   
                 }}
               >
@@ -99,14 +99,15 @@ const Home = () => {
               </h3>
               <h2
                 style={{
-                  
+                  marginBottom:"30px"
                 }}
               >
                 Know About Our Thami Society
               </h2>
               <p
                 style={{
-                 fontSize:"18px"
+                 fontSize:"18px",    marginBottom:"50px"
+
                 }}
               >
                 We are a social unit commonality such as norms,
@@ -115,16 +116,8 @@ const Home = () => {
                 or in virtual space through communication platform.
               </p>
               <button
-                style={{
-                  background: "#f6b745",
-                  border: "none",
-                  padding: "15px",
-                  paddingLeft: "40px",
-                  paddingRight: "40px",
-                  fontWeight: "bold",
-                  marginLeft: "10px",
-                  marginTop: "20px",
-                }}
+                              className="buttonNormal"
+
               >
                 Read More
               </button>
@@ -133,24 +126,25 @@ const Home = () => {
         </div>
       </Container>
       <div
-        className="text-center"
+        className="text-center section"
         style={{
           background: "#f6b745",
-          padding: "70px 0",
         }}
       >
         <Container>
           <h3
             style={{
              
-              
+              fontWeight: "bold", marginBottom:"20px"
+
             }}
           >
             Events
           </h3>
           <h2
             style={{
-             
+              marginBottom:"30px"
+
             }}
           >
             About Our Events
@@ -189,10 +183,19 @@ const Home = () => {
               >
                 News
               </h3>
-              <p>
+              <p  style={{
+                 fontSize:"18px",    marginBottom:"50px"
+
+                }}>
                 We distributes new from around a nation or the world to
                 news-paper, periodical, radio and television.{" "}
               </p>
+              <button
+                               className="buttonReverse"
+
+              >
+                Learn More
+              </button>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
               <div className="d-flex justify-content-center">
@@ -226,10 +229,19 @@ const Home = () => {
               >
                 News
               </h3>
-              <p>
+              <p  style={{
+                 fontSize:"18px",    marginBottom:"50px"
+
+                }}>
                 We distributes new from around a nation or the world to
                 news-paper, periodical, radio and television.{" "}
               </p>
+              <button
+                               className="buttonReverse"
+
+              >
+                Learn More
+              </button>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
               <div className="d-flex justify-content-center">
@@ -263,25 +275,33 @@ const Home = () => {
               >
                 News
               </h3>
-              <p>
+              <p  style={{
+                 fontSize:"18px",    marginBottom:"50px"
+
+                }}>
                 We distributes new from around a nation or the world to
                 news-paper, periodical, radio and television.{" "}
               </p>
+              <button
+               className="buttonReverse"
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </Container>
       </div>
       <Container>
-        <div className="row" style={{ marginTop: "100px" }}>
+        <div className="row section">
           <div
-            className="col-md-6 col-sm-12 col-xs-12 col-lg-6 "
-            style={{ paddingBottom: "20px" }}
+            className="col-md-12 col-sm-12 col-xs-12 col-lg-6 "
+            style={{ margin: "50px 0" }}
           >
-            <h3 style={{ color: "#f6b745" }}>Publication</h3>
-            <h2>
+            <h3 style={{ color: "#f6b745" }} className="topTitle">Publication</h3>
+            <h2 className="middleTitle">
               What we are <br /> publicing
             </h2>
-            <p>
+            <p className="paragraph">
               In the broadest sense, the publishing industry would include
               newspaper publishing, magazine publishing, music publishing, map
               publishing, government information publishing, comic book
@@ -289,17 +309,13 @@ const Home = () => {
             </p>
             <button
               type="button"
-              style={{
-                backgroundColor: "#f6b745",
-                padding: "15px",
-                border: "none",
-                width: "200px",
-              }}
+              className="buttonNormal"
+
             >
               Read More
             </button>
           </div>
-          <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{matginTop:"30px"}}>
+          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{matginTop:"30px"}}>
             <img src={bookcover} style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
@@ -312,18 +328,17 @@ const Home = () => {
               className="col-md-12 col-sm-12 col-xs-12 col-lg-8"
             >
               <div className="row">
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{paddingBottom: "50px"}} >
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{padding: "0 10px 0 0"}} >
                   <div
                     class="card"
-                    style={{ height: "550px", border: "none" }}
+                    style={{ height: "600px", border: "none" }}
                   >
                     <img src={sponsor} style={{ height: "275px" }} />
                     <div class="card-body">
                       <h3
-                        class="card-title d-flex justify-content-center"
+                        class="card-title d-flex "
                         style={{
                           marginTop: "1.5rem",
-                          marginBottom: "50px",
                           textAlign:"left"
                         }}
                       >
@@ -333,26 +348,28 @@ const Home = () => {
                         Sponsors commit to providing financial, emotional and
                         resettlement suppot to help the community.
                       </p>
-                    </div>
+                      <button
+                type="button"
+                className="buttonReverse"
+              >
+               Sponsor Us
+              </button>                    </div>
                   </div>
                 </div>
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{
-                     paddingBottom: "40px"
-                    }}>
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{padding: "0 10px 0 0"}}>
                   <div
                     class="card"
                     style={{
-                      border: "none", height: "550px"
+                      border: "none", height: "600px"
                     }}
                   >
                     <img src={support} style={{ height: "275px" }} />
-                    <div class="card-body">
+                    <div class="card-body" style={{textAlign:"left"}}>
                       <h3
-                        class="card-title d-flex justify-content-center"
+                        class="card-title d-flex"
                         style={{
                           marginTop: "1.5rem",
-                          marginBottom: "1rem",
-                          textAlign:"left"
+                          textAlign:"left!important"
 
                         }}
                       >
@@ -362,6 +379,12 @@ const Home = () => {
                         Support for community organisat ions. We can help you
                         deliver the services people in our community.
                       </p>
+                      <button
+                type="button"
+                className="buttonReverse"
+              >
+               Support Us
+              </button>
                     </div>
                   </div>
                 </div>
@@ -370,16 +393,18 @@ const Home = () => {
 
             <div
               className="col-md-12 col-sm-12 col-xs-12 col-lg-4"
-              style={{ paddingLeft: "20px"}}
+              style={{  marginTop:"50px", padding:"0px"}}
             >
               <h3
                 style={{
                   
                 }}
+                className="topTitle"
               >
                 Get involved
               </h3>
-              <h2 style={{ marginBottom: "50px"}}>
+              <h2 className="middleTitle"
+>
                 An open <br />
                 community
               </h2>
@@ -387,6 +412,8 @@ const Home = () => {
                 style={{
                   
                 }}
+                className="paragraph"
+
               >
                 Several of our sites were originally started by volunteers. Over
                 time, they have become Core Thami Society projects that are, for
@@ -394,15 +421,7 @@ const Home = () => {
               </p>
               <button
                 type="button"
-                style={{
-                  backgroundColor: "black",
-                  padding: "18px",
-                  border: "none",
-                  width: "15rem",
-                  marginBottom: "170px",
-                  color: "#f6b745",
-              
-                }}
+                className="buttonReverse"
               >
                 Be a Member
               </button>

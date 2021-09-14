@@ -3,27 +3,31 @@ import { Container } from "react-bootstrap";
 import news1 from "../../assests/news1.jpg";
 import penpaper from "../../assests/penpaper.jpg";
 import news2 from "../../assests/news2.jpg";
+import "../../Pages/style.css";
+
 const Blogs = ()=>{
 
     return(
         <div>
-            <Container style={{ backgroundColor: "#f6b745" }}>
-        <h3
-          style={{
-            textAlign: "center",
-            fontFamily: "sans-serif",
-            fontStyle: "bold",
-            padding: "30px, 0px, 0px, 0px",
-          }}
-        >
-          Latest Blog{" "}
-        </h3>
-        <p style={{ textAlign: "center", marginBottom: "70px" }}>
+          <div className="blogBanner">
+<Container>
+<div className="headerinfo col-md-12 col-sm-12">
+                <h2
+                  style={{ fontWeight: "bold", color:"white" }}
+                >
+ Latest Blog           </h2>
+<p style={{color:"white"}}>
           We are a social unit with community such as norms.
         </p>
+               
+              </div>    
+              </Container>
+              </div>  
+            <Container >
+      
 
-        <div className="col-12">
-          <div className="row">
+        <div className="col-12" style={{marginTop:"50px"}}>
+          <div className="row" style={{display:"flex", justifyContent:"center"}}>
             <div
               className="card"
               style={{
@@ -107,9 +111,7 @@ const Blogs = ()=>{
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="row">
+         
             <div
               className="card"
               style={{

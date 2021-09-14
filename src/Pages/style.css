@@ -9,6 +9,71 @@
  }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... } */
+.contactImage{
+  background-image: url('../assests/card4image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+}
+.contactImage::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.article-margin{
+  margin-bottom: 50px;
+}
+.buttonNormal{
+  background: rgb(246, 183, 69) none repeat scroll 0% 0%;
+border: medium none;
+padding: 15px 30px;
+color:black;
+font-weight: bold;
+font-size: 18px;
+cursor: pointer;
+border: 1px rgb(246, 183, 69) solid;
+}
+.buttonNormal:hover{
+  background:black;
+  color:rgb(246, 183, 69);
+}
+.buttonReverse{
+  background: black;
+  color: rgb(246, 183, 69);
+border: medium none;
+border: 1px black solid;
+padding: 15px 30px;
+cursor: pointer;
+font-weight: bold;
+font-size: 18px;
+}
+.buttonReverse:hover{
+  color:black;
+  background:rgb(246, 183, 69);
+}
+.topTitle{
+  font-weight: bold; margin-bottom:20px;
+}
+.middleTitle{
+  margin-bottom:30px;
+
+}
+.paragraph{
+  margin-bottom:50px;
+
+}
+.section{
+  min-height: 100vh;
+  padding: 80px 0;
+margin: 20px 0;
+}
 .h1tag {
   font-size: 55px;
   background: #f6b745;
@@ -18,7 +83,9 @@
 }
 .headerinfo{
   padding-top: 85px;
+  text-align: left;
 }
+
 @media screen and (max-width: 992px) {
   .headerinfo {
     text-align: center;
@@ -32,6 +99,9 @@
     margin-bottom: 50px!important;
     
   }
+  .social-footer2{
+    text-align: center;
+  }
   .fBox{
     text-align: center!important;
   }
@@ -43,6 +113,9 @@
     padding-top: 0px!important;
     
   }
+  .social-footer2{
+    text-align: center;
+  }
   .h1tag{
     padding-top: 7rem!important;
   }
@@ -52,7 +125,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  height: 650px;
+  height: 100vh;
   background-color: rgba(5, 5, 0, 0.7);
 }
 .navbar-overlay {
@@ -71,3 +144,222 @@
   height: 350px;
   background-color: rgba(5, 5, 0, 0.7);
 }
+
+
+/* publication ::-webkit-progress-value */
+.publicationBanner{
+  background-image: url("../assests/publicationcard1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  z-index: 1;
+  padding: 30px 0px;
+}
+
+.publicationBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.bookWriter{
+  margin-top: -5px;
+  font-size: 16px !important;
+}
+.imageFrame{
+  background: black;
+height: 296px;
+width: 90%;
+padding: 20px;
+}
+
+
+/* news */
+.newsBanner{
+  background-image: url("../assests/publicationcard1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.newsBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* article */
+.articleBanner{
+  background-image: url("../assests/publicationcard1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.articleBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* blog */
+.blogBanner{
+  background-image: url("../assests/penpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.blogBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* get involved */
+.getInvolvedBanner{
+  background-image: url("../assests/sponsor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.getInvolvedBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* about us banner */
+.aboutUsBanner{
+  background-image: url("../assests/sixthimg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.aboutUsBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+
+/* visionAndMission banner */
+.visionAndMissionBanner{
+  background-image: url("../assests/aboutcard4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.visionAndMissionBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+
+/* ourteam banner */
+.ourTeamBanner{
+  background-image: url("../assests/card3image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.ourTeamBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* gallery banner */
+.ourGalleryBanner{
+  background-image: url("../assests/video.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  padding: 30px 0px;
+}
+.ourGalleryBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* news button */
+.newsButton{
+  padding: 10px;
+  border: none;
+                          background: #000000;
+                          color: #f6b745;
+margin-bottom: 50px;
+}
+
+
+
+

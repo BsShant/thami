@@ -3,29 +3,32 @@ import { Container } from "react-bootstrap";
 import news1 from "../../assests/news1.jpg";
 import penpaper from "../../assests/penpaper.jpg";
 import news2 from "../../assests/news2.jpg";
+import "../../Pages/style.css";
 
 const OurArticles = ()=>{
 
     return(
+      
         <div>
-            <Container>
-        <h3
-          style={{
-            textAlign: "center",
-            color: "#f6b745",
-            fontFamily: "sans-serif",
-            fontStyle: "bold",
-            marginTop: "70px",
-          }}
-        >
-          Latest Activities{" "}
-        </h3>
-        <p style={{ textAlign: "center", marginBottom: "70px" }}>
+          <div className="articleBanner">
+<Container>
+<div className="headerinfo col-md-12 col-sm-12">
+                <h2
+                  style={{ fontWeight: "bold", color:"white" }}
+                >
+Latest Activities            </h2>
+<p style={{color:"white"}}>
           We are a social unit with community such as norms.
         </p>
+               
+              </div>      
+</Container>
+     </div>
+            <Container>
 
-        <div className="col-12">
-          <div className="row">
+
+        <div className="col-12" style={{marginTop:"50px"}}>
+          <div className="row" style={{display:"flex", justifyContent:"center"}}>
             <div
               className="card p-2 ml-2 shadow-lg"
               style={{ width: "22rem", margin: "5px" }}
@@ -132,9 +135,7 @@ const OurArticles = ()=>{
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="row">
+         
             <div
               className="card p-2 ml-2 shadow-lg"
               style={{ width: "22rem", margin: "5px" }}
