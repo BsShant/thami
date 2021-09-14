@@ -1,7 +1,17 @@
 import React from "react";
 import slider from "../assests/slider.jpg";
-import imgwhoweare from "../assests/imgwhoweare.png";
 import style from "../Pages/style.css";
+import imgwhoweare from "../assests/imgwhoweare.png";
+import fourthimg from "../assests/fourthimg.jpeg";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 import thamigirl from "../assests/thamigirls.jpg";
 import bookcover from "../assests/bookcover.jpg";
 import sponsor from "../assests/sponsor.jpg";
@@ -9,6 +19,8 @@ import support from "../assests/support.jpg";
 import { Container, Button } from "react-bootstrap";
 
 const Home = () => {
+  let history = useHistory();
+
   return (
     <React.Fragment>
       <div
@@ -21,7 +33,7 @@ const Home = () => {
         <div className="color-overlay">
           <Container>
             <Container>
-              <div className="col-6">
+              <div className="headerinfo col-md-12 col-sm-12">
                 <h1
                   className="h1tag"
                   style={{ paddingTop: "10rem", fontWeight: "bold" }}
@@ -67,41 +79,34 @@ const Home = () => {
             className="row"
             style={{ paddingTop: "90px", paddingBottom: "90px" }}
           >
-            <div className="col-6">
-              <img
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6">
+                <img
                 src={thamigirl}
                 style={{ width: "100%", height: "100%" }}
-              ></img>
+               ></img>
+              
+             
             </div>
-            <div className="col-6">
-              <h2
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"30px 15px"}}>
+              <h3
                 style={{
                   color: "#f6b745",
                   fontWeight: "bold",
-                  fontSize: "24px",
-                  fontFamily: "sans-serif",
-                  marginLeft: "10px",
+                  
                 }}
               >
                 About Us
-              </h2>
-              <h1
+              </h3>
+              <h2
                 style={{
-                  fontSize: "29px",
-                  fontWeight: "bold",
-                  marginTop: "20px",
-                  marginLeft: "10px",
+                  
                 }}
               >
                 Know About Our Thami Society
-              </h1>
+              </h2>
               <p
                 style={{
-                  fontFamily: "20px",
-                  fontSize: "20px",
-                  fontFamily: "sans-serif",
-                  marginLeft: "10px",
-                  marginTop: "10px",
+                 fontSize:"18px"
                 }}
               >
                 We are a social unit commonality such as norms,
@@ -131,48 +136,43 @@ const Home = () => {
         className="text-center"
         style={{
           background: "#f6b745",
-          paddingBottom: "50px",
+          padding: "70px 0",
         }}
       >
         <Container>
           <h3
             style={{
-              color: "#ffffff",
-              fontWeight: "bold",
-              fontSize: "25px",
-              fontFamily: "sans-serif",
-              paddingTop: "50px",
+             
+              
             }}
           >
             Events
           </h3>
           <h2
             style={{
-              color: "#ffffff",
-              fontWeight: "bold",
-              fontFamily: "sans-serif",
-              fontSize: "45px",
+             
             }}
           >
             About Our Events
           </h2>
 
-          <div className="row mt-5">
-            <div className="col-4 align-middle">
+          <div className="row mt-5" >
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4 align-middle" style={{padding: "30px 0"}}>
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
                   style={{
-                    background: "#808080",
+                    background: "black",
                     width: "150px",
                     height: "150px",
+
                   }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="85"
                     height="85"
-                    fill="#FFFFFF"
+                    fill="#f6b745"
                     class="bi bi-newspaper"
                     viewBox="0 0 16 16"
                     style={{ marginTop: "2rem" }}
@@ -184,9 +184,7 @@ const Home = () => {
               </div>
               <h3
                 style={{
-                  marginTop: "2rem",
-                  color: "#FFFFFF",
-                  fontSize: "30px",
+                  marginTop:'30px'
                 }}
               >
                 News
@@ -196,12 +194,12 @@ const Home = () => {
                 news-paper, periodical, radio and television.{" "}
               </p>
             </div>
-            <div className="col-4 align-middle">
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
                   style={{
-                    background: "#808080",
+                    background: "black",
                     width: "150px",
                     height: "150px",
                   }}
@@ -210,7 +208,7 @@ const Home = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     width="85"
                     height="85"
-                    fill="#FFFFFF"
+                    fill="#f6b745"
                     class="bi bi-newspaper"
                     viewBox="0 0 16 16"
                     style={{ marginTop: "2rem" }}
@@ -222,9 +220,8 @@ const Home = () => {
               </div>
               <h3
                 style={{
-                  marginTop: "2rem",
-                  color: "#FFFFFF",
-                  fontSize: "30px",
+                  marginTop: "30px",
+                 
                 }}
               >
                 News
@@ -234,12 +231,12 @@ const Home = () => {
                 news-paper, periodical, radio and television.{" "}
               </p>
             </div>
-            <div className="col-4 align-middle">
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
                   style={{
-                    background: "#808080",
+                    background: "black",
                     width: "150px",
                     height: "150px",
                   }}
@@ -248,7 +245,7 @@ const Home = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     width="85"
                     height="85"
-                    fill="#FFFFFF"
+                    fill="#f6b745"
                     class="bi bi-newspaper"
                     viewBox="0 0 16 16"
                     style={{ marginTop: "2rem" }}
@@ -260,9 +257,8 @@ const Home = () => {
               </div>
               <h3
                 style={{
-                  marginTop: "2rem",
-                  color: "#FFFFFF",
-                  fontSize: "30px",
+                  marginTop: "30px",
+                 
                 }}
               >
                 News
@@ -276,21 +272,21 @@ const Home = () => {
         </Container>
       </div>
       <Container>
-        <div className="row mt-2 mb-5">
+        <div className="row" style={{ marginTop: "100px" }}>
           <div
-            className="col-6"
-            style={{ fontFamily: "sans-serif", marginTop: "150px" }}
+            className="col-md-6 col-sm-12 col-xs-12 col-lg-6 "
+            style={{ paddingBottom: "20px" }}
           >
-            <p style={{ fontSize: "30px", color: "#f6b745" }}>Publication</p>
-            <h1>
+            <h3 style={{ color: "#f6b745" }}>Publication</h3>
+            <h2>
               What we are <br /> publicing
-            </h1>
-            <h4>
+            </h2>
+            <p>
               In the broadest sense, the publishing industry would include
               newspaper publishing, magazine publishing, music publishing, map
               publishing, government information publishing, comic book
               publishing, and book publishing.
-            </h4>
+            </p>
             <button
               type="button"
               style={{
@@ -303,38 +299,36 @@ const Home = () => {
               Read More
             </button>
           </div>
-          <div className="col-6" style={{ marginTop: "100px" }}>
-            <img src={bookcover} style={{ width: "600px", height: "500px" }} />
+          <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{matginTop:"30px"}}>
+            <img src={bookcover} style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
       </Container>
 
-      <div style={{ backgroundColor: "#f6b745", padding: "1rem" }}>
+      <div style={{ backgroundColor: "#f6b745", padding: "100px 0 ", marginTop:"100px"}}>
         <Container>
-          <div className="row ">
+          <div className="row " >
             <div
-              className="col-8"
-              style={{ fontFamily: "sans-serif", marginTop: "125px" }}
+              className="col-md-12 col-sm-12 col-xs-12 col-lg-8"
             >
               <div className="row">
-                <div className="col-4 ">
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{paddingBottom: "50px"}} >
                   <div
                     class="card"
-                    style={{ width: "20rem", height: "34rem", border: "none" }}
+                    style={{ height: "550px", border: "none" }}
                   >
-                    <img src={sponsor} style={{ height: "19rem" }} />
+                    <img src={sponsor} style={{ height: "275px" }} />
                     <div class="card-body">
-                      <h5
+                      <h3
                         class="card-title d-flex justify-content-center"
                         style={{
-                          fontWeight: "bold",
                           marginTop: "1.5rem",
-                          marginBottom: "1rem",
-                          fontFamily: "sans-serif",
+                          marginBottom: "50px",
+                          textAlign:"left"
                         }}
                       >
                         Sponsor a community
-                      </h5>
+                      </h3>
                       <p class="card-text">
                         Sponsors commit to providing financial, emotional and
                         resettlement suppot to help the community.
@@ -342,29 +336,28 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{
+                     paddingBottom: "40px"
+                    }}>
                   <div
                     class="card"
                     style={{
-                      width: "20rem",
-                      height: "34rem",
-                      border: "none",
-                      marginLeft: "3rem",
+                      border: "none", height: "550px"
                     }}
                   >
-                    <img src={support} style={{ height: "19rem" }} />
+                    <img src={support} style={{ height: "275px" }} />
                     <div class="card-body">
-                      <h5
+                      <h3
                         class="card-title d-flex justify-content-center"
                         style={{
-                          fontWeight: "bold",
                           marginTop: "1.5rem",
                           marginBottom: "1rem",
-                          fontFamily: "sans-serif",
+                          textAlign:"left"
+
                         }}
                       >
                         Support a community
-                      </h5>
+                      </h3>
                       <p class="card-text">
                         Support for community organisat ions. We can help you
                         deliver the services people in our community.
@@ -376,28 +369,23 @@ const Home = () => {
             </div>
 
             <div
-              className="col-4"
-              style={{ marginTop: "100px", color: "white", marginTop: "130px" }}
+              className="col-md-12 col-sm-12 col-xs-12 col-lg-4"
+              style={{ paddingLeft: "20px"}}
             >
-              <p
+              <h3
                 style={{
-                  fontSize: "30px",
-                  color: "white",
-                  fontFamily: "sans-serif",
+                  
                 }}
               >
                 Get involved
-              </p>
-              <h1 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+              </h3>
+              <h2 style={{ marginBottom: "50px"}}>
                 An open <br />
                 community
-              </h1>
+              </h2>
               <p
                 style={{
-                  marginTop: "2rem",
-                  fontFamily: "sans-serif",
-                  marginBottom: "3rem",
-                  fontSize: "19px",
+                  
                 }}
               >
                 Several of our sites were originally started by volunteers. Over
@@ -407,14 +395,13 @@ const Home = () => {
               <button
                 type="button"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "black",
                   padding: "18px",
                   border: "none",
                   width: "15rem",
                   marginBottom: "170px",
                   color: "#f6b745",
-                  fontSize: "22px",
-                  fontFamily: "sans-serif",
+              
                 }}
               >
                 Be a Member

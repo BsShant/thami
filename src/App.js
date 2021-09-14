@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'antd/dist/antd.css';
 import React from "react";
 import Home from "./Pages/Home";
 import About from "./Pages/AboutUs";
@@ -8,6 +9,11 @@ import Publication from "./Pages/Publication";
 import SupportCommunity from "./Pages/SupportCommunity";
 import ContactUs from "./Pages/ContactUs";
 import Events from "./Pages/Event";
+import News from "./Pages/news/news";
+import Blogs from "./Pages/blogs/blogs";
+import OurArticles from "./Pages/ourArticles/ourArticles";
+
+
 import ResourcePreview from "./Pages/ResourcePreview";
 
 // import Appcss from "./App.css";
@@ -25,7 +31,13 @@ function App() {
           <Route path="/getinvolved" component={GetInvolved} />
           <Route path="/resourcepreview" component={ResourcePreview} />
           <Route path="/supportcommunity" component={SupportCommunity} />
-          <Route path="/event" component={Events} />
+          <Route exact path="/event" component={Events} />
+          <Route path="/event/news" component={News} />
+          <Route path="/event/blogs" component={Blogs} />
+          <Route path="/event/our-articles" component={OurArticles} />
+
+
+
         </Switch>
         <ContactUs />
         <Footer />

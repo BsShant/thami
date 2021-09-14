@@ -2,14 +2,15 @@ import React from "react";
 import { Container, Form } from "react-bootstrap";
 const ContactUs = () => {
   return (
-    <React.Fragment>
+    <div style={{ background: "#000000"}}>
+      <Container>
       <div
         id="contact"
-        style={{ background: "#000000", padding: "90px" }}
+        style={{ background: "#000000", padding: "50px 0 30px" }}
         className="text-center .col-sm-12 .col-md-6 .offset-md-3"
       >
-        <h1 style={{ color: "#f6b745" }}>Get in touch</h1>
-        <p style={{ color: "#ffffff", fontSize: "20px" }}>
+        <h2 style={{ color: "#f6b745" }}>Get in touch</h2>
+        <p style={{ color: "#ffffff", fontSize: "20px", marginBottom:"50px" }}>
           Feel free to drop us a line below
         </p>
         <Form
@@ -51,10 +52,11 @@ const ContactUs = () => {
         </Form>
         <hr
           className="col-md-12 mx-auto mb-5"
-          style={{ padding: "0.01rem", background: "#FFFFFF" }}
+          style={{ marginTop: "50px", background: "#FFFFFF" }}
         ></hr>
       </div>
-    </React.Fragment>
+      </Container>
+    </div>
   );
 };
 export default ContactUs;

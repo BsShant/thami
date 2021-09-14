@@ -20,156 +20,17 @@ const Footer = () => {
               style={{
                 fontFamily: "sans-serif",
                 color: "white",
-                marginTop: "3rem",
               }}
             >
-              <div className="col-xs-12 col-sm-6 col-md-4">
-                <div className="widget no-box">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <img src={Logo} style={{ height: "12rem" }} />
                   <p style={{ fontSize: "20px" }}>
                     We are a social unit with commonality <br /> such as norms,
                     religion, values, customs, <br /> or identity.
                   </p>
                 </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-3">
-                <div className="widget no-box">
-                  <h5 className="title" style={{ fontSize: "1.7rem" }}>
-                    Navigation<span></span>
-                  </h5>
-                  <br />
-                  <ul
-                    className="thumbnail-widget"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <li>
-                      <div className="thumb-content">
-                        <a
-                          style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
-                        >
-                          Home
-                        </a>
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div className="thumb-content">
-                        <a
-                          style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
-                        >
-                          About
-                        </a>
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div className="thumb-content">
-                        <a
-                          style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
-                        >
-                          Event
-                        </a>
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div className="thumb-content">
-                        <a
-                          style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
-                        >
-                          Publication
-                        </a>
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div className="thumb-content">
-                        <a
-                          style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
-                        >
-                          Contact
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-6 col-md-3">
-                <div className="widget no-box">
-                  <h5 className="title" style={{ fontSize: "1.7rem" }}>
-                    Contact Us<span></span>
-                  </h5>
-                  <br />
-                  <ul
-                    className="thumbnail-widget"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <li>
-                      <div
-                        className="thumb-content"
-                        style={{ fontSize: "17px" }}
-                      >
-                        Shamkhusi, kathmandu <br /> Nepal
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div
-                        className="thumb-content"
-                        style={{ fontSize: "17px" }}
-                      >
-                        +9779849724596
-                      </div>
-                    </li>
-                    <br />
-                    <li>
-                      <div
-                        classname="thumb-content"
-                        style={{ fontSize: "17px" }}
-                      >
-                        thamisociety@gmail.com
-                      </div>
-                    </li>
-
-                    <br />
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-xs-12 col-sm-6 col-md-2">
-                <div className="widget no-box">
-                  <h5 className="title" style={{ fontSize: "1.7rem" }}>
-                    Get Involved<span></span>
-                  </h5>
-                  <br />
-                  <p style={{ fontSize: "1.2rem", fontSize: "17px" }}>
-                    An open community several of our sites were orginallly
-                    started by volunteers.
-                  </p>
-                  <br />
-                  <button
-                    type="button"
-                    style={{
-                      backgroundColor: "#f6b745",
-                      padding: "8px",
-                      border: "none",
-                      width: "8rem",
-                      marginBottom: "170px",
-                      color: "black",
-                      fontSize: "15px",
-                      fontFamily: "sans-serif",
-                    }}
-                  >
-                    Be a Member
-                  </button>
-                </div>
-              </div>
-              <ul className="social-footer2">
+                <ul className="social-footer2">
                 <li className="">
                   <a
                     href="https://www.facebook.com/"
@@ -208,14 +69,155 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+              </div>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <div className="widget fBox no-box" style={{ textAlign: "left" }}>
+                  <h2 className="title" style={{ color:"white" }}>
+                    Navigation<span></span>
+                  </h2>
+                  <br />
+                  <ul
+                    className="thumbnail-widget"
+                    style={{ fontSize: "1.2rem" }}
+                  >
+                    <li>
+                      <div className="thumb-content">
+                        <a
+                          style={{ textDecoration: "none", fontSize: "18px" }}
+                          href="#."
+                        >
+                          Home
+                        </a>
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div className="thumb-content">
+                        <a
+                          style={{ textDecoration: "none", fontSize: "18px" }}
+                          href="#."
+                        >
+                          About
+                        </a>
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div className="thumb-content">
+                        <a
+                          style={{ textDecoration: "none", fontSize: "18px" }}
+                          href="#."
+                        >
+                          Event
+                        </a>
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div className="thumb-content">
+                        <a
+                          style={{ textDecoration: "none", fontSize: "19px" }}
+                          href="#."
+                        >
+                          Publication
+                        </a>
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div className="thumb-content">
+                        <a
+                          style={{ textDecoration: "none", fontSize: "17px" }}
+                          href="#."
+                        >
+                          Contact
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <div className="widget fBox no-box" style={{ textAlign: "left" }}>
+
+                  <h2 className="title" style={{ color:"white" }}>
+                    Contact Us<span></span>
+                  </h2>
+                  <br />
+                  <ul
+                    className="thumbnail-widget"
+                    style={{ fontSize: "1.2rem" }}
+                  >
+                    <li>
+                      <div
+                        className="thumb-content"
+                        style={{ fontSize: "17px" }}
+                      >
+                        Shamkhusi, kathmandu <br /> Nepal
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div
+                        className="thumb-content"
+                        style={{ fontSize: "17px" }}
+                      >
+                        +9779849724596
+                      </div>
+                    </li>
+                    <br />
+                    <li>
+                      <div
+                        classname="thumb-content"
+                        style={{ fontSize: "17px" }}
+                      >
+                        thamisociety@gmail.com
+                      </div>
+                    </li>
+
+                    <br />
+                  </ul>
+                </div>
+              </div>
+
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                <div className="widget fBox no-box" style={{ textAlign: "left" }}>
+                  <h2 className="title" style={{ color:"white" }}>
+                    Get Involved<span></span>
+                  </h2>
+                  <br />
+                  <p style={{ fontSize: "1.2rem", fontSize: "17px" }}>
+                    An open community several of our sites were orginallly
+                    started by volunteers.
+                  </p>
+                  <br />
+                  <button
+                    type="button"
+                    style={{
+                      backgroundColor: "#f6b745",
+                      padding: "8px",
+                      border: "none",
+                      width: "8rem",
+                      marginBottom: "170px",
+                      color: "black",
+                      fontSize: "15px",
+                      fontFamily: "sans-serif",
+                    }}
+                  >
+                    Be a Member
+                  </button>
+                </div>
+              </div>
+             
               <hr
                 className="col-md-12 mx-auto mb-5"
                 style={{ padding: "1.5px" }}
               ></hr>
             </div>
+            <hr class="col-md-12 mx-auto mb-5" style={{padding: "0.01rem", background: "rgb(255, 255, 255) none repeat scroll 0% 0%"}}/>
+
           </div>
         </div>
-
         <div className="footer-copyright" style={{ color: "white" }}>
           <div className="container">
             <div className="row">
