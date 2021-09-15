@@ -16,6 +16,16 @@ import OurStory from "./Pages/ourStory/ourStory";
 import VisionAndMission from "./Pages/visionAndMission/visionAndMission";
 import OurTeam from "./Pages/ourTeam/ourTeam";
 import OurGallery from "./Pages/ourGallery/ourGallery";
+import DonateUs from "./Pages/donate/donate";
+import Membership from "./Pages/membership/membership";
+import Books from "./Pages/books/books";
+import Resources from "./Pages/resources/resources";
+import ContactPage from "./Pages/contactUs/contactUs";
+
+
+
+
+
 
 
 
@@ -27,16 +37,21 @@ import Footer from "../src/Pages/Footer";
 function App() {
   return (
     <React.Fragment>
+      
       <BrowserRouter>
-        <NavigationBar />
-        <Switch>
+      <Switch>
+      <Route path="/getinvolved/membership" component={Membership} />
+      <div>
+      <NavigationBar />
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route path="/publication" component={Publication} />
-          <Route path="/getinvolved" component={GetInvolved} />
+          <Route exact path="/publication" component={Publication} />
+          <Route exact path="/getinvolved" component={GetInvolved} />
           <Route path="/resourcepreview" component={ResourcePreview} />
           <Route path="/supportcommunity" component={SupportCommunity} />
           <Route exact path="/event" component={Events} />
+          <Route path="/contact-us" component={ContactPage} />
+
           <Route path="/event/news" component={News} />
           <Route path="/event/blogs" component={Blogs} />
           <Route path="/event/our-articles" component={OurArticles} />
@@ -44,6 +59,10 @@ function App() {
           <Route path="/about/vision-and-mission" component={VisionAndMission} />
           <Route path="/about/our-team" component={OurTeam} />
           <Route path="/about/our-gallery" component={OurGallery} />
+          <Route path="/getinvolved/donate-us" component={DonateUs} />
+          <Route path="/getinvolved/membership" component={Membership} />
+          <Route path="/publication/our-books" component={Books} />
+          <Route path="/publication/our-resources" component={Resources} />
 
 
 
@@ -51,9 +70,15 @@ function App() {
 
 
 
-        </Switch>
+
+
+
+
         <ContactUs />
         <Footer />
+      </div>
+      </Switch>
+
       </BrowserRouter>
     </React.Fragment>
   );

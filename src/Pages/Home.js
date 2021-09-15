@@ -3,6 +3,8 @@ import slider from "../assests/slider.jpg";
 import style from "../Pages/style.css";
 import imgwhoweare from "../assests/imgwhoweare.png";
 import fourthimg from "../assests/fourthimg.jpeg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell, faBiking, faBars, faBookmark, faScroll } from '@fortawesome/free-solid-svg-icons';
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,7 +40,7 @@ const Home = () => {
                   className="h1tag"
                   style={{ paddingTop: "10rem", fontWeight: "bold" }}
                 >
-                  WELCOME TO <br /> NEPAL THAMI SOCIETY
+                  WELCOME TO <br /> NEPAL THAMI <br/> SOCIETY
                 </h1>
                 <p
                   style={{
@@ -51,15 +53,8 @@ const Home = () => {
                   Protect culture, protect ourselves
                 </p>
                 <button
-                  style={{
-                    background: "#f6b745",
-                    border: "none",
-                    padding: "15px",
-                    paddingLeft: "30px",
-                    paddingRight: "30px",
-                    fontWeight: "bold",
-                 fontSize:"18px"
-                  }}
+                  className="buttonNormal"
+                  onClick={()=>history.push('/about/our-story')}
                 >
                   Learn more
                 </button>
@@ -79,11 +74,14 @@ const Home = () => {
             className="row"
             
           >
-            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6">
-                <img
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{display: "flex",
+justifyContent: "center",
+alignItems: "center"}}>
+              <div className="about-image"></div>
+                {/* <img
                 src={thamigirl}
                 style={{ width: "100%", height: "100%" }}
-               ></img>
+               ></img> */}
               
              
             </div>
@@ -117,6 +115,8 @@ const Home = () => {
               </p>
               <button
                               className="buttonNormal"
+                              onClick={()=>history.push('/about/our-story')}
+
 
               >
                 Read More
@@ -192,6 +192,8 @@ const Home = () => {
               </p>
               <button
                                className="buttonReverse"
+                               onClick={()=>history.push('/event/news')}
+
 
               >
                 Learn More
@@ -207,18 +209,10 @@ const Home = () => {
                     height: "150px",
                   }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="85"
-                    height="85"
-                    fill="#f6b745"
-                    class="bi bi-newspaper"
-                    viewBox="0 0 16 16"
-                    style={{ marginTop: "2rem" }}
-                  >
-                    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
-                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
-                  </svg>
+                    <FontAwesomeIcon icon={faBookmark} style={{color: "#f6b745",
+height: "100%",
+width: "49%"}} />
+
                 </div>
               </div>
               <h3
@@ -227,7 +221,7 @@ const Home = () => {
                  
                 }}
               >
-                News
+                Blogs
               </h3>
               <p  style={{
                  fontSize:"18px",    marginBottom:"50px"
@@ -238,6 +232,8 @@ const Home = () => {
               </p>
               <button
                                className="buttonReverse"
+                               onClick={()=>history.push('/event/blogs')}
+
 
               >
                 Learn More
@@ -253,18 +249,9 @@ const Home = () => {
                     height: "150px",
                   }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="85"
-                    height="85"
-                    fill="#f6b745"
-                    class="bi bi-newspaper"
-                    viewBox="0 0 16 16"
-                    style={{ marginTop: "2rem" }}
-                  >
-                    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
-                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
-                  </svg>
+                  <FontAwesomeIcon icon={faScroll} style={{color: "#f6b745",
+height: "100%",
+width: "49%"}} />
                 </div>
               </div>
               <h3
@@ -273,7 +260,7 @@ const Home = () => {
                  
                 }}
               >
-                News
+                Our Articles
               </h3>
               <p  style={{
                  fontSize:"18px",    marginBottom:"50px"
@@ -284,6 +271,8 @@ const Home = () => {
               </p>
               <button
                className="buttonReverse"
+               onClick={()=>history.push('/event/our-articles')}
+
               >
                 Learn More
               </button>
@@ -310,13 +299,15 @@ const Home = () => {
             <button
               type="button"
               className="buttonNormal"
+              onClick={()=>history.push('/publication')}
+
 
             >
               Read More
             </button>
           </div>
-          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{matginTop:"30px"}}>
-            <img src={bookcover} style={{ width: "100%", height: "100%" }} />
+          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}}>
+            <img src={bookcover} style={{ width: "100%", height: "400px" }} />
           </div>
         </div>
       </Container>
@@ -328,12 +319,13 @@ const Home = () => {
               className="col-md-12 col-sm-12 col-xs-12 col-lg-8"
             >
               <div className="row">
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{padding: "0 10px 0 0"}} >
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{padding: "0px 10px 0px 10px",
+marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "600px", border: "none" }}
+                    style={{ height: "485px", border: "none" }}
                   >
-                    <img src={sponsor} style={{ height: "275px" }} />
+                    <img src={sponsor} style={{ height: "200px" }} />
                     <div class="card-body">
                       <h3
                         class="card-title d-flex "
@@ -351,19 +343,22 @@ const Home = () => {
                       <button
                 type="button"
                 className="buttonReverse"
+                onClick={()=>history.push('/getinvolved/donate-us')}
+
               >
                Sponsor Us
               </button>                    </div>
                   </div>
                 </div>
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{padding: "0 10px 0 0"}}>
+                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{padding: "0px 10px 0px 10px",
+marginBottom: "30px"}}>
                   <div
                     class="card"
                     style={{
-                      border: "none", height: "600px"
+                      border: "none", height: "485px"
                     }}
                   >
-                    <img src={support} style={{ height: "275px" }} />
+                    <img src={support} style={{ height: "200px" }} />
                     <div class="card-body" style={{textAlign:"left"}}>
                       <h3
                         class="card-title d-flex"
@@ -382,6 +377,8 @@ const Home = () => {
                       <button
                 type="button"
                 className="buttonReverse"
+                onClick={()=>history.push('/supportcommunity')}
+
               >
                Support Us
               </button>
@@ -393,7 +390,7 @@ const Home = () => {
 
             <div
               className="col-md-12 col-sm-12 col-xs-12 col-lg-4"
-              style={{  marginTop:"50px", padding:"0px"}}
+              style={{  marginTop:"50px", padding:"0 10px"}}
             >
               <h3
                 style={{
@@ -405,7 +402,7 @@ const Home = () => {
               </h3>
               <h2 className="middleTitle"
 >
-                An open <br />
+                An open
                 community
               </h2>
               <p
@@ -422,6 +419,8 @@ const Home = () => {
               <button
                 type="button"
                 className="buttonReverse"
+                onClick={()=>history.push('/getinvolved/membership')}
+
               >
                 Be a Member
               </button>

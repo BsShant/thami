@@ -106,7 +106,10 @@ border: none;
     display: none;
 }
 @media screen and (max-width: 992px) {
-
+body{
+    width: 100vw!important;
+    overflow-x: hidden!important;
+}
   .ant-menu-submenu-popup {
         position: absolute;
         z-index: 1050;

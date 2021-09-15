@@ -6,41 +6,47 @@ import farm from "../assests/farm.jpeg";
 import poultry4 from "../assests/poultry4.jpg";
 import bakery from "../assests/bakery.jpg";
 import airplane_2 from "../assests/airplane_2.jpg";
+import "../Pages/style.css";
+
 
 const SupportCommunity = () => {
   return (
     <React.Fragment>
       <div>
-        <div>
+      <div className="supportUsBanner">
+<Container>
+<div className="headerinfo col-md-12 col-sm-12">
+                <h2
+                  style={{ fontWeight: "bold", color:"white" }}
+                >
+ Call for support     </h2>
+
+               
+              </div>    
+              </Container>
+              </div> 
+              <div style={{ }}>
+        <div className="text-center" style={{ padding: "50px" }}>
+          <h3 style={{color:"#f6b745"}}>Support a community</h3>
+        </div>
           <Container>
-            <div className="row container-fluid min-vh-100">
-              <h3
-                style={{
-                  textAlign: "center",
-                  color: "#f6b745",
-                  fontFamily: "sans-serif",
-                  fontStyle: "bold",
-                  marginTop: "70px",
-                }}
-              >
-                Support a Community{" "}
-              </h3>
-              <div className="col-6" style={{}}>
+              
+            <div className="row section">
+
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom:"30px"}}>
                 <img
                   src={retailstore}
-                  style={{ width: "580px", height: "400px" }}
+                  style={{ width: "100%", height: "400px" }}
                 />
               </div>
 
-              <div className="col-6" style={{ fontFamily: "sans-serif" }}>
-                <p style={{ fontSize: "55px", fontWeight: "bold" }}>
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{marginTop:"30px"}}>
+                <h2 style={{ fontWeight: "bold" }}>
                   1. Retail Shop
-                </p>
+                </h2>
                 <p
                   style={{
-                    fontSize: "20px",
-                    fontFamily: "sans-serif",
-                    fontWeight: "bold",
+                    
                     marginBottom: "40px",
                   }}
                 >
@@ -49,9 +55,9 @@ const SupportCommunity = () => {
                   the activities involved in selling of goods or services
                   directly to final consumer for personal, non-business use
                 </p>
-                <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+                <h3 style={{ fontWeight: "bold" }}>
                   Name : Ram Thami
-                </h2>
+                </h3>
                 <p style={{ fontSize: "30px" }}>
                   Koteshwor, Kathmandu, Nepal <br /> +977 9812345678
                 </p>
@@ -62,20 +68,19 @@ const SupportCommunity = () => {
 
         <div style={{ backgroundColor: "#f6b745" }}>
           <Container>
-            <div className="row container-fluid min-vh-100">
+            <div className="row section">
               <div
-                className="col-6"
-                style={{ fontFamily: "sans-serif", marginTop: "125px" }}
+                className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                style={{ margin: "30px 0" }}
               >
-                <p style={{ fontSize: "55px", fontWeight: "bold" }}>
+                <h2 style={{  fontWeight: "bold" }}>
                   2. Agriculture Farm
-                </p>
+                </h2>
                 <p
                   style={{
-                    fontSize: "20px",
-                    fontFamily: "sans-serif",
+                    
                     fontWeight: "bold",
-                    marginBottom: "50px",
+                    marginBottom: "30px",
                   }}
                 >
                   A farm (also called an agricultural holding) is an area of
@@ -83,21 +88,21 @@ const SupportCommunity = () => {
                   the primary objective of producing food and other crops; it is
                   the basic facility in food production.
                 </p>
-                <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+                <h3 style={{  fontWeight: "bold" }}>
                   Name : Ram Thami
-                </h2>
-                <p style={{ fontSize: "30px" }}>
+                </h3>
+                <p style={{ }}>
                   Koteshwor, Kathmandu, Nepal <br /> +977 9812345678
                 </p>
               </div>
 
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img
                   src={farm}
                   style={{
-                    width: "630px",
+                    width: "100%",
                     height: "430px",
-                    marginTop: "125px",
+                   
                   }}
                 />
               </div>
@@ -107,26 +112,24 @@ const SupportCommunity = () => {
 
         <div>
           <Container>
-            <div className="row container-fluid min-vh-100">
-              <div className="col-6" style={{ marginTop: "125px" }}>
+            <div className="row section">
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: "30px" }}>
                 <img
                   src={poultry4}
-                  style={{ width: "580px", height: "400px" }}
+                  style={{ width: "100%", height: "400px" }}
                 />
               </div>
 
               <div
-                className="col-6"
-                style={{ fontFamily: "sans-serif", marginTop: "125px" }}
+                className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                style={{ marginTop: "30px" }}
               >
-                <p style={{ fontSize: "55px", fontWeight: "bold" }}>
+                <h2 style={{ fontWeight: "bold" }}>
                   3. Poultry Farm
-                </p>
+                </h2>
                 <p
                   style={{
-                    fontSize: "20px",
-                    fontFamily: "sans-serif",
-                    fontWeight: "bold",
+                    
                     marginBottom: "40px",
                   }}
                 >
@@ -136,10 +139,10 @@ const SupportCommunity = () => {
                   importance, while guinea fowl and squabs (young pigeons) are
                   chiefly of local interest.
                 </p>
-                <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+                <h3 style={{  fontWeight: "bold" }}>
                   Name : Ram Thami
-                </h2>
-                <p style={{ fontSize: "30px" }}>
+                </h3>
+                <p style={{ }}>
                   Koteshwor, Kathmandu, Nepal <br /> +977 9812345678
                 </p>
               </div>
@@ -149,19 +152,17 @@ const SupportCommunity = () => {
 
         <div style={{ backgroundColor: "#f6b745" }}>
           <Container>
-            <div className="row container-fluid min-vh-100">
+            <div className="row section">
               <div
-                className="col-6"
-                style={{ fontFamily: "sans-serif", marginTop: "125px" }}
+                className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                style={{ margin: "30px 0" }}
               >
-                <p style={{ fontSize: "55px", fontWeight: "bold" }}>
+                <h2 style={{ fontSize: "55px", fontWeight: "bold" }}>
                   4. Bakery Shop
-                </p>
+                </h2>
                 <p
                   style={{
-                    fontSize: "20px",
-                    fontFamily: "sans-serif",
-                    fontWeight: "bold",
+                   
                     marginBottom: "50px",
                   }}
                 >
@@ -171,21 +172,20 @@ const SupportCommunity = () => {
                   sweet goods (doughnuts, Danish, sweet rolls, cinnamon rolls
                   and coffee cake) and tortillas.
                 </p>
-                <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+                <h3 style={{  fontWeight: "bold" }}>
                   Name : Ram Thami
-                </h2>
+                </h3>
                 <p style={{ fontSize: "30px" }}>
                   Koteshwor, Kathmandu, Nepal <br /> +977 9812345678
                 </p>
               </div>
 
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img
                   src={bakery}
                   style={{
-                    width: "630px",
+                    width: "100%",
                     height: "430px",
-                    marginTop: "125px",
                   }}
                 />
               </div>
@@ -195,26 +195,24 @@ const SupportCommunity = () => {
 
         <div>
           <Container>
-            <div className="row container-fluid min-vh-100">
-              <div className="col-6" style={{ marginTop: "125px" }}>
+            <div className="row section">
+              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{ marginBottom: "30px" }}>
                 <img
                   src={airplane_2}
-                  style={{ width: "570px", height: "450px" }}
+                  style={{ width: "100%", height: "450px" }}
                 />
               </div>
 
               <div
-                className="col-6"
-                style={{ fontFamily: "sans-serif", marginTop: "125px" }}
+                className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                style={{ marginTop: "30px" }}
               >
-                <p style={{ fontSize: "55px", fontWeight: "bold" }}>
+                <h2 style={{ fontWeight: "bold" }}>
                   5. Travel Agency
-                </p>
+                </h2>
                 <p
                   style={{
-                    fontSize: "20px",
-                    fontFamily: "sans-serif",
-                    fontWeight: "bold",
+                    
                     marginBottom: "40px",
                   }}
                 >
@@ -224,10 +222,10 @@ const SupportCommunity = () => {
                   destination, modes of transportations, travel dates, costs and
                   accommodations.
                 </p>
-                <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+                <h3 style={{ fontWeight: "bold" }}>
                   Name : Ram Thami
-                </h2>
-                <p style={{ fontSize: "30px" }}>
+                </h3>
+                <p style={{}}>
                   Koteshwor, Kathmandu, Nepal <br /> +977 9812345678
                 </p>
               </div>

@@ -3,8 +3,17 @@ import { Container } from "react-bootstrap";
 import card3image from "../assests/card3image.jpg";
 import { Link } from "react-router-dom";
 import "../Pages/style.css";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 const Card3 = () => {
+  let history = useHistory();
+
   return (
     <React.Fragment>
       <div>
@@ -20,14 +29,14 @@ const Card3 = () => {
                   marginTop:"50px", color:"#f6b745"
                 }}
               >
-                Be a Member
+                Support us
               </h3>
               <h2
                 className="middleTitle"
                 style={{
                 }}
               >
-                Join the Build on Movement
+                Support the community 
               </h2>
               <p
               className="paragraph"
@@ -42,9 +51,9 @@ const Card3 = () => {
                 never miss a chance to make difference.
               </p>
               <button
-                className="buttonNormal"
+                className="buttonNormal" onClick={()=>history.push("/SupportCommunity")}
               >
-                Join Now
+               Support us
               </button>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">

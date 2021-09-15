@@ -40,6 +40,7 @@ useEffect(() => {
 
   window.addEventListener('scroll', scrollFunction);
 }, []);
+console.log(window.pageYOffset)
 const scrollFunction = ()=>{
   handleScroll(window.pageYOffset)
   console.log(scroll)
@@ -56,9 +57,11 @@ const showDrawer = () => {
 
   return (
     <div>
-      <div style={{position: "fixed", visibility:`${scroll> 400? "visible":"hidden"}`,
-    width: "100%", zIndex:"100", top:"0", left:"0",
+      <div style={{position: "fixed", visibility:`${scroll> 683? "visible":"hidden"}`, height:`${scroll> 683? "85px":"0px"}`, transition:"all 500ms ease",
+    width: "100vw", overflowX:"hidden", zIndex:"100", top:"0", left:"0",
     background: "rgba(0, 0, 0,1)", padding:"8px 8px 8px"}}>
+              <Container>
+
     <Row  >
       <Col span={8} onClick={()=>history.push('/')} style={{cursor:"pointer", display:"flex", alignItems:"center"}}>
       <img src={Logo} style={{ height: "80px", width: "80px" }}></img>
@@ -82,13 +85,16 @@ const showDrawer = () => {
     <Menu.Item key="Our Articles" onClick={()=>history.push('/event/our-articles')}>Our Articles</Menu.Item>
 
 </SubMenu>
-      <Menu.Item key="Publication" onClick={()=>history.push('/Publication')}>
-       Publication
-      </Menu.Item>
+<SubMenu key="Publication"  title="Publication">
+      <Menu.Item key="Our Books" onClick={()=>history.push('/publication/our-books')}>Our Books</Menu.Item>
+    <Menu.Item key="Our Resources" onClick={()=>history.push('/publication/our-resources')}>Our Resources</Menu.Item>
+
+</SubMenu>
+      
       <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
       Get Involved
       </Menu.Item>
-      <Menu.Item key="Contact Us" onClick={()=>history.push('/')}>
+      <Menu.Item key="Contact Us" onClick={()=>history.push('/contact-us')}>
      Contact Us
       </Menu.Item>
       
@@ -114,7 +120,7 @@ const showDrawer = () => {
         Home
       </Menu.Item>
       <SubMenu key="About Us"  title="About us">
-      <Menu.Item key="Our Story" onClick={()=>{history.push('/about/out-story')
+      <Menu.Item key="Our Story" onClick={()=>{history.push('/about/our-story')
         return handleVisible(false)
       }}>Our Story</Menu.Item>
     <Menu.Item key="Vision&Mission" onClick={()=>{history.push('/about/vision-and-mission')
@@ -141,17 +147,22 @@ const showDrawer = () => {
     }}>Our Articles</Menu.Item>
 
 </SubMenu>
-      <Menu.Item key="Publication" nClick={()=>{history.push('/publication')
-      return handleVisible(false)
-    }}>
-       Publication
-      </Menu.Item>
+<SubMenu key="Publication"  title="Publication">
+      <Menu.Item key="Our Books" onClick={()=>{history.push('/publication/our-books')
+        return handleVisible(false)
+      }}>Our Books</Menu.Item>
+    <Menu.Item key="Our Resources" onClick={()=>{history.push('/publication/our-resources')
+        return handleVisible(false)
+      }}>Our Resources</Menu.Item>
+
+</SubMenu>
+     
       <Menu.Item key="Get Involved" onClick={()=>{history.push('/getInvolved')
       return handleVisible(false)
     }}>
       Get Involved
       </Menu.Item>
-      <Menu.Item key="Contact Us" onClick={()=>{history.push('/')
+      <Menu.Item key="Contact Us" onClick={()=>{history.push('/contact-us')
       return handleVisible(false)
     }}>
      Contact Us
@@ -164,6 +175,8 @@ const showDrawer = () => {
 </Col>
 
       </Row>
+      </Container>
+
    
 {/* <Navbar
 className="navbar-overlay"
@@ -299,13 +312,16 @@ style={{ float: "left", width: "100%" }}
       <Menu.Item key="Our Articles" onClick={()=>history.push('/event/our-articles')}>Our Articles</Menu.Item>
 
   </SubMenu>
-        <Menu.Item key="Publication" onClick={()=>history.push('/Publication')}>
-         Publication
-        </Menu.Item>
+  <SubMenu key="Publication"  title="Publication">
+      <Menu.Item key="Our Books" onClick={()=>history.push('/publication/our-books')}>Our Books</Menu.Item>
+    <Menu.Item key="Our Resources" onClick={()=>history.push('/publication/our-resources')}>Our Resources</Menu.Item>
+
+</SubMenu>
+        
         <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
         Get Involved
         </Menu.Item>
-        <Menu.Item key="Contact Us" onClick={()=>history.push('/')}>
+        <Menu.Item key="Contact Us" onClick={()=>history.push('/contact-us')}>
        Contact Us
         </Menu.Item>
         
@@ -313,7 +329,7 @@ style={{ float: "left", width: "100%" }}
   </Menu>
   <div className="mobileVisible">
   <Button type="primary drawerButton" onClick={showDrawer}>
-  {React.createElement(visible ? MenuUnfoldOutlined : MenuFoldOutlined)}
+  <FontAwesomeIcon icon={faBars} />
 
           </Button>
   <Drawer
@@ -331,7 +347,7 @@ style={{ float: "left", width: "100%" }}
         Home
       </Menu.Item>
       <SubMenu key="About Us"  title="About us">
-      <Menu.Item key="Our Story" onClick={()=>{history.push('/about/out-story')
+      <Menu.Item key="Our Story" onClick={()=>{history.push('/about/our-story')
         return handleVisible(false)
       }}>Our Story</Menu.Item>
     <Menu.Item key="Vision&Mission" onClick={()=>{history.push('/about/vision-and-mission')
@@ -358,17 +374,22 @@ style={{ float: "left", width: "100%" }}
     }}>Our Articles</Menu.Item>
 
 </SubMenu>
-      <Menu.Item key="Publication" onClick={()=>{history.push('/publication')
-      return handleVisible(false)
-    }}>
-       Publication
-      </Menu.Item>
+<SubMenu key="Publication"  title="Publication">
+      <Menu.Item key="Our Books" onClick={()=>{history.push('/publication/our-books')
+        return handleVisible(false)
+      }}>Our Books</Menu.Item>
+    <Menu.Item key="Our Resources" onClick={()=>{history.push('/publication/our-resources')
+        return handleVisible(false)
+      }}>Our Resources</Menu.Item>
+
+</SubMenu>
+    
       <Menu.Item key="Get Involved" onClick={()=>{history.push('/getInvolved')
       return handleVisible(false)
     }}>
       Get Involved
       </Menu.Item>
-      <Menu.Item key="Contact Us" onClick={()=>{history.push('/')
+      <Menu.Item key="Contact Us" onClick={()=>{history.push('/contact-us')
       return handleVisible(false)
     }}>
      Contact Us

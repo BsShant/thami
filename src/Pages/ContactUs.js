@@ -3,7 +3,7 @@ import style from "../Pages/style.css";
 import { Container, Form } from "react-bootstrap";
 const ContactUs = () => {
   return (
-    <div style={{  margin:"0px 0px", paddingBottom:"40px"}} className="section contactImage">
+    <div style={{  margin:"0px 0px", paddingBottom:"40px", minHeight:"auto"}} className=" section contactImage">
       <Container>
       <div
         id="contact"
@@ -60,10 +60,7 @@ const ContactUs = () => {
        
       </div>
       </Container>
-      <hr
-          className="col-md-12 mx-auto mb-5"
-          style={{ marginTop: "70px", background: "#FFFFFF" }}
-        ></hr>
+     
     </div>
   );
 };

@@ -6,15 +6,26 @@ import facebook from "../assests/facebook.png";
 import youtube from "../assests/youtube.png";
 import twitter from "../assests/twitter.png";
 import instagram from "../assests/instagram.png";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 const Footer = () => {
+  let history = useHistory();
+
   return (
     <React.Fragment>
       <footer
         id="footer"
         className="footer-1 section"
-        style={{ backgroundColor: "black", margin:"0px 0px" }}
+        style={{ backgroundColor: "black", margin:"0px 0px", paddingBottom:"0", minHeight:"auto" }}
       >
-        <div className="main-footer widgets-dark typo-light ">
+        <div className="main-footer widgets-dark typo-light" >
           <div className="container">
             <div
               className="row"
@@ -195,6 +206,8 @@ const Footer = () => {
                   <button
                     type="button"
                    className="buttonNormal"
+                   onClick={()=>history.push('/getinvolved/membership')}
+
                   >
                     Be a Member
                   </button>
@@ -208,16 +221,15 @@ const Footer = () => {
             </div>
 
           </div>
-          <hr class="col-md-12 mx-auto mb-5" style={{padding: "0.01rem", background: "rgb(255, 255, 255) none repeat scroll 0% 0%"}}/>
 
         </div>
-        <div className="footer-copyright" style={{ color: "white" }}>
+        <div className="footer-copyright" style={{ color: "white", borderTop:"1px solid white", marginTop:"-100px",  padding: "20px 0 0"}}>
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
                 <p>
-                  Copyright © 2021 all rights reserved | this website is made by
-                  LOGIN
+                  Copyright © 2021 all rights reserved | this website is made by <br />
+                  LOGIN Corporation
                 </p>
               </div>
             </div>

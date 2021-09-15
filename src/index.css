@@ -1,16 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 * {
   margin: 0;
 font-family: 'Andika', sans-serif!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body{
-  overflow-x: hidden;
-width: 100vw!important;
+html{
+  width: 100vw !important;
+  /* overflow-x: hidden!important; */
 }
 
+body{
+  overflow-x: hidden!important;
+width: 100vw!important;
+}
+/* @media screen and (max-width: 992px) {
+  body{
+    overflow-x: hidden!important;
+  width: 100vw!important;
+  }
+}
+@media screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden!important;
+  width: 100vw!important;
+  }
+} */
+#root{
+  width: 100vw;
+overflow-x: hidden;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas,
     sans-serif "Courier New", monospace;

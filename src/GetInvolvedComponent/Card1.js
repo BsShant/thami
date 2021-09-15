@@ -1,10 +1,21 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import card1image from "../assests/card1image.jpg";
+import card1image from "../assests/fourthimg.jpeg";
 import "../Pages/style.css";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 const Card1 = () => {
+  const history = useHistory();
+
   return (
+
     <React.Fragment>
       <div>
         <Container>
@@ -12,7 +23,7 @@ const Card1 = () => {
             className="row section"
             
           >
-            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12"style={{margin:"30px 0"}}>
+            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12"style={{margin:"50px 0"}}>
               <h3 className="topTitle"
                 style={{
                   fontWeight: "bold",
@@ -43,6 +54,7 @@ const Card1 = () => {
               </p>
               <button
               className="buttonNormal"
+onClick={()=>history.push('/getinvolved/membership')}
                 
               >
                 Join Now

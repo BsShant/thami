@@ -11,7 +11,7 @@ const Card2 = () => {
         <Container>
           <div className="row section">
             <div
-              className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{margin:"30px 0"}}
+              className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{margin:"0 0 30px 0"}}
               
             >
               <img
@@ -57,7 +57,7 @@ const Card2 = () => {
               </p>
               
                 <Link
-                  to="/supportcommunity"
+                  to="/getinvolved/donate-us"
                   className="buttonReverse"
 
                   style={{
@@ -71,7 +71,7 @@ const Card2 = () => {
                     // paddingRight: "45px",
                   }}
                 >
-                  Get Statered
+                  Sponser Us
                 </Link>
             </div>
           </div>
