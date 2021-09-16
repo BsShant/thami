@@ -28,6 +28,8 @@ import PressRelease from "./Pages/pressRelease/pressRelease";
 import NewsPost from "./Pages/news post/ResourcePreview";
 import BlogPost from "./Pages/blogPost/ResourcePreview";
 import ArticlePost from "./Pages/articlePost/ResourcePreview";
+import OurPartners from "./Pages/ourPartners/ourPartners";
+
 
 
 
@@ -80,6 +82,8 @@ function App() {
           <Route path="/about/vision-and-mission" component={VisionAndMission} />
           <Route path="/about/our-team" component={OurTeam} />
           <Route path="/about/our-gallery" component={OurGallery} />
+          <Route path="/about/our-partners" component={OurPartners} />
+
           <Route path="/getinvolved/donate-us" component={DonateUs} />
           <Route path="/getinvolved/membership" component={Membership} />
           <Route path="/publication/our-books" component={Books} />

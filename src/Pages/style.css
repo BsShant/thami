@@ -34,10 +34,10 @@
 .buttonNormal{
   background: rgb(246, 183, 69) none repeat scroll 0% 0%;
 border: medium none;
-padding: 15px 30px;
+padding: 10px 15px;
 color:black;
 font-weight: bold;
-font-size: 18px;
+font-size: 16px;
 cursor: pointer;
 border: 1px rgb(246, 183, 69) solid;
 }
@@ -50,10 +50,10 @@ border: 1px rgb(246, 183, 69) solid;
   color: rgb(246, 183, 69);
 border: medium none;
 border: 1px black solid;
-padding: 15px 30px;
+padding: 10px 15px;
 cursor: pointer;
 font-weight: bold;
-font-size: 18px;
+font-size: 16px;
 }
 .buttonReverse:hover{
   color:black;
@@ -97,6 +97,10 @@ font-size: 18px;
   .articleExerpt{
     margin-top: 30px!important;
   }
+  /* .ant-modal{
+    width: auto!important;
+    padding: 0 20px;
+  } */
   .headerinfo {
     
   }
@@ -109,6 +113,9 @@ font-size: 18px;
     margin-bottom: 50px!important;
     
     
+  } */
+  /* .ant-modal{
+    width: auto!important;
   } */
   .h1tag {
     background: #f6b745;
@@ -130,8 +137,16 @@ font-size: 18px;
   .headerinfo {
     text-align: center;
     padding-top: 60px;
+    /* .ant-modal{
+      width: auto!important;
+    } */
 
     
+    
+  }
+  .ant-modal{
+    width: auto!important;
+    padding: 0 4px;
   }
   .social-footer2{
     text-align: center;
@@ -188,6 +203,8 @@ font-size: 18px;
   top: 0;
   left: 0;
 }
+
+
 .bookWriter{
   margin-top: -5px;
   font-size: 16px !important;
@@ -317,6 +334,27 @@ padding: 20px;
   padding: 30px 0px;
 }
 .blogBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* our partners */
+.ourPartnersBanner{
+  background-image: url("../assests/sponsor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.ourPartnersBanner::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -662,7 +700,6 @@ padding: 10px;
 cursor: pointer;
 font-weight: bold;
 font-size: 14px;
-margin-bottom: 50px;
 
 }
 
@@ -670,10 +707,23 @@ margin-bottom: 50px;
   padding: 10px;
   color:black;
   background:rgb(246, 183, 69);
-margin-bottom: 50px;
 }
 
-
+.newsContainerImage{
+  /* display: flex;
+justify-content: center;
+align-items: center; */
+background: white;
+/* height: 100%; */
+height: 200px;
+width: 90%;
+padding: 20px;
+}
+.newsContainerImage img{
+  /* height: 80%; width: 80%;  padding: 15px; */
+  height: 160px;
+width: 80%;
+}
 
 /* form */
 .inputContainer{
@@ -831,8 +881,8 @@ border: 1px rgb(246, 183, 69) solid;
 }
 
 .videoButton{
-  height: 100px;
-width: 100px;
+  height: 50px;
+width: 50px;
 position: absolute;
 background: #f6b745;
 border-radius: 50%;
@@ -844,6 +894,7 @@ left: 50%;
 transform: translate(-50%,-50%);
 z-index: 2;
 opacity: 0.8;
+cursor: pointer;
 }
 
 .ant-modal{
@@ -858,4 +909,70 @@ opacity: 0.8;
   background-size: cover;
   height: 400px;
 width: 100%;
+}
+
+.gridBox{
+  width: "100%";
+  height: 190px;
+  border: 1px solid black;
+  position: relative;
+  background-position: center center !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;
+}
+
+.flatBox{
+  background-image: url("../assests/secondimage.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 380px;
+  border: 1px solid black;
+  position: relative;
+ 
+}
+
+.massiveBox{
+background-image: url("../assests/thirdimage.JPG");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 760px;
+  width: 100%;
+  border: 1px solid black;
+
+  
+}
+
+.lastBox{
+  background-image: url("../assests/video.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 190px;
+    width: 100%;
+    border: 1px solid black;
+
+    
+  }
+
+  .videoDescription{
+    position: absolute;
+background: rgba(0,0,0,0.6);
+color: white !important;
+left: 0;
+bottom: 0;
+width: 100%;
+z-index: 10;
+cursor: pointer;
+visibility: hidden;
+  }
+  .videoDescription h3{
+    color: #f6b745!important;
+  }
+.show:hover .videoDescription{
+  visibility: visible;
 }

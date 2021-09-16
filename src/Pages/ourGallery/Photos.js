@@ -5,10 +5,30 @@ import thirdimage from "../../assests/thirdimage.JPG";
 import fourthimg from "../../assests/fourthimg.jpeg";
 import fifthimg from "../../assests/fifthimg.jpeg";
 import sixthimg from "../../assests/sixthimg.jpeg";
+import seventh from "../../assests/video.jpeg";
+
+import "../../Pages/style.css";
+
 const Photos = () => {
   return (
     <React.Fragment>
-      <div className="row">
+      <div className="row" style={{marginBottom:"50px"}}>
+        <div className="col-md-6">
+          <div className="row">
+            <div className="col-md-6 gridBox" style={{background:`url(${firstimage})`}}></div>
+            <div className="col-md-6 gridBox" style={{background:`url(${fourthimg})`}}></div>
+            <div className="col-md-6 gridBox" style={{background:`url(${fifthimg})`}}></div>
+            <div className="col-md-6 gridBox" style={{background:`url(${sixthimg})`}}></div>
+            <div className="col-md-12 flatBox"></div>
+
+          </div>
+        </div>
+        <div className="col-md-6 massiveBox"></div>
+        <div className="col-md-12 lastBox"></div>
+
+
+      </div>
+      {/* <div className="row">
         <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
           <img
             src={firstimage}
@@ -50,7 +70,7 @@ const Photos = () => {
             alt=""
           />
         </div>
-      </div>
+      </div> */}
       <div className="row d-flex justify-content-center">
         <button
           style={{

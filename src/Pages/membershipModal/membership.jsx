@@ -25,7 +25,7 @@ const Membership = ()=>{
                     {/* name */}
                     <div className="row inputField">
                         <div className="col-md-4 col-sm-12 col-xs-12">
-                        <label for="firstName"><h3>First Name</h3> </label>
+                        <label for="firstName"><h3>Name</h3> </label>
 
                         </div>
                         <div className="col-md-8 col-sm-12 col-xs-12 inputBox">

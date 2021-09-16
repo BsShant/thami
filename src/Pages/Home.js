@@ -24,7 +24,7 @@ import support from "../assests/support.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { Container, Button } from "react-bootstrap";
-
+import ContactUs from "./ContactUs";
 const Home = () => {
   let history = useHistory();
 useEffect(()=>{
@@ -360,7 +360,7 @@ marginBottom: "30px"}} >
                       >
                         Sponsor our events
                       </h3>
-                      <p class="card-text">
+                      <p class="card-text" style={{marginBottom:"25px"}}>
                         Sponsors commit to providing financial, emotional and
                         resettlement suppot to help the community.
                       </p>
@@ -391,7 +391,7 @@ marginBottom: "30px"}} >
                       >
                          Get Involved
                       </h3>
-                      <p class="card-text">
+                      <p class="card-text" style={{marginBottom:"25px"}}>
                       Several of our sites were originally started by volunteers. Over
                 time, they have become Core .
                       </p>
@@ -425,7 +425,7 @@ marginBottom: "30px"}}>
                       >
                         Support our community
                       </h3>
-                      <p class="card-text">
+                      <p class="card-text" style={{marginBottom:"25px"}}>
                         Support for community organisat ions. We can help you
                         deliver the services people in our community.
                       </p>
@@ -481,6 +481,7 @@ Learn More              </button>
           </div>
         </Container>
       </div>
+      {/* <ContactUs /> */}
       <GoToTop />
     </React.Fragment>
   );

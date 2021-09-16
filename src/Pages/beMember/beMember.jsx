@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import "../../Pages/style.css";
 import { Container } from "react-bootstrap";
 import thamigirls from "../../assests/thamigirls.jpg";
@@ -21,8 +21,18 @@ import {
 } from "react-router-dom";
 import Membership from '../membership/membership';
 const BeMember=()=>{
+
+  const [viewport, handleViewport] = useState()
     const history = useHistory();
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const changeViewport = ()=>{
+      const stringViewPort = window.innerWidth.toString()
+      handleViewport(stringViewPort)
+    
+    }
+useEffect(()=>{
+  // window.addEventListener('resize', changeViewport)
+},[])
 
     const showModal = () => {
       setIsModalVisible(true);
@@ -92,7 +102,7 @@ Why join our community?              </h2>
               >
                 Join Now
               </button>
-              <Modal title="" footer={null} header={null} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+              <Modal title="" width={"70%"} footer={null} header={null} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
        <MembershipForm />
       </Modal>
             </div>

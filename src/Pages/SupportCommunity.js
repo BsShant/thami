@@ -8,6 +8,13 @@ import bakery from "../assests/bakery.jpg";
 import airplane_2 from "../assests/airplane_2.jpg";
 import "../Pages/style.css";
 import GoTOTop from "./goToTop";
+import {
+  MDBPagination,
+  MDBPageItem,
+  MDBPageNav,
+  MDBCol,
+  MDBRow,
+} from "mdbreact";
 
 const SupportCommunity = () => {
   return (
@@ -233,56 +240,70 @@ const SupportCommunity = () => {
           </Container>
         </div>
 
-        <div className="pagination">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <ul className="pages">
-                  <li>
-                    <a href="/booklist" style={{ textDecoration: "none" }}>
-                      First
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/booklist" style={{ textDecoration: "none" }}>
-                      Previous
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/booklist" style={{ textDecoration: "none" }}>
-                      1
-                    </a>
-                  </li>
-                  <li className="#">
-                    <a href="#" style={{ textDecoration: "none" }}>
-                      2
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ textDecoration: "none" }}>
-                      3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ textDecoration: "none" }}>
-                      4
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/booklist" style={{ textDecoration: "none" }}>
-                      Next
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/booklist" style={{ textDecoration: "none" }}>
-                      Last
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <div className="d-flex justify-content-center mt-5">
+              <MDBRow>
+                <MDBCol>
+                  <MDBPagination className="mb-5">
+                    <MDBPageItem disabled>
+                      <MDBPageNav
+                        aria-label="Previous"
+                        className="ml-2 mr-2"
+                        style={{ background: "#000000", color: "#f6b745" }}
+                      >
+                        <span aria-hidden="true">Previous</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem active>
+                      <MDBPageNav
+                        style={{ background: "#ffffff", color: "#000000" }}
+                      >
+                        1 <span className="sr-only ">(current)</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem className="ml-2 mr-2">
+                      <MDBPageNav
+                        style={{ background: "#ffffff", color: "#000000" }}
+                      >
+                        2
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem className=" mr-2">
+                      <MDBPageNav
+                        style={{ background: "#ffffff", color: "#000000" }}
+                      >
+                        3
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem>
+                      <MDBPageNav
+                        aria-label="Previous"
+                        className=" mr-2"
+                        style={{ background: "#000000", color: "#f6b745" }}
+                      >
+                        <span aria-hidden="true">Next</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                  </MDBPagination>
+                </MDBCol>
+              </MDBRow>
+              {/* <Pagination>
+                <Pagination.First />
+                <Pagination.Prev />
+                <Pagination.Item active>{1}</Pagination.Item>
+                <Pagination.Ellipsis />
+
+                <Pagination.Item>{10}</Pagination.Item>
+                <Pagination.Item>{11}</Pagination.Item>
+                <Pagination.Item>{12}</Pagination.Item>
+                <Pagination.Item>{13}</Pagination.Item>
+                <Pagination.Item disabled>{14}</Pagination.Item>
+
+                <Pagination.Ellipsis />
+                <Pagination.Item>{20}</Pagination.Item>
+                <Pagination.Next />
+                <Pagination.Last />
+              </Pagination> */}
             </div>
-          </div>
-        </div>
       </div>
       <GoTOTop />
     </React.Fragment>

@@ -71,8 +71,7 @@ const SupportCommunity=()=>{
               <button
                 className="buttonNormal" onClick={()=>history.push("/SupportCommunity")}
               >
-               Learn More
-              </button>
+Support Us              </button>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <img src={card3image} style={{ height: "100%", width: "100%" }} />

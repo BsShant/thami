@@ -75,6 +75,7 @@ const showDrawer = () => {
       <Menu.Item key="Our Story" onClick={()=>history.push('/about/our-story')}>Our Story</Menu.Item>
     <Menu.Item key="Vision&Mission" onClick={()=>history.push('/about/vision-and-mission')}>Vision&Mission</Menu.Item>
     <Menu.Item key="Our Team" onClick={()=>history.push('/about/our-team')}>Our Team</Menu.Item>
+    <Menu.Item key="Our Partners" onClick={()=>history.push('/about/our-partners')}>Our Partners</Menu.Item>
     <Menu.Item key="Gallery" onClick={()=>history.push('/about/our-gallery')}>Gallery</Menu.Item>
 
 </SubMenu>
@@ -138,6 +139,9 @@ const showDrawer = () => {
     <Menu.Item key="Our Team" onClick={()=>{history.push('/about/our-team')
         return handleVisible(false)
       }}>Our Team</Menu.Item>
+      <Menu.Item key="Our Partners" onClick={()=>{history.push('/about/our-partners')
+        return handleVisible(false)
+      }}>Our Partners</Menu.Item>
     <Menu.Item key="Gallery" onClick={()=>{history.push('/about/our-gallery')
         return handleVisible(false)
       }}>Gallery</Menu.Item>
@@ -326,6 +330,8 @@ style={{ float: "left", width: "100%" }}
         <Menu.Item key="Our Story" onClick={()=>history.push('/about/our-story')}>Our Story</Menu.Item>
       <Menu.Item key="Vision&Mission" onClick={()=>history.push('/about/vision-and-mission')}>Vision&Mission</Menu.Item>
       <Menu.Item key="Our Team" onClick={()=>history.push('/about/our-team')}>Our Team</Menu.Item>
+      <Menu.Item key="Our Partners" onClick={()=>history.push('/about/our-partners')}>Our Partners</Menu.Item>
+
       <Menu.Item key="Gallery" onClick={()=>history.push('/about/our-gallery')}>Gallery</Menu.Item>
 
   </SubMenu>
@@ -389,6 +395,9 @@ style={{ float: "left", width: "100%" }}
     <Menu.Item key="Our Team" onClick={()=>{history.push('/about/our-team')
         return handleVisible(false)
       }}>Our Team</Menu.Item>
+      <Menu.Item key="Our Partners" onClick={()=>{history.push('/about/our-partners')
+        return handleVisible(false)
+      }}>Our Partners</Menu.Item>
     <Menu.Item key="Gallery" onClick={()=>{history.push('/about/our-gallery')
         return handleVisible(false)
       }}>Gallery</Menu.Item>
