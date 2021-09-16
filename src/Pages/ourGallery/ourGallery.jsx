@@ -16,6 +16,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Photos from "./Photos";
 import Video from "./Video";
+import GoToTop from '../goToTop';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -125,6 +126,7 @@ const Gallery=()=>{
           </div>
         </div>
       </Container>
+      <GoToTop />
               </div>)}
 
 

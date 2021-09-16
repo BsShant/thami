@@ -5,6 +5,7 @@ import Card2 from "../GetInvolvedComponent/Card2";
 import Card3 from "../GetInvolvedComponent/Card3";
 import Card4 from "../GetInvolvedComponent/Card4";
 import "../Pages/style.css";
+import GoTOTop from "./goToTop";
 
 const GetInvolved = () => {
   return (
@@ -14,6 +15,7 @@ const GetInvolved = () => {
       <Card2 />
       <Card3 />
       {/* <Card4 /> */}
+      <GoTOTop />
     </React.Fragment>
   );
 };

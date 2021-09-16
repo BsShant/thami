@@ -5,7 +5,7 @@ import thamigirls from "../../assests/thamigirls.jpg";
 import aboutcard3 from "../../assests/aboutcard3.jpg";
 import aboutcard4 from "../../assests/aboutcard4.jpg";
 import aboutcard5 from "../../assests/aboutcard5.jpg";
-
+import GoTOTop  from '../goToTop';
 
 const OurTeam=()=>{
 
@@ -70,6 +70,7 @@ const OurTeam=()=>{
           </Container>
         </div>
       </div>
+      <GoTOTop />
              </div>
     )}
     export default OurTeam;

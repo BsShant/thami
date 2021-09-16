@@ -11,6 +11,7 @@ import setodharti from "../../assests/setodharti.jpg";
 import karnalibluz from "../../assests/karnalibluz.jpg";
 import gulabiumer from "../../assests/gulabiumer.jpg";
 import { Pagination } from "react-bootstrap";
+import GoToTop from '../goToTop';
 
 import {
   MDBPagination,
@@ -357,6 +358,7 @@ const Books = ()=>{
           </Container>
         </div>
       </div>
+      <GoToTop />
               </div>
     )}
 

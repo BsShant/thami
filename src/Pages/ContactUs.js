@@ -18,32 +18,39 @@ const ContactUs = () => {
           className="container-sm"
           style={{ width:"80%"}}
         >
+          <div className="formPadding">
+            <label>Name</label>
           <input
             type="text"
             class="form-control"
             id="exapleName"
             aria-describedby="NameHelp"
-            placeholder="Enter a name"
-            style={{background:"rgba(255,255,255,0.5)",
+            style={{background:"rgba(255,255,255,0.4)",
               color: "black"}}
           ></input>
-          <input
+          </div>
+        <div className="formPadding">
+          <label>Email</label>
+        <input
             type="email"
             class="form-control mt-3"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
-            style={{background:"rgba(255,255,255,0.5)",
+            style={{background:"rgba(255,255,255,0.4)",
               color: "black"}}
           ></input>
-          <textarea
+        </div>
+         <div className="formPadding">
+           <label>Message</label>
+         <textarea
             class="form-control mt-3"
             id="exampleFormControlTextarea3"
             rows="7"
-            placeholder="Write your message here."
-            style={{background:"rgba(255,255,255,0.5)",
+            style={{background:"rgba(255,255,255,0.4)",
               color: "black"}}
           ></textarea>
+         </div>
+          
           <button
             className="mt-3 p-2"
             style={{

@@ -7,7 +7,7 @@ import poultry4 from "../assests/poultry4.jpg";
 import bakery from "../assests/bakery.jpg";
 import airplane_2 from "../assests/airplane_2.jpg";
 import "../Pages/style.css";
-
+import GoTOTop from "./goToTop";
 
 const SupportCommunity = () => {
   return (
@@ -284,6 +284,7 @@ const SupportCommunity = () => {
           </div>
         </div>
       </div>
+      <GoTOTop />
     </React.Fragment>
   );
 };

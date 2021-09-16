@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import thamigirls from "../../assests/thamigirls.jpg";
 import aboutcard3 from "../../assests/aboutcard3.jpg";
 import aboutcard4 from "../../assests/aboutcard4.jpg";
-
+import GoTOTop from '../goToTop';
 
 const VisionAndMission=()=>{
 
@@ -117,6 +117,7 @@ const VisionAndMission=()=>{
           </div>
         </Container>
       </div>
+      <GoTOTop />
               </div>
               )
               }

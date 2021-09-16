@@ -1,8 +1,8 @@
 import React from 'react';
 import "../../Pages/style.css";
 import { Container } from "react-bootstrap";
-import thamigirls from "../../assests/thamigirls.jpg";
-
+import thamigirls from "../../assests/video.jpeg";
+import GoTOTop from '../goToTop';
 const AboutUs=()=>{
 
     return(
@@ -89,6 +89,7 @@ s containing Lorem Ipsum passages, and more recently with desktop publishing sof
           </div>
         </Container>
       </div>
+      <GoTOTop />
         </div>
     )
 }

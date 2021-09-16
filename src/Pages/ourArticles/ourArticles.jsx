@@ -4,7 +4,14 @@ import news1 from "../../assests/news1.jpg";
 import penpaper from "../../assests/penpaper.jpg";
 import news2 from "../../assests/news2.jpg";
 import "../../Pages/style.css";
-
+import GoTOTop from '../goToTop';
+import {
+  MDBPagination,
+  MDBPageItem,
+  MDBPageNav,
+  MDBCol,
+  MDBRow,
+} from "mdbreact";
 const OurArticles = ()=>{
 
     return(
@@ -244,81 +251,56 @@ Latest Activities            </h2>
             </div>
           </div>
 
-          <div className="pagination">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <ul className="pages">
-                    <li>
-                      <a
-                        href="#"
-                        style={{
-                          width: "6rem",
-                          textDecoration: "none",
-                          backgroundColor: "black",
-                          color: "#f6b745",
-                        }}
+          <div className="d-flex justify-content-center mt-5">
+              <MDBRow>
+                <MDBCol>
+                  <MDBPagination className="mb-5">
+                    <MDBPageItem disabled>
+                      <MDBPageNav
+                        aria-label="Previous"
+                        className="ml-2 mr-2"
+                        style={{ background: "#000000", color: "#f6b745" }}
                       >
-                        Previous
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" style={{ textDecoration: "none" }}>
-                        1
-                      </a>
-                    </li>
-                    <li className="#">
-                      <a href="#" style={{ textDecoration: "none" }}>
+                        <span aria-hidden="true">Previous</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem active>
+                      <MDBPageNav
+                        style={{ background: "#f6b745", color: "#000000" }}
+                      >
+                        1 <span className="sr-only ">(current)</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem className="ml-2 mr-2">
+                      <MDBPageNav
+                        style={{ background: "#f6b745", color: "#000000" }}
+                      >
                         2
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" style={{ textDecoration: "none" }}>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem className=" mr-2">
+                      <MDBPageNav
+                        style={{ background: "#f6b745", color: "#000000" }}
+                      >
                         3
-                      </a>
-                    </li>
-                    <li>
-                      <b
-                        style={{
-                          textDecoration: "none",
-                          fontSize: "2rem",
-                          color: "#f6b745",
-                        }}
+                      </MDBPageNav>
+                    </MDBPageItem>
+                    <MDBPageItem>
+                      <MDBPageNav
+                        aria-label="Previous"
+                        className=" mr-2"
+                        style={{ background: "#000000", color: "#f6b745" }}
                       >
-                        {" "}
-                        . . .{" "}
-                      </b>
-                    </li>
-                    <li>
-                      <a href="#" style={{ textDecoration: "none" }}>
-                        9
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" style={{ textDecoration: "none" }}>
-                        10
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/booklist"
-                        style={{
-                          width: "6rem",
-                          textDecoration: "none",
-                          backgroundColor: "black",
-                          color: "#f6b745",
-                        }}
-                      >
-                        Next
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                        <span aria-hidden="true">Next</span>
+                      </MDBPageNav>
+                    </MDBPageItem>
+                  </MDBPagination>
+                </MDBCol>
+              </MDBRow>
               </div>
-            </div>
-          </div>
-        </div>
+              </div>
       </Container>
+      <GoTOTop />
         </div>
     )
 }

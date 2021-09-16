@@ -3,7 +3,7 @@ import "../../Pages/style.css";
 import { Container } from "react-bootstrap";
 import esewa from "../../assests/esewa_logo.png";
 import { Form, Input, Button } from 'antd';
-
+import GoToTop from '../goToTop';
 
 const Membership = ()=>{
 
@@ -170,6 +170,7 @@ const Membership = ()=>{
             </div>
         </Container>
     </div>
+    <GoToTop />
 </div>
     )
 }

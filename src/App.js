@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'antd/dist/antd.css';
-import React from "react";
+import React,{useEffect} from "react";
 import Home from "./Pages/Home";
 import About from "./Pages/AboutUs";
 import NavigationBar from "./HeaderCompenent/NavigationBar";
@@ -21,6 +21,10 @@ import Membership from "./Pages/membership/membership";
 import Books from "./Pages/books/books";
 import Resources from "./Pages/resources/resources";
 import ContactPage from "./Pages/contactUs/contactUs";
+import BeMember from "./Pages/beMember/beMember";
+import Support from "./Pages/supportCommunity/supportCommunity";
+import Sponser from "./Pages/sponser/sponser";
+import PressRelease from "./Pages/pressRelease/pressRelease";
 
 
 
@@ -32,9 +36,17 @@ import ContactPage from "./Pages/contactUs/contactUs";
 import ResourcePreview from "./Pages/ResourcePreview";
 
 // import Appcss from "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import Footer from "../src/Pages/Footer";
 function App() {
+  // // const routePath = useLocation()
+  // const scrollTop=()=>{
+  //   window.scrollTo(0,0)
+
+  // }
+  // useEffect(()=>{
+  //   scrollTop()
+  // },[0])
   return (
     <React.Fragment>
       
@@ -46,7 +58,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/publication" component={Publication} />
-          <Route exact path="/getinvolved" component={GetInvolved} />
+          <Route exact path="/getInvolved" component={GetInvolved} />
           <Route path="/resourcepreview" component={ResourcePreview} />
           <Route path="/supportcommunity" component={SupportCommunity} />
           <Route exact path="/event" component={Events} />
@@ -63,6 +75,13 @@ function App() {
           <Route path="/getinvolved/membership" component={Membership} />
           <Route path="/publication/our-books" component={Books} />
           <Route path="/publication/our-resources" component={Resources} />
+          <Route path="/publication/press-release" component={PressRelease} />
+          <Route path="/getInvolved/be-member" component={BeMember} />
+          <Route path="/getInvolved/support" component={Support} />
+          <Route path="/getInvolved/sponser" component={Sponser} />
+
+
+
 
 
 

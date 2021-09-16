@@ -7,7 +7,7 @@ import airpolution from "../../assests/airpolution.jpg";
 import gralcier from "../../assests/gralcier.jpg";
 import landpolutation from "../../assests/landpolutation.jpg";
 import { Link } from "react-router-dom";
-
+import GoTOTop from '../goToTop';
 import {
   MDBPagination,
   MDBPageItem,
@@ -289,6 +289,7 @@ const Resources = ()=>{
           </Container>
         </div>
       </div>
+      <GoTOTop />
               </div>
     )}
 

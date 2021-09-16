@@ -88,12 +88,21 @@ const showDrawer = () => {
 <SubMenu key="Publication"  title="Publication">
       <Menu.Item key="Our Books" onClick={()=>history.push('/publication/our-books')}>Our Books</Menu.Item>
     <Menu.Item key="Our Resources" onClick={()=>history.push('/publication/our-resources')}>Our Resources</Menu.Item>
+    <Menu.Item key="Press Release" onClick={()=>history.push('/publication/press-release')}>Press Release</Menu.Item>
 
 </SubMenu>
-      
-      <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
+<SubMenu key="Get Involved"  title="Get Involved">
+      <Menu.Item key="Be Member" onClick={()=>history.push('/getInvolved/be-member')
+      }>Be Member</Menu.Item>
+      <Menu.Item key="Support" onClick={()=>history.push('/getInvolved/support')
+        }>Support</Menu.Item>
+    <Menu.Item key="Sponser" onClick={()=>history.push('/getInvolved/sponser')
+       }>Sponser</Menu.Item>
+
+</SubMenu>
+      {/* <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
       Get Involved
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Item key="Contact Us" onClick={()=>history.push('/contact-us')}>
      Contact Us
       </Menu.Item>
@@ -154,14 +163,29 @@ const showDrawer = () => {
     <Menu.Item key="Our Resources" onClick={()=>{history.push('/publication/our-resources')
         return handleVisible(false)
       }}>Our Resources</Menu.Item>
+        <Menu.Item key="Press Release" onClick={()=>{history.push('/publication/press-release')
+        return handleVisible(false)
+      }}>Press Release</Menu.Item>
+
+</SubMenu>
+<SubMenu key="Get Involved"  title="Get Involved">
+      <Menu.Item key="Be Member" onClick={()=>{history.push('/getInvolved/be-member')
+        return handleVisible(false)
+      }}>Be Member</Menu.Item>
+      <Menu.Item key="Support" onClick={()=>{history.push('/getInvolved/support')
+        return handleVisible(false)
+      }}>Support</Menu.Item>
+    <Menu.Item key="Sponser" onClick={()=>{history.push('/getInvolved/sponser')
+        return handleVisible(false)
+      }}>Sponser</Menu.Item>
 
 </SubMenu>
      
-      <Menu.Item key="Get Involved" onClick={()=>{history.push('/getInvolved')
+      {/* <Menu.Item key="Get Involved" onClick={()=>{history.push('/getInvolved')
       return handleVisible(false)
     }}>
       Get Involved
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Item key="Contact Us" onClick={()=>{history.push('/contact-us')
       return handleVisible(false)
     }}>
@@ -315,12 +339,21 @@ style={{ float: "left", width: "100%" }}
   <SubMenu key="Publication"  title="Publication">
       <Menu.Item key="Our Books" onClick={()=>history.push('/publication/our-books')}>Our Books</Menu.Item>
     <Menu.Item key="Our Resources" onClick={()=>history.push('/publication/our-resources')}>Our Resources</Menu.Item>
+    <Menu.Item key="Press Release" onClick={()=>history.push('/publication/press-release')}>Press Release</Menu.Item>
 
 </SubMenu>
-        
-        <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
+<SubMenu key="Get Involved"  title="Get Involved">
+      <Menu.Item key="Be Member" onClick={()=>history.push('/getInvolved/be-member')
+      }>Be Member</Menu.Item>
+      <Menu.Item key="Support" onClick={()=>history.push('/getInvolved/support')
+        }>Support</Menu.Item>
+    <Menu.Item key="Sponser" onClick={()=>history.push('/getInvolved/sponser')
+       }>Sponser</Menu.Item>
+
+</SubMenu>
+        {/* <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
         Get Involved
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="Contact Us" onClick={()=>history.push('/contact-us')}>
        Contact Us
         </Menu.Item>
@@ -381,14 +414,24 @@ style={{ float: "left", width: "100%" }}
     <Menu.Item key="Our Resources" onClick={()=>{history.push('/publication/our-resources')
         return handleVisible(false)
       }}>Our Resources</Menu.Item>
+      <Menu.Item key="Press Release" onClick={()=>{history.push('/publication/press-release')
+        return handleVisible(false)
+      }}>Press Release</Menu.Item>
 
 </SubMenu>
-    
-      <Menu.Item key="Get Involved" onClick={()=>{history.push('/getInvolved')
-      return handleVisible(false)
-    }}>
-      Get Involved
-      </Menu.Item>
+<SubMenu key="Get Involved"  title="Get Involved">
+      <Menu.Item key="Be Member" onClick={()=>{history.push('/getInvolved/be-member')
+        return handleVisible(false)
+      }}>Be Member</Menu.Item>
+      <Menu.Item key="Support" onClick={()=>{history.push('/getInvolved/support')
+        return handleVisible(false)
+      }}>Support</Menu.Item>
+    <Menu.Item key="Sponser" onClick={()=>{history.push('/getInvolved/sponser')
+        return handleVisible(false)
+      }}>Sponser</Menu.Item>
+
+</SubMenu>
+      
       <Menu.Item key="Contact Us" onClick={()=>{history.push('/contact-us')
       return handleVisible(false)
     }}>

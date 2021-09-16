@@ -5,7 +5,7 @@ import esewa from "../../assests/esewa_logo.png";
 import ime from "../../assests/ime-red.png";
 import khalti from "../../assests/khalti.jpeg";
 import global from "../../assests/global.png";
-
+import GoToTop from '../goToTop';
 const Donate = ()=>{
 
     return(
@@ -31,7 +31,7 @@ Donate Today     </h2>
           </div>
           <div>
               <Container>
-                  <div className="row" style={{display:"flex",flexDirection:"column"}}>
+                  <div className="row" style={{display:"flex",flexDirection:"column", padding:"0 10px"}}>
                       <div className="col text-left" style={{marginBottom: "30px",
 padding: "20px 0",
 borderBottom: "1px solid gray"}}>
@@ -91,36 +91,37 @@ marginBottom: "0px"}}>Branch: Koteshwor, Kathmandu</p>
          
           </div>
                           <div className="row">
-                <div className="col-lg-2 col-md-3 col-sm-4 col-xs-12" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" >                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
 
-<div className="col-lg-2 col-md-3 col-sm-4">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+<div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
 
 
               </div>
 </Container>
                         </div>
+                        <GoToTop />
           </div>
     )
 }

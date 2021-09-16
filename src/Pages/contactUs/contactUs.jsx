@@ -5,7 +5,7 @@ import esewa from "../../assests/esewa_logo.png";
 import ime from "../../assests/ime-red.png";
 import khalti from "../../assests/khalti.jpeg";
 import global from "../../assests/global.png";
-
+import GoToTop from '../goToTop'; 
 const ContactUs = ()=>{
 
     return(
@@ -22,6 +22,7 @@ Contact Us    </h2>
               </div>    
               </Container>
               </div> 
+              <GoToTop />
               </div>
     )}
     export default ContactUs;

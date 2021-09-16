@@ -5,7 +5,7 @@ import PublicationCard3 from "../PublicationComponent/PublicationCard3";
 import publicationImage from "../assests/publicationcard1.jpg";
 import { Container, Button } from "react-bootstrap";
 import "./style.css";
-
+import GoTOTop from "./goToTop";
 const Publication = () => {
   return (
     <React.Fragment>
@@ -23,6 +23,7 @@ What we have published?                </h2>
      </div>
       <PubliciationCard2 />
       <PublicationCard3 />
+      <GoTOTop />
     </React.Fragment>
   );
 };

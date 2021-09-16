@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import GoToTop from './goToTop';
 import slider from "../assests/slider.jpg";
 import style from "../Pages/style.css";
 import imgwhoweare from "../assests/imgwhoweare.png";
+import munamadan from "../assests/munamadan.jpg";
+import aboutcard1 from "../assests/aboutcard1.jpg";
 import fourthimg from "../assests/fourthimg.jpeg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faBiking, faBars, faBookmark, faScroll } from '@fortawesome/free-solid-svg-icons';
@@ -18,11 +21,16 @@ import thamigirl from "../assests/thamigirls.jpg";
 import bookcover from "../assests/bookcover.jpg";
 import sponsor from "../assests/sponsor.jpg";
 import support from "../assests/support.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import { Container, Button } from "react-bootstrap";
 
 const Home = () => {
   let history = useHistory();
+useEffect(()=>{
+  AOS.init({duration:1500,once: true,});
 
+},[])
   return (
     <React.Fragment>
       <div
@@ -34,13 +42,12 @@ const Home = () => {
       >
         <div className="color-overlay">
           <Container>
-            <Container>
               <div className="headerinfo col-md-12 col-sm-12">
                 <h1
                   className="h1tag"
                   style={{ paddingTop: "10rem", fontWeight: "bold" }}
                 >
-                  WELCOME TO <br /> NEPAL THAMI <br/> SOCIETY
+                  WELCOME TO <br /> NEPAL THAMI SOCIETY
                 </h1>
                 <p
                   style={{
@@ -59,7 +66,6 @@ const Home = () => {
                   Learn more
                 </button>
               </div>
-            </Container>
           </Container>
         </div>
       </div>
@@ -77,7 +83,7 @@ const Home = () => {
             <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{display: "flex",
 justifyContent: "center",
 alignItems: "center"}}>
-              <div className="about-image"></div>
+              <div className="about-image" data-aos="fade-up"></div>
                 {/* <img
                 src={thamigirl}
                 style={{ width: "100%", height: "100%" }}
@@ -85,7 +91,7 @@ alignItems: "center"}}>
               
              
             </div>
-            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"0 15px", marginTop:"50px"}} >
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"0 15px", marginTop:"50px"}} data-aos="fade-up">
               <h3
                 style={{
                   color: "#f6b745",
@@ -151,7 +157,7 @@ alignItems: "center"}}>
           </h2>
 
           <div className="row mt-5" >
-            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4 align-middle" style={{padding: "30px 0"}}>
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4 align-middle" style={{padding: "30px 0"}} data-aos="fade-up">
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
@@ -239,7 +245,7 @@ width: "49%"}} />
                 Learn More
               </button>
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}} data-aos="fade-up">
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
@@ -283,12 +289,12 @@ width: "49%"}} />
       <Container>
         <div className="row section">
           <div
-            className="col-md-12 col-sm-12 col-xs-12 col-lg-6 "
+            className="col-md-12 col-sm-12 col-xs-12 col-lg-6 " data-aos="fade-up"
             style={{ margin: "50px 0" }}
           >
             <h3 style={{ color: "#f6b745" }} className="topTitle">Publication</h3>
             <h2 className="middleTitle">
-              What we are <br /> publicing
+              What we are <br /> publishing
             </h2>
             <p className="paragraph">
               In the broadest sense, the publishing industry would include
@@ -299,31 +305,46 @@ width: "49%"}} />
             <button
               type="button"
               className="buttonNormal"
-              onClick={()=>history.push('/publication')}
+              onClick={()=>history.push('/publication/our-books')}
 
 
             >
               Read More
             </button>
           </div>
-          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}}>
+          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}} data-aos="fade-up">
             <img src={bookcover} style={{ width: "100%", height: "400px" }} />
           </div>
         </div>
       </Container>
 
-      <div style={{ backgroundColor: "#f6b745", padding: "100px 0 ", marginTop:"100px"}}>
+      <div style={{ backgroundColor: "#f6b745", padding: " 10px 0 50px 0 "}}>
         <Container>
-          <div className="row " >
-            <div
-              className="col-md-12 col-sm-12 col-xs-12 col-lg-8"
+        <div
+              className="text-center"
+              style={{  marginTop:"0 0 80px", padding:"45px 0 0"}}
             >
-              <div className="row">
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6 " style={{padding: "0px 10px 0px 10px",
+              <h3
+                style={{
+                  
+                }}
+                className="topTitle"
+              >
+                Get Involved
+              </h3>
+              <h2 className="middleTitle"
+>
+                An open
+                community
+              </h2>
+              </div>
+          <div className="row " >
+           
+                <div className="col-sm-12 col-xs-12 col-md-12 col-lg-4 " style={{padding: "0px 10px 0px 10px",
 marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "485px", border: "none" }}
+                    style={{ height: "485px", border: "none" }} data-aos="fade-up"
                   >
                     <img src={sponsor} style={{ height: "200px" }} />
                     <div class="card-body">
@@ -334,7 +355,7 @@ marginBottom: "30px"}} >
                           textAlign:"left"
                         }}
                       >
-                        Sponsor a community
+                        Sponsor our events
                       </h3>
                       <p class="card-text">
                         Sponsors commit to providing financial, emotional and
@@ -343,20 +364,51 @@ marginBottom: "30px"}} >
                       <button
                 type="button"
                 className="buttonReverse"
-                onClick={()=>history.push('/getinvolved/donate-us')}
+                onClick={()=>history.push('/getinvolved/sponser')}
 
               >
                Sponsor Us
               </button>                    </div>
                   </div>
                 </div>
-                <div className="col-sm-12 col-xs-12 col-md-6 col-lg-6"  style={{padding: "0px 10px 0px 10px",
+                <div className="col-sm-12 col-xs-12 col-md-12 col-lg-4 " style={{padding: "0px 10px 0px 10px",
+marginBottom: "30px"}} >
+                  <div
+                    class="card"
+                    style={{ height: "485px", border: "none" }}
+                  >
+                    <img src={aboutcard1} style={{ height: "200px" }} />
+                    <div class="card-body">
+                      <h3
+                        class="card-title d-flex "
+                        style={{
+                          marginTop: "1.5rem",
+                          textAlign:"left"
+                        }}
+                      >
+                         Get Involved
+                      </h3>
+                      <p class="card-text">
+                      Several of our sites were originally started by volunteers. Over
+                time, they have become Core .
+                      </p>
+                      <button
+                type="button"
+                className="buttonReverse"
+                onClick={()=>history.push('/getinvolved/be-member')}
+
+              >
+               Join Us
+              </button>                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-xs-12 col-md-12 col-lg-4"  style={{padding: "0px 10px 0px 10px",
 marginBottom: "30px"}}>
                   <div
                     class="card"
                     style={{
-                      border: "none", height: "485px"
-                    }}
+                      border: "none", height: "485px" 
+                    }} data-aos="fade-up"
                   >
                     <img src={support} style={{ height: "200px" }} />
                     <div class="card-body" style={{textAlign:"left"}}>
@@ -368,7 +420,7 @@ marginBottom: "30px"}}>
 
                         }}
                       >
-                        Support a community
+                        Support our community
                       </h3>
                       <p class="card-text">
                         Support for community organisat ions. We can help you
@@ -377,18 +429,16 @@ marginBottom: "30px"}}>
                       <button
                 type="button"
                 className="buttonReverse"
-                onClick={()=>history.push('/supportcommunity')}
+                onClick={()=>history.push('/getInvolved/support')}
 
               >
-               Support Us
-              </button>
+Learn More              </button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+             
 
-            <div
+            {/* <div
               className="col-md-12 col-sm-12 col-xs-12 col-lg-4"
               style={{  marginTop:"50px", padding:"0 10px"}}
             >
@@ -424,10 +474,11 @@ marginBottom: "30px"}}>
               >
                 Be a Member
               </button>
-            </div>
+            </div> */}
           </div>
         </Container>
       </div>
+      <GoToTop />
     </React.Fragment>
   );
 };
