@@ -1,11 +1,18 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell, faBiking, faBars, faBookmark, faScroll, faPlay } from '@fortawesome/free-solid-svg-icons';
 import video from "../../assests/video.jpeg";
 const Video = () => {
   return (
     <React.Fragment>
-      <div className="row">
-        <div className="card p-2 shadow-lg" style={{ width: "22rem" }}>
+      <div className="row" style={{display:"flex", justifyContent:"center"}}>
+        <div className="card p-2 shadow-lg" style={{ width: "22rem", position:"relative" }}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">
@@ -36,8 +43,13 @@ const Video = () => {
             </div>
           </div>
         </div>
-        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem" }}>
+        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem", display:"flex", justifyContent:"center"}}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">
@@ -68,8 +80,13 @@ const Video = () => {
             </div>
           </div>
         </div>
-        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem" }}>
+        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem",display:"flex", justifyContent:"center" }}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">
@@ -100,10 +117,13 @@ const Video = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="row mt-3">
-        <div className="card p-2 shadow-lg" style={{ width: "22rem" }}>
+        <div className="card p-2 shadow-lg" style={{ width: "22rem", display:"flex", justifyContent:"center" }}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">
@@ -134,8 +154,13 @@ const Video = () => {
             </div>
           </div>
         </div>
-        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem" }}>
+        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem", display:"flex", justifyContent:"center" }}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">
@@ -166,8 +191,13 @@ const Video = () => {
             </div>
           </div>
         </div>
-        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem" }}>
+        <div className="card p-2 ml-2 shadow-lg" style={{ width: "22rem", display:"flex", justifyContent:"center" }}>
           <img src={video} />
+          <div className="videoButton">
+          <FontAwesomeIcon icon={faPlay} style={{color: "white",
+marginleft: "6px",
+height: "40px",
+width: "50px"}} />          </div>
           <div className="card-body" style={{ padding: "0rem" }}>
             <div className="col-12">
               <div className="row pt-3">

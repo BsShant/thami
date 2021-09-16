@@ -45,7 +45,7 @@ const SupportCommunity=()=>{
             >
               <img
                 src={card2image}
-                style={{ height: "100%", width: "100%" }}
+                style={{ height: "445px", width: "100%" }}
               ></img>
             </div>
             <div

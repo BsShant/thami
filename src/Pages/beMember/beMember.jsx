@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "../../Pages/style.css";
 import { Container } from "react-bootstrap";
 import thamigirls from "../../assests/thamigirls.jpg";
@@ -7,6 +7,9 @@ import aboutcard4 from "../../assests/aboutcard4.jpg";
 import aboutcard5 from "../../assests/aboutcard5.jpg";
 import GoTOTop  from '../goToTop';
 import card1image from "../../assests/fourthimg.jpeg";
+import { Modal} from 'antd';
+import MembershipForm from '../membershipModal/membership'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,8 +19,22 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
+import Membership from '../membership/membership';
 const BeMember=()=>{
     const history = useHistory();
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+      setIsModalVisible(true);
+    };
+  
+    const handleOk = () => {
+      setIsModalVisible(false);
+    };
+  
+    const handleCancel = () => {
+      setIsModalVisible(false);
+    };
 
     return(
         <div>
@@ -69,11 +86,15 @@ Why join our community?              </h2>
               </p>
               <button
               className="buttonNormal"
-onClick={()=>history.push('/getinvolved/membership')}
+              onClick={()=>showModal()}
+// onClick={()=>history.push('/getinvolved/membership')}
                 
               >
                 Join Now
               </button>
+              <Modal title="" footer={null} header={null} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+       <MembershipForm />
+      </Modal>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <img src={card1image} style={{ height: "100%", width: "100%" }} />

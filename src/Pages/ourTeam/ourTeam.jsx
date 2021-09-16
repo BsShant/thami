@@ -41,6 +41,7 @@ const OurTeam=()=>{
                 <p style={{ fontWeight: "bold", marginTop: "-7px" }}>
                   Short description will be here from the founder.
                 </p>
+                <button className="buttonReverse">Learn More</button>
               </div>
               <div className="col-md-6 col-lg-3 col-sm-12 col-xs-12 p-4 p-4">
                 <img src={aboutcard5} style={{ width: "100%" }}></img>
@@ -49,6 +50,8 @@ const OurTeam=()=>{
                 <p style={{ fontWeight: "bold", marginTop: "-7px" }}>
                   Short description will be here from the founder.
                 </p>
+                <button className="buttonReverse">Learn More</button>
+
               </div>
               <div className="col-md-6 col-lg-3 col-sm-12 col-xs-12 p-4 p-4">
                 <img src={aboutcard5} style={{ width: "100%" }}></img>
@@ -57,6 +60,8 @@ const OurTeam=()=>{
                 <p style={{ fontWeight: "bold", marginTop: "-7px" }}>
                   Short description will be here from the founder.
                 </p>
+                <button className="buttonReverse">Learn More</button>
+
               </div>
               <div className="col-md-6 col-lg-3 col-sm-12 col-xs-12 p-4 p-4">
                 <img src={aboutcard5} style={{ width: "100%" }}></img>
@@ -65,6 +70,8 @@ const OurTeam=()=>{
                 <p style={{ fontWeight: "bold", marginTop: "-7px" }}>
                   Short description will be here from the founder.
                 </p>
+                <button className="buttonReverse">Learn More</button>
+
               </div>
             </div>
           </Container>

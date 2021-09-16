@@ -12,7 +12,18 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
+
 const OurArticles = ()=>{
+  const history = useHistory()
 
     return(
       
@@ -41,7 +52,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -65,6 +76,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -77,7 +90,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -101,6 +114,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -112,7 +127,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -136,6 +151,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -148,7 +165,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -163,7 +180,7 @@ Latest Activities            </h2>
                         <br />
                       </h5>
                     </div>
-                    <div className="col-10 d-flex justify-content-start">
+                    <div className="col-10 d-flex justify-content-start  ">
                       <h4 style={{}}>
                         World runs out of time{" "}
                         <p style={{ marginBottom: "3rem", fontSize: "18px" }}>
@@ -172,6 +189,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -184,7 +203,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -199,7 +218,7 @@ Latest Activities            </h2>
                         <br />
                       </h5>
                     </div>
-                    <div className="col-10 d-flex justify-content-start">
+                    <div className="col-10 d-flex justify-content-start  ">
                       <h4 style={{}}>
                         World runs out of time{" "}
                         <p style={{ marginBottom: "3rem", fontSize: "18px" }}>
@@ -208,6 +227,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -219,7 +240,7 @@ Latest Activities            </h2>
               style={{ width: "22rem", margin: "5px" }}
             >
               <img src={news2} />
-              <div className="card-body" style={{ padding: "0rem" }}>
+              <div className="card-body  " style={{ padding: "0rem" }}>
                 <div className="col-12">
                   <div className="row pt-3">
                     <div className="col-2 ">
@@ -234,7 +255,7 @@ Latest Activities            </h2>
                         <br />
                       </h5>
                     </div>
-                    <div className="col-10 d-flex justify-content-start">
+                    <div className="col-10 d-flex justify-content-start  ">
                       <h4 style={{}}>
                         World runs out of time{" "}
                         <p style={{ marginBottom: "3rem", fontSize: "18px" }}>
@@ -243,6 +264,8 @@ Latest Activities            </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/article-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>

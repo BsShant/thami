@@ -90,8 +90,13 @@ font-size: 18px;
   padding-left: 0;
   margin-left: 9px!important;
 }
-
+.articleExerpt{
+  margin-top: 0;
+}
 @media screen and (max-width: 992px) {
+  .articleExerpt{
+    margin-top: 30px!important;
+  }
   .headerinfo {
     
   }
@@ -215,6 +220,70 @@ padding: 20px;
   top: 0;
   left: 0;
 }
+
+/* newspost */
+.newsPostBanner{
+  background-image: url("../assests/news2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.newsPostBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* blogpost */
+.blogPostBanner{
+  background-image: url("../assests/news2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.blogPostBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* newspost */
+.articlePostBanner{
+  background-image: url("../assests/news2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  z-index: 1;
+  padding: 30px 0px;
+}
+.articlePostBanner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
 
 /* article */
 .articleBanner{
@@ -585,10 +654,22 @@ padding: 20px;
 
 /* news button */
 .newsButton{
+  background: black;
+  color: rgb(246, 183, 69);
+border: medium none;
+border: 1px black solid;
+padding: 10px;
+cursor: pointer;
+font-weight: bold;
+font-size: 14px;
+margin-bottom: 50px;
+
+}
+
+.newsButton:hover{
   padding: 10px;
-  border: none;
-                          background: #000000;
-                          color: #f6b745;
+  color:black;
+  background:rgb(246, 183, 69);
 margin-bottom: 50px;
 }
 
@@ -706,6 +787,75 @@ input:-ms-input-placeholder
   color: white;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu{
+.MuiButtonBase-root {
+  
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  -moz-user-select: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: rgb(246, 183, 69)!important;
+border: medium none;
+padding: 15px 30px;
+color:black;
+font-weight: bold;
+font-size: 18px;
+cursor: pointer;
+border: 1px rgb(246, 183, 69) solid;
+}
 
+.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4{
+  box-shadow: none;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.MuiTabs-flexContainer{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.videoButton{
+  height: 100px;
+width: 100px;
+position: absolute;
+background: #f6b745;
+border-radius: 50%;
+top: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+left: 50%;
+transform: translate(-50%,-50%);
+z-index: 2;
+opacity: 0.8;
+}
+
+.ant-modal{
+  width: 600px;
+}
+
+.ourStory{
+
+  background-image: url("../assests/video.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+width: 100%;
 }

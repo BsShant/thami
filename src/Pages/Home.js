@@ -45,11 +45,13 @@ useEffect(()=>{
               <div className="headerinfo col-md-12 col-sm-12">
                 <h1
                   className="h1tag"
+                  data-aos="fade-down"
                   style={{ paddingTop: "10rem", fontWeight: "bold" }}
                 >
                   WELCOME TO <br /> NEPAL THAMI SOCIETY
                 </h1>
                 <p
+                data-aos="fade-up"
                   style={{
                     color: "white",
                     fontWeight: "bold",
@@ -60,6 +62,7 @@ useEffect(()=>{
                   Protect culture, protect ourselves
                 </p>
                 <button
+                data-aos="fade-up"
                   className="buttonNormal"
                   onClick={()=>history.push('/about/our-story')}
                 >
@@ -72,7 +75,7 @@ useEffect(()=>{
       <Container>
         <div
           style={{
-          
+          matgin:"25px 0"
           }}
           className="section"
         >
@@ -83,7 +86,7 @@ useEffect(()=>{
             <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{display: "flex",
 justifyContent: "center",
 alignItems: "center"}}>
-              <div className="about-image" data-aos="fade-up"></div>
+              <div className="about-image" data-aos="fade-right"></div>
                 {/* <img
                 src={thamigirl}
                 style={{ width: "100%", height: "100%" }}
@@ -91,7 +94,7 @@ alignItems: "center"}}>
               
              
             </div>
-            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"0 15px", marginTop:"50px"}} data-aos="fade-up">
+            <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{padding:"0 15px", marginTop:"50px"}} data-aos="fade-left">
               <h3
                 style={{
                   color: "#f6b745",
@@ -205,7 +208,7 @@ alignItems: "center"}}>
                 Learn More
               </button>
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}}>
+            <div className="col-md-4 col-sm-12 col-xs-12 col-lg-4  align-middle" style={{padding: "30px 0"}} data-aos="fade-down">
               <div className="d-flex justify-content-center">
                 <div
                   className="rounded-circle align-middle"
@@ -287,9 +290,9 @@ width: "49%"}} />
         </Container>
       </div>
       <Container>
-        <div className="row section">
+        <div className="row section" >
           <div
-            className="col-md-12 col-sm-12 col-xs-12 col-lg-6 " data-aos="fade-up"
+            className="col-md-12 col-sm-12 col-xs-12 col-lg-6 " data-aos="fade-left"
             style={{ margin: "50px 0" }}
           >
             <h3 style={{ color: "#f6b745" }} className="topTitle">Publication</h3>
@@ -312,8 +315,8 @@ width: "49%"}} />
               Read More
             </button>
           </div>
-          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}} data-aos="fade-up">
-            <img src={bookcover} style={{ width: "100%", height: "400px" }} />
+          <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}} data-aos="fade-right">
+            <img src={bookcover} style={{ width: "100%", height: "445px", marginTop:"15px" }} />
           </div>
         </div>
       </Container>
@@ -344,7 +347,7 @@ width: "49%"}} />
 marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "485px", border: "none" }} data-aos="fade-up"
+                    style={{ height: "485px", border: "none" }} data-aos="fade-down"
                   >
                     <img src={sponsor} style={{ height: "200px" }} />
                     <div class="card-body">
@@ -375,7 +378,7 @@ marginBottom: "30px"}} >
 marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "485px", border: "none" }}
+                    style={{ height: "485px", border: "none" }} data-aos="fade-up"
                   >
                     <img src={aboutcard1} style={{ height: "200px" }} />
                     <div class="card-body">
@@ -408,7 +411,7 @@ marginBottom: "30px"}}>
                     class="card"
                     style={{
                       border: "none", height: "485px" 
-                    }} data-aos="fade-up"
+                    }} data-aos="fade-down"
                   >
                     <img src={support} style={{ height: "200px" }} />
                     <div class="card-body" style={{textAlign:"left"}}>

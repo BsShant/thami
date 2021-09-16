@@ -12,8 +12,17 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 const News = ()=>{
-
+const history = useHistory()
     return(
         <div>
           <div className="newsBanner">
@@ -64,6 +73,8 @@ Latest News              </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -100,7 +111,9 @@ Latest News              </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
                       </h4>
+                     
                     </div>
                   </div>
                 </div>
@@ -134,7 +147,10 @@ Latest News              </h2>
                           sollicitudin urna.
                           <br />
                           phasellus rutrum luctus...
+                          
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -171,6 +187,8 @@ Latest News              </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -207,6 +225,8 @@ Latest News              </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -242,6 +262,8 @@ Latest News              </h2>
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/news-post')} style={{marginTop:"-10px"}}  className="buttonNormal">Read More</button>
+
                       </h4>
                     </div>
                   </div>

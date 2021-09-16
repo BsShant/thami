@@ -98,7 +98,7 @@ const Gallery=()=>{
             custom or indentity.
             <br /> Our communicaty communication platform.
           </p>
-          <div className="align-middle">
+          <div className="align-middle" style={{marginTop:"50px"}}>
             <AppBar position="static" style={{ background: "#ffffff" }}>
               <Tabs
                 value={value}
@@ -108,11 +108,13 @@ const Gallery=()=>{
                 <Tab
                   label="Photos"
                   {...a11yProps(0)}
+                
                   style={{ color: "#000000" }}
                 />
                 <Tab
                   label="Video"
                   {...a11yProps(1)}
+                  className="buttonNormal"
                   style={{ color: "#000000" }}
                 />
               </Tabs>

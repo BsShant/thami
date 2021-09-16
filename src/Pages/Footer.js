@@ -206,7 +206,7 @@ const Footer = () => {
                   <button
                     type="button"
                    className="buttonNormal"
-                   onClick={()=>history.push('/getinvolved/membership')}
+                   onClick={()=>history.push('/getinvolved/be-member')}
 
                   >
                     Be a Member

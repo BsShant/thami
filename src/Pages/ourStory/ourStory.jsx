@@ -53,11 +53,12 @@ const AboutUs=()=>{
                 space through communication platform.
               </p>
             </div>
-            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-              <img
+            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12 ourStory">
+              
+              {/* <img
                 src={thamigirls}
                 style={{ height: "100%", width: "100%" }}
-              ></img>
+              ></img> */}
             </div>
           </div>
           <hr class="col-md-12 mx-auto mb-5" style={{padding: "0.01rem", background: "grey none repeat scroll 0% 0%"}}/>

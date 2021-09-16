@@ -40,25 +40,24 @@ const PressRelease = ()=>{
         </p> */}
         <div>
           <Container>
-            <div className="row mt-5">
+          <div className="row mt-5">
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={publicationResource}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
                     <p
                       style={{}} className="bookWriter"
                     >
-                      The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                       The air we breath has a lot to do with our health. As we
+                      breath in fresh air...
                     </p>
                     
                       <Link
@@ -73,22 +72,21 @@ const PressRelease = ()=>{
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={airparticles}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
                     <p
                       style={{}} className="bookWriter"
                     >
-                      The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                       The air we breath has a lot to do with our health. As we
+                      breath in fresh air...
                     </p>
                    
                       <Link
@@ -103,22 +101,21 @@ const PressRelease = ()=>{
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={airparticle2}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
                     <p
                       style={{}} className="bookWriter"
                     >
-                      The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                       The air we breath has a lot to do with our health. As we
+                      breath in fresh air...
                     </p>
                    
                       <Link
@@ -134,13 +131,13 @@ const PressRelease = ()=>{
 
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBottom:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={airpolution}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt">
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
@@ -148,8 +145,8 @@ const PressRelease = ()=>{
                       style={{}} className="bookWriter"
                     >
                       The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                      breath in fresh air...
+                       
                     </p>
                     
                       <Link
@@ -164,22 +161,21 @@ const PressRelease = ()=>{
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={gralcier}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{padding:"0"}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
                     <p
                       style={{}} className="bookWriter"
                     >
-                      The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                       The air we breath has a lot to do with our health. As we
+                      breath in fresh air...
                     </p>
                     
                       <Link
@@ -194,33 +190,34 @@ const PressRelease = ()=>{
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-6 ">
+                  <div className="col-12 col-sm-6">
                     <img
                       src={landpolutation}
                       style={{ height: "200px", width: "100%" }}
                     ></img>
                   </div>
-                  <div className="col-6 text-left align-middle" style={{}}>
+                  <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
                       Air Particles and Air Quality
                     </h3>
                     <p
                       style={{}} className="bookWriter"
                     >
-                      The air we breath has a lot to do with our health. As we
-                      breath in fresh air, our lungs absorb oxygen from the air
-                      and pass it into our blood steam.
+                       The air we breath has a lot to do with our health. As we
+                      breath in fresh air...
                     </p>
-                   
+                    
                       <Link
                         to={"/resourcepreview"}
                         className="newsButton"
+
                       >
                         Learn More
                       </Link>
                   </div>
                 </div>
               </div>
+              
             </div>
             <div className="d-flex justify-content-center mt-5">
               <MDBRow>

@@ -25,6 +25,10 @@ import BeMember from "./Pages/beMember/beMember";
 import Support from "./Pages/supportCommunity/supportCommunity";
 import Sponser from "./Pages/sponser/sponser";
 import PressRelease from "./Pages/pressRelease/pressRelease";
+import NewsPost from "./Pages/news post/ResourcePreview";
+import BlogPost from "./Pages/blogPost/ResourcePreview";
+import ArticlePost from "./Pages/articlePost/ResourcePreview";
+
 
 
 
@@ -65,6 +69,11 @@ function App() {
           <Route path="/contact-us" component={ContactPage} />
 
           <Route path="/event/news" component={News} />
+          <Route path="/event/news-post" component={NewsPost} />
+          <Route path="/event/blog-post" component={BlogPost} />
+          <Route path="/event/article-post" component={ArticlePost} />
+
+
           <Route path="/event/blogs" component={Blogs} />
           <Route path="/event/our-articles" component={OurArticles} />
           <Route path="/about/our-story" component={OurStory} />

@@ -12,9 +12,18 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 
 const Blogs = ()=>{
-
+const history = useHistory()
     return(
         <div>
           <div className="blogBanner">
@@ -57,6 +66,7 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
                       </h4>
                     </div>
                   </div>
@@ -85,6 +95,8 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -113,6 +125,8 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -141,6 +155,8 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -169,6 +185,8 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
+
                       </h4>
                     </div>
                   </div>
@@ -197,6 +215,8 @@ const Blogs = ()=>{
                           <br />
                           phasellus rutrum luctus...
                         </p>
+                        <button onClick={()=>history.push('/event/blog-post')} style={{marginTop:"-10px"}}  className="buttonReverse">Read More</button>
+
                       </h4>
                     </div>
                   </div>
