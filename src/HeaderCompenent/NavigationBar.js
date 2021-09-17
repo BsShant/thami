@@ -40,7 +40,6 @@ useEffect(() => {
 
   window.addEventListener('scroll', scrollFunction);
 }, []);
-console.log(window.pageYOffset)
 const scrollFunction = ()=>{
   handleScroll(window.pageYOffset)
 }

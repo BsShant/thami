@@ -25,6 +25,9 @@ import {
 const Blogs = ()=>{
 const history = useHistory()
     return(
+      <React.Fragment>
+        <GoToTop />
+
         <div>
           <div className="blogBanner">
 <Container>
@@ -275,8 +278,8 @@ const history = useHistory()
                 </MDBCol>
               </MDBRow>
               </div>
-<GoToTop />
         </div>
+        </React.Fragment>
     )
 }
 
