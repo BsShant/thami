@@ -193,10 +193,11 @@ font-size: 16px;
     /* .ant-modal{
       width: auto!important;
     } */
-
-    
-    
   }
+  .color-overlay {
+    
+    background-color: rgba(5,5,0,.6)!important;
+}
   .ant-modal{
     width: auto!important;
     padding: 0 4px;
@@ -205,8 +206,10 @@ font-size: 16px;
     text-align: center;
   }
   .h1tag{
-    padding-top: 5rem!important;
-    font-size: 50px!important;
+    /* padding-top: 5rem!important;
+    font-size: 50px!important; */
+    padding-top: 11rem !important;
+font-size: 26px !important;
   }
 }
 .color-overlay {
@@ -1049,6 +1052,7 @@ visibility: hidden;
 
 .articleBox{
   padding: 30px 0 0;
+  text-align: left!important;
 }
 
 .articleHeader{
