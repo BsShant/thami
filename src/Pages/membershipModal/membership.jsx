@@ -24,15 +24,15 @@ const Membership = ()=>{
 
                     {/* name */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="firstName"><h3>Name</h3> </label>
 
                         </div>
                         <div className="col-md-8 col-sm-12 col-xs-12 inputBox">
                         <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="firstName" style={{width:"100%"}}></input>
+                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6 inputContainer" style={{paddingRight:"0"}}><input type="text" id="firstName" style={{width:"100%"}}></input>
                     <p className="inputBelow">First Name</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="lastName" style={{width:"100%"}}></input>
+                            <div className="sexondBox col-md-6 col-sm-12 col-xs-12 col-lg-6 inputContainer" style={{paddingRight:"0"}}><input type="text" id="lastName" style={{width:"100%"}}></input>
                     <p className="inputBelow">Last Name</p></div>
                     
                     </div>
@@ -42,7 +42,7 @@ const Membership = ()=>{
 
                     {/* addrress */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="address"><h3>Address</h3></label>
 
                         </div>
@@ -51,31 +51,31 @@ const Membership = ()=>{
                             
                         {/* address first row */}
                         <div className="row">
-                            <div className="col-12" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className=" col-12 inputContainer" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">Street Adress</p></div>
                     </div>
                    
                    {/* address second row */}
                    <div className="row">
-                            <div className="col-12" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className=" col-12 inputContainer"  style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">Street Adress Line 2</p></div>
                     </div>
                    
                    
                     {/* address third row */}
                     <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className=" inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">City</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6"style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className=" sexondBox inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6"style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">State / Province</p></div>
                     
                     </div>
 
                     {/* address fourth row */}
                     <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className=" inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">Postal/ Zip Code</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
+                            <div className="sexondBox inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="address" style={{width:"100%"}}></input>
                     <p className="inputBelow">Country</p></div>
                     
                     </div>
@@ -85,12 +85,12 @@ const Membership = ()=>{
 
                 {/* email */}
                 <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="email"><h3>Email</h3></label>
 
                         </div>
 
-                        <div className="col-md-8 col-sm-12 col-xs-12 inputBox" style={{paddingRight:"0"}}>
+                        <div className="inputContainer col-md-8 col-sm-12 col-xs-12 inputBox" style={{paddingRight:"0"}}>
                             
                         <input type="email" id="email" style={{width:"100%"}}></input>
                     <p className="inputBelow">email@example.com</p>                        
@@ -99,15 +99,15 @@ const Membership = ()=>{
 
                 {/* Home Number */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="homeNumber"><h3>Home Number</h3></label>
 
                         </div>
-                        <div className="col-md-8 col-sm-12 col-xs-12 inputBox" >
+                        <div className=" col-md-8 col-sm-12 col-xs-12 inputBox" >
                         <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="homeNumber" style={{width:"100%"}}></input>
+                            <div className=" inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="homeNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Area Code</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="homeNumber" style={{width:"100%"}}></input>
+                            <div className="sexondBox inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="homeNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Phone Number</p></div>
                     
                     </div>
@@ -116,15 +116,15 @@ const Membership = ()=>{
 
                     {/* Cellular Number */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="cellularNumber"><h3>Cellular Number</h3></label>
 
                         </div>
                         <div className="col-md-8 col-sm-12 col-xs-12 inputBox">
                         <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="cellularNumber" style={{width:"100%"}}></input>
+                            <div className=" inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="cellularNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Area Code</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="cellularNumber" style={{width:"100%"}}></input>
+                            <div className="sexondBox inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="cellularNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Phone Number</p></div>
                     
                     </div>
@@ -133,15 +133,15 @@ const Membership = ()=>{
 
                     {/* Work Number */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="workNumber"><h3>Work Number</h3></label>
 
                         </div>
                         <div className="col-md-8 col-sm-12 col-xs-12 inputBox">
                         <div className="row">
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="workNumber" style={{width:"100%"}}></input>
+                            <div className=" inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="workNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Area Code</p></div>
-                            <div className="col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="workNumber" style={{width:"100%"}}></input>
+                            <div className="sexondBox inputContainer col-md-6 col-sm-12 col-xs-12 col-lg-6" style={{paddingRight:"0"}}><input type="text" id="workNumber" style={{width:"100%"}}></input>
                     <p className="inputBelow">Phone Number</p></div>
                     
                     </div>
@@ -150,12 +150,12 @@ const Membership = ()=>{
 
                     {/* message */}
                     <div className="row inputField">
-                        <div className="col-md-4 col-sm-12 col-xs-12">
+                        <div className="inputLabel col-md-4 col-sm-12 col-xs-12">
                         <label for="message"><h3>Message</h3></label>
 
                         </div>
 
-                        <div className="col-md-8 col-sm-12 col-xs-12 inputBox" style={{paddingRight:"0"}}>
+                        <div className="inputContainer col-md-8 col-sm-12 col-xs-12 inputBox" style={{paddingRight:"0"}}>
                             
                         <textarea type="textarea" rows="4" cols="50" id="message" style={{width:"100%"}}></textarea>
                         <p className="inputBelow">Message</p>
@@ -163,8 +163,7 @@ const Membership = ()=>{
                     </div>
                     </div>
                     <div className="row">
-                        <div className="col-6">                 </div>
-                        <div className="col-6 text-right" style={{paddingRight:"0"}}>   <button className="buttonReverse">Apply</button>
+                        <div className="col-12 modalButton" style={{paddingRight:"0"}}>   <button className="buttonReverse">Apply</button>
 </div>
                     </div>
                 </form>

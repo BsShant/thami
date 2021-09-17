@@ -316,7 +316,8 @@ width: "49%"}} />
             </button>
           </div>
           <div className="col-md-12 col-sm-12 col-xs-12 col-lg-6" style={{}} data-aos="fade-right">
-            <img src={bookcover} style={{ width: "100%", height: "445px", marginTop:"15px" }} />
+            <div style={{backgroundImage:`url(${bookcover})`, width:"100%", height:"100%", minHeight:"440px",backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center center"}}></div>
+            {/* <img src={bookcover} style={{ width: "100%", height: "445px", marginTop:"15px" }} /> */}
           </div>
         </div>
       </Container>
@@ -367,7 +368,7 @@ marginBottom: "30px"}} >
                       <button
                 type="button"
                 className="buttonReverse"
-                style={{marginBottom:"-10px"}}
+                style={{marginBottom:"-5px"}}
                 onClick={()=>history.push('/getinvolved/sponser')}
 
               >
@@ -399,7 +400,7 @@ marginBottom: "30px"}} >
                       <button
                 type="button"
                 className="buttonReverse"
-                style={{marginBottom:"-10px"}}
+                style={{marginBottom:"-5px"}}
 
                 onClick={()=>history.push('/getinvolved/be-member')}
 
@@ -435,12 +436,12 @@ marginBottom: "30px"}}>
                       <button
                 type="button"
                 className="buttonReverse"
-                style={{marginBottom:"-10px"}}
+                style={{marginBottom:"-5px"}}
 
                 onClick={()=>history.push('/getInvolved/support')}
 
               >
-Learn More              </button>
+Support Us             </button>
                     </div>
                   </div>
                 </div>

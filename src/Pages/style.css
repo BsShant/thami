@@ -92,6 +92,7 @@ font-size: 16px;
 }
 .articleExerpt{
   margin-top: 0;
+  padding: 0;
 }
 @media screen and (max-width: 992px) {
   .articleExerpt{
@@ -108,7 +109,59 @@ font-size: 16px;
     padding-top: 6rem!important;
   }
 }
+.newsContainerBox{
+  padding: 0px;
+  }
+  .newsContainerImage{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 0;
+  height: 100%;
+  /* height: 200px; */
+  width: 90%;
+  
+  padding: 20px;
+  }
+  @media screen and (max-width:576px){
+    .newsContainerBox{
+      padding: 0px 20px!important;
+      }
+      .newsContainerImage{
+       
+      width: 100%!important;
+      padding: 20px 0px!important;
+
+      
+      }
+      .articleExerpt{
+        padding: 0 20px!important;
+      }
+  }
 @media screen and (max-width: 768px) {
+  .modalButton{
+    margin: 0%!important;
+  }
+  .inputLabel{
+    padding-left: 14px!important;
+  }
+  .inputBox{
+    /* padding: 0!important; */
+   margin-left: 0%!important;
+  
+  } 
+  /* .newsContainerBox{
+    padding: 0px 20px!important;
+    }
+    .newsContainerImage{
+     padding: 0 10px!important;
+    width: 100%!important;
+    
+    }
+    .articleExerpt{
+      padding: 0 20px;
+    } */
   /* .headerinfo {
     margin-bottom: 50px!important;
     
@@ -388,12 +441,12 @@ padding: 20px;
 
 /* about us banner */
 .aboutUsBanner{
-  background-image: url("../assests/sixthimg.jpeg");
+  background-image: url("../assests/video.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
-  background-position: center center;
+  background-position: center top;
   padding: 30px 0px;
 }
 .aboutUsBanner::after {
@@ -708,16 +761,19 @@ font-size: 14px;
   color:black;
   background:rgb(246, 183, 69);
 }
-
+.newsContainerBox{
+padding: 0px;
+}
 .newsContainerImage{
-  /* display: flex;
+  display: flex;
 justify-content: center;
-align-items: center; */
+align-items: center;
 background: white;
-/* height: 100%; */
-height: 200px;
+padding: 0;
+height: 100%;
+/* height: 200px; */
 width: 90%;
-padding: 20px;
+
 }
 .newsContainerImage img{
   /* height: 80%; width: 80%;  padding: 15px; */
@@ -726,12 +782,25 @@ width: 80%;
 }
 
 /* form */
-.inputContainer{
-  padding: 0 10px;
+
+.inputLabel{
+  padding-left: 8%;
+}
+.modalButton{
+  margin-left: 26.4%;
+display: block;
+}
+.inputBox{
+  /* padding: 0!important; */
+margin-left: -7%;
 
 }
+.sexondBox{
+  /* margin-left: -7%!important; */
+  /* padding: 0!important; */
+}
 .inputBox input{
-  width: 100%;
+  width: 100%!important;
   background: #f6b745;
   border: 1px solid black;
   padding: 5px;
@@ -745,9 +814,9 @@ width: 80%;
 }
 
 .inputBox textarea{
-  width: 100%;
+  width: 80%;
   background: #f6b745;
-  border: none;
+  border: 1px solid black;
   padding: 5px;
 
   /* display: flex; */
@@ -787,31 +856,32 @@ height: 350px;
 }
 .about-image::before{
   content: '';
-  width: 250px;
-height: 400px;
+  width: 220px;
+height: 350px;
   background-image: url("../assests/longone.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  left: -130px;
-top: -92px;
+  left: -55px;
+top: -75px;
   
 
 
 }
 .about-image::after{
   content: '';
-  width: 250px;
-height: 400px;
+width: 220px;
+height: 350px;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+left: 65px;
+top: 70px;
+ 
   background-image: url("../assests/thirdimage.JPG");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 90px;
-top: 42px;
-
+  
 
 }
 
@@ -978,9 +1048,9 @@ visibility: hidden;
 }
 
 .articleBox{
-  padding: 90px;
+  padding: 30px 0 0;
 }
 
 .articleHeader{
-  padding-top: 100px;
+  padding-top: 50px;
 }

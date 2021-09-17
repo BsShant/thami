@@ -23,7 +23,7 @@ import Resources from "./Pages/resources/resources";
 import ContactPage from "./Pages/contactUs/contactUs";
 import BeMember from "./Pages/beMember/beMember";
 import Support from "./Pages/supportCommunity/supportCommunity";
-import Sponser from "./Pages/sponser/sponser";
+import Donation from "./Pages/donation/donation";
 import PressRelease from "./Pages/pressRelease/pressRelease";
 import NewsPost from "./Pages/news post/ResourcePreview";
 import BlogPost from "./Pages/blogPost/ResourcePreview";
@@ -91,7 +91,7 @@ function App() {
           <Route path="/publication/press-release" component={PressRelease} />
           <Route path="/getInvolved/be-member" component={BeMember} />
           <Route path="/getInvolved/support" component={Support} />
-          <Route path="/getInvolved/sponser" component={Sponser} />
+          <Route path="/getInvolved/donation" component={Donation} />
 
 
 

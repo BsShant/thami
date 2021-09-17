@@ -30,7 +30,7 @@ const SupportCommunity=()=>{
                 <h2
                   style={{ fontWeight: "bold", color:"white" }}
                 >
- Sponser Our Community      </h2>
+ Donation for community events      </h2>
 
                
               </div>    
@@ -43,10 +43,11 @@ const SupportCommunity=()=>{
               className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{margin:"0 0 30px 0"}}
               
             >
-              <img
+            <div style={{backgroundImage:`url(${card2image})`, width:"100%", height:"100%", minHeight:"440px",backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center center"}}></div>
+              {/* <img
                 src={card2image}
                 style={{ height: "445px", width: "100%" }}
-              ></img>
+              ></img> */}
             </div>
             <div
              className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
@@ -60,7 +61,7 @@ const SupportCommunity=()=>{
                   marginTop:"50px"
                 }}
               >
-                Sponsor our community events
+                Donate to our community events
               </h3>
               <h2
                             className="middleTitle"
@@ -69,7 +70,7 @@ const SupportCommunity=()=>{
                   fontWeight: "bold",
                 }}
               >
-                You can now sponser us
+                You can now donate us
               </h2>
               <p
                             className="paragraph"
@@ -100,7 +101,7 @@ const SupportCommunity=()=>{
                     // paddingRight: "45px",
                   }}
                 >
-                  Sponser Us
+                  Donate Us
                 </Link>
             </div>
           </div>

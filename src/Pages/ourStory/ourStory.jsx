@@ -53,7 +53,8 @@ const AboutUs=()=>{
                 space through communication platform.
               </p>
             </div>
-            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12 ourStory">
+            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12 ">
+              <div className="ourStory"></div>
               
               {/* <img
                 src={thamigirls}

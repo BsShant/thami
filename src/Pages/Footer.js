@@ -42,21 +42,21 @@ const Footer = () => {
                   </p>
                 </div>
                 <ul className="social-footer2">
-                <li className="">
+                <li className="socialIconList">
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/NepalThangmiSamaj"
                     target="_blank"
                     title="Facebook"
                   >
                     <img alt="Facebook" width="30" height="30" src={facebook} />
                   </a>
                 </li>
-                <li className="">
+                <li className="socialIconList">
                   <a href="https://twitter.com" target="_blank" title="Twitter">
                     <img alt="Twitter" width="30" height="30" src={twitter} />
                   </a>
                 </li>
-                <li className="">
+                <li className="socialIconList">
                   <a
                     title="instagram"
                     target="_blank"
@@ -70,7 +70,7 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                <li className="">
+                <li className="socialIconList">
                   <a
                     title="youtube"
                     target="_blank"
@@ -95,7 +95,9 @@ const Footer = () => {
                       <div className="thumb-content">
                         <a
                           style={{ textDecoration: "none", fontSize: "18px" }}
-                          href="#."
+                          onClick={()=>history.push('/')}
+                          className="footerNav"
+
                         >
                           Home
                         </a>
@@ -106,7 +108,9 @@ const Footer = () => {
                       <div className="thumb-content">
                         <a
                           style={{ textDecoration: "none", fontSize: "18px" }}
-                          href="#."
+                          onClick={()=>history.push('/about/our-story')}
+                          className="footerNav"
+
                         >
                           About
                         </a>
@@ -117,7 +121,9 @@ const Footer = () => {
                       <div className="thumb-content">
                         <a
                           style={{ textDecoration: "none", fontSize: "18px" }}
-                          href="#."
+                          onClick={()=>history.push('/event/news')}
+                          className="footerNav"
+
                         >
                           Event
                         </a>
@@ -128,7 +134,9 @@ const Footer = () => {
                       <div className="thumb-content">
                         <a
                           style={{ textDecoration: "none", fontSize: "19px" }}
-                          href="#."
+                          onClick={()=>history.push('/publication/our-books')}
+                          className="footerNav"
+
                         >
                           Publication
                         </a>
@@ -139,9 +147,10 @@ const Footer = () => {
                       <div className="thumb-content">
                         <a
                           style={{ textDecoration: "none", fontSize: "17px" }}
-                          href="#."
+                          onClick={()=>history.push('/contact-us')}
+                          className="footerNav"
                         >
-                          Contact
+                          Contact Us
                         </a>
                       </div>
                     </li>

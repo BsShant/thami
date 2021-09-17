@@ -22,16 +22,19 @@ Donate Today     </h2>
               </div>    
               </Container>
               </div> 
-        <div className="text-center" style={{ padding: "80px" }}>
+        <div className="text-center" style={{padding:"80px 0"  }} >
+          <Container>
           <h3 style={{color:"#f6b745 "}}>You can make a difference!</h3>
-          <p style={{ }}>
-            We are a social unit commonality such as norms, religion, values,
+          <p style={{marginLeft:"9px"  }}>
+            We are a social unit commonality such as norms, <br />religion, values,
             custom or indentity. Your generous support will go to providing our society.
           </p>
+          </Container>
+        
           </div>
           <div>
               <Container>
-                  <div className="row" style={{display:"flex",flexDirection:"column", padding:"0 10px"}}>
+                  <div className="row" style={{display:"flex",flexDirection:"column", padding:"0", marginLeft:"9px"}}>
                       <div className="col text-left" style={{marginBottom: "30px",
 padding: "20px 0",
 borderBottom: "1px solid gray"}}>

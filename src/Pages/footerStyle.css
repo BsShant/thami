@@ -11,6 +11,17 @@ footer ul {
   background-color: black; margin:0px 0px; padding-bottom:0; min-height:auto; 
   position: relative;
 }
+.footerNav{
+  transition: all 250ms ease;
+}
+.footerNav:hover{
+  color: #f6b745;
+  transform: translateX(5px)!important;
+}
+
+.socialIconList a:hover{
+transform: scale(1.2);
+}
 
 .footerWidget{
 

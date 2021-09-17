@@ -95,8 +95,8 @@ const showDrawer = () => {
       }>Be Member</Menu.Item>
       <Menu.Item key="Support" onClick={()=>history.push('/getInvolved/support')
         }>Support</Menu.Item>
-    <Menu.Item key="Sponser" onClick={()=>history.push('/getInvolved/sponser')
-       }>Sponser</Menu.Item>
+    <Menu.Item key="Donation" onClick={()=>history.push('/getInvolved/donation')
+       }>Donation</Menu.Item>
 
 </SubMenu>
       {/* <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
@@ -177,9 +177,9 @@ const showDrawer = () => {
       <Menu.Item key="Support" onClick={()=>{history.push('/getInvolved/support')
         return handleVisible(false)
       }}>Support</Menu.Item>
-    <Menu.Item key="Sponser" onClick={()=>{history.push('/getInvolved/sponser')
+    <Menu.Item key="Donation" onClick={()=>{history.push('/getInvolved/donation')
         return handleVisible(false)
-      }}>Sponser</Menu.Item>
+      }}>Donation</Menu.Item>
 
 </SubMenu>
      
@@ -351,8 +351,8 @@ style={{ float: "left", width: "100%" }}
       }>Be Member</Menu.Item>
       <Menu.Item key="Support" onClick={()=>history.push('/getInvolved/support')
         }>Support</Menu.Item>
-    <Menu.Item key="Sponser" onClick={()=>history.push('/getInvolved/sponser')
-       }>Sponser</Menu.Item>
+    <Menu.Item key="Donation" onClick={()=>history.push('/getInvolved/donation')
+       }>Donation</Menu.Item>
 
 </SubMenu>
         {/* <Menu.Item key="Get Involved" onClick={()=>history.push('/GetInvolved')}>
@@ -433,9 +433,9 @@ style={{ float: "left", width: "100%" }}
       <Menu.Item key="Support" onClick={()=>{history.push('/getInvolved/support')
         return handleVisible(false)
       }}>Support</Menu.Item>
-    <Menu.Item key="Sponser" onClick={()=>{history.push('/getInvolved/sponser')
+    <Menu.Item key="Donation" onClick={()=>{history.push('/getInvolved/donation')
         return handleVisible(false)
-      }}>Sponser</Menu.Item>
+      }}>Donation</Menu.Item>
 
 </SubMenu>
       

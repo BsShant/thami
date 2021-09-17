@@ -43,7 +43,7 @@ const history = useHistory()
             <div className="row mt-5">
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                     <div className="newsContainerImage"> <img
                       src={publicationResource}
                     ></img>
@@ -73,7 +73,7 @@ const history = useHistory()
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                   <div className="newsContainerImage"> <img
                       src={airparticles}
                     ></img>
@@ -103,7 +103,7 @@ const history = useHistory()
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                   <div className="newsContainerImage"> <img
                       src={airparticle2}
                     ></img>
@@ -134,7 +134,7 @@ const history = useHistory()
 
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBottom:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                   <div className="newsContainerImage">  <img
                       src={airpolution}
                     ></img>
@@ -165,7 +165,7 @@ const history = useHistory()
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                     <div className="newsContainerImage"> <img
                       src={gralcier}
                     ></img>
@@ -195,7 +195,7 @@ const history = useHistory()
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 ">
+                  <div className="col-12 col-sm-6 newsContainerBox">
                   <div className="newsContainerImage"> <img
                       src={landpolutation}
                       style={{  }}
