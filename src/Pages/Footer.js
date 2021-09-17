@@ -22,10 +22,9 @@ const Footer = () => {
     <React.Fragment>
       <footer
         id="footer"
-        className="footer-1 section"
-        style={{ backgroundColor: "black", margin:"0px 0px", paddingBottom:"0", minHeight:"auto" }}
+        className="footer-1 section footerSection"
       >
-        <div className="main-footer widgets-dark typo-light" >
+        <div className="main-footer widgets-dark typo-light footerWidget" >
           <div className="container">
             <div
               className="row"
@@ -34,7 +33,7 @@ const Footer = () => {
                 color: "white",
               }}
             >
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" style={{marginBottom:"30px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <img src={Logo} style={{ height: "12rem" }} />
                   <p style={{ fontSize: "20px" }}>
@@ -82,7 +81,7 @@ const Footer = () => {
                 </li>
               </ul>
               </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"30px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <h2 className="title" style={{ color:"white" }}>
                     Navigation<span></span>
@@ -149,7 +148,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"50px"}}>
+              <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3" style={{marginBottom:"30px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
 
                   <h2 className="title" style={{ color:"white" }}>
@@ -192,7 +191,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3" style={{marginBottom:"30px"}}>
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <h2 className="title" style={{ color:"white" }}>
                     Get Involved<span></span>
@@ -223,7 +222,7 @@ const Footer = () => {
           </div>
 
         </div>
-        <div className="footer-copyright" style={{ color: "white", borderTop:"1px solid white", marginTop:"-100px",  padding: "20px 0 0"}}>
+        <div className="footer-copyright" >
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">

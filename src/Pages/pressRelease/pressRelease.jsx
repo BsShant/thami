@@ -6,7 +6,8 @@ import airparticle2 from "../../assests/airparticle2.jpg";
 import airpolution from "../../assests/airpolution.jpg";
 import gralcier from "../../assests/gralcier.jpg";
 import landpolutation from "../../assests/landpolutation.jpg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 import GoTOTop from '../goToTop';
 import {
   MDBPagination,
@@ -17,6 +18,7 @@ import {
 } from "mdbreact";
 
 const PressRelease = ()=>{
+  const history = useHistory()
 
     return(
         <div>
@@ -43,11 +45,12 @@ const PressRelease = ()=>{
           <div className="row mt-5">
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                    <div className="newsContainerImage"> <img
                       src={publicationResource}
-                      style={{ height: "200px", width: "100%" }}
                     ></img>
+                    </div>
+                   
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
@@ -60,23 +63,24 @@ const PressRelease = ()=>{
                       breath in fresh air...
                     </p>
                     
-                      <Link
-                        to={"/resourcepreview"}
+                      <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                  <div className="newsContainerImage"> <img
                       src={airparticles}
-                      style={{ height: "200px", width: "100%" }}
                     ></img>
+                    </div>
+                    
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
@@ -89,23 +93,24 @@ const PressRelease = ()=>{
                       breath in fresh air...
                     </p>
                    
-                      <Link
-                        to={"/resourcepreview"}
+                    <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                  <div className="newsContainerImage"> <img
                       src={airparticle2}
-                      style={{ height: "200px", width: "100%" }}
                     ></img>
+                    </div>
+                    
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
@@ -118,24 +123,25 @@ const PressRelease = ()=>{
                       breath in fresh air...
                     </p>
                    
-                      <Link
-                        to={"/resourcepreview"}
+                    <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>
 
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBottom:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                  <div className="newsContainerImage">  <img
                       src={airpolution}
-                      style={{ height: "200px", width: "100%" }}
                     ></img>
+                    </div>
+                   
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt">
                     <h3 style={{ fontWeight: "bold" }}>
@@ -149,23 +155,24 @@ const PressRelease = ()=>{
                        
                     </p>
                     
-                      <Link
-                        to={"/resourcepreview"}
+                    <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                    <div className="newsContainerImage"> <img
                       src={gralcier}
-                      style={{ height: "200px", width: "100%" }}
                     ></img>
+                    </div>
+                    
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
@@ -178,23 +185,25 @@ const PressRelease = ()=>{
                       breath in fresh air...
                     </p>
                     
-                      <Link
-                        to={"/resourcepreview"}
+                    <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>
               <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
-                  <div className="col-12 col-sm-6">
-                    <img
+                  <div className="col-12 col-sm-6 ">
+                  <div className="newsContainerImage"> <img
                       src={landpolutation}
-                      style={{ height: "200px", width: "100%" }}
+                      style={{  }}
                     ></img>
+                    </div>
+                    
                   </div>
                   <div className="col-12 col-sm-6 text-left align-middle articleExerpt" >
                     <h3 style={{ fontWeight: "bold" }}>
@@ -207,13 +216,13 @@ const PressRelease = ()=>{
                       breath in fresh air...
                     </p>
                     
-                      <Link
-                        to={"/resourcepreview"}
+                    <button
+                        onClick={()=>history.push("/resourcepreview")}
                         className="newsButton"
 
                       >
                         Learn More
-                      </Link>
+                      </button>
                   </div>
                 </div>
               </div>

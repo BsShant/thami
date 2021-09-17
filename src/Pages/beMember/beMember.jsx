@@ -25,11 +25,11 @@ const BeMember=()=>{
   const [viewport, handleViewport] = useState()
     const history = useHistory();
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const changeViewport = ()=>{
-      const stringViewPort = window.innerWidth.toString()
-      handleViewport(stringViewPort)
+    // const changeViewport = ()=>{
+    //   const stringViewPort = window.innerWidth.toString()
+    //   handleViewport(stringViewPort)
     
-    }
+    // }
 useEffect(()=>{
   // window.addEventListener('resize', changeViewport)
 },[])

@@ -321,7 +321,7 @@ width: "49%"}} />
         </div>
       </Container>
 
-      <div style={{ backgroundColor: "#f6b745", padding: " 10px 0 50px 0 "}}>
+      <div style={{ backgroundColor: "#f6b745", padding: " 10px 0 30px 0 "}}>
         <Container>
         <div
               className="text-center"
@@ -347,9 +347,9 @@ width: "49%"}} />
 marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "485px", border: "none" }} data-aos="fade-down"
+                    style={{  border: "none" }} data-aos="fade-down"
                   >
-                    <img src={sponsor} style={{ height: "200px" }} />
+                    <img src={sponsor} style={{ height: "230px" }} />
                     <div class="card-body">
                       <h3
                         class="card-title d-flex "
@@ -367,6 +367,7 @@ marginBottom: "30px"}} >
                       <button
                 type="button"
                 className="buttonReverse"
+                style={{marginBottom:"-10px"}}
                 onClick={()=>history.push('/getinvolved/sponser')}
 
               >
@@ -378,9 +379,9 @@ marginBottom: "30px"}} >
 marginBottom: "30px"}} >
                   <div
                     class="card"
-                    style={{ height: "485px", border: "none" }} data-aos="fade-up"
+                    style={{  border: "none" }} data-aos="fade-up"
                   >
-                    <img src={aboutcard1} style={{ height: "200px" }} />
+                    <img src={aboutcard1} style={{ height: "230px" }} />
                     <div class="card-body">
                       <h3
                         class="card-title d-flex "
@@ -398,6 +399,8 @@ marginBottom: "30px"}} >
                       <button
                 type="button"
                 className="buttonReverse"
+                style={{marginBottom:"-10px"}}
+
                 onClick={()=>history.push('/getinvolved/be-member')}
 
               >
@@ -410,10 +413,10 @@ marginBottom: "30px"}}>
                   <div
                     class="card"
                     style={{
-                      border: "none", height: "485px" 
+                      border: "none", 
                     }} data-aos="fade-down"
                   >
-                    <img src={support} style={{ height: "200px" }} />
+                    <img src={support} style={{ height: "230px" }} />
                     <div class="card-body" style={{textAlign:"left"}}>
                       <h3
                         class="card-title d-flex"
@@ -432,6 +435,8 @@ marginBottom: "30px"}}>
                       <button
                 type="button"
                 className="buttonReverse"
+                style={{marginBottom:"-10px"}}
+
                 onClick={()=>history.push('/getInvolved/support')}
 
               >
@@ -481,7 +486,7 @@ Learn More              </button>
           </div>
         </Container>
       </div>
-      {/* <ContactUs /> */}
+      <ContactUs />
       <GoToTop />
     </React.Fragment>
   );

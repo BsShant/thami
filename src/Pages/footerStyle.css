@@ -7,6 +7,14 @@ footer ul {
   list-style: none;
 }
 
+.footerSection{
+  background-color: black; margin:0px 0px; padding-bottom:0; min-height:auto; 
+  position: relative;
+}
+
+.footerWidget{
+
+}
 /*==================== 
   Widgets 
 ====================== */
@@ -96,3 +104,13 @@ ul.social-footer2 li a {
   text-decoration: underline;
   color: white;
 }
+.footer-copyright{
+  color: white; border-top: 1px solid white; 
+  /* margin-top: -100px;   */
+  padding: 20px 0 0;
+  position: absolute;
+width: 100%;
+left: 0;
+bottom: 0;
+}
+

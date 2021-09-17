@@ -158,6 +158,8 @@ const Membership = ()=>{
                         <div className="col-md-8 col-sm-12 col-xs-12 inputBox" style={{paddingRight:"0"}}>
                             
                         <textarea type="textarea" rows="4" cols="50" id="message" style={{width:"100%"}}></textarea>
+                        <p className="inputBelow">Message</p>
+
                     </div>
                     </div>
                     <div className="row">

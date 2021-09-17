@@ -4,13 +4,11 @@ import publicationcard2 from "../../../assests/joinhands.jpg";
 const Card2 = () => {
   return (
     <React.Fragment>
-      <div>
-        <Container>
+      <div className="articleHeader">
           <img
             src={publicationcard2}
-            style={{ height: "80%", width: "100%", padding: "90px" }}
+            style={{ height: "80%", width: "100%" }}
           ></img>
-        </Container>
       </div>
     </React.Fragment>
   );

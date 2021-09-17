@@ -6,6 +6,7 @@ import ime from "../../assests/ime-red.png";
 import khalti from "../../assests/khalti.jpeg";
 import global from "../../assests/global.png";
 import GoToTop from '../goToTop'; 
+import ContactForm from '../ContactUs';
 const ContactUs = ()=>{
 
     return(
@@ -22,6 +23,7 @@ Contact Us    </h2>
               </div>    
               </Container>
               </div> 
+              <ContactForm />
               <GoToTop />
               </div>
     )}

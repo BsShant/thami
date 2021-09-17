@@ -106,7 +106,7 @@ function App() {
 
 
 
-        <ContactUs />
+        {/* <ContactUs /> */}
         <Footer />
       </div>
       </Switch>

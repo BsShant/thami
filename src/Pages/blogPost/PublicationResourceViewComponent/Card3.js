@@ -4,7 +4,7 @@ import publicationcard3 from "../../../assests/publicationcard3.jpg";
 const Card3 = () => {
   return (
     <React.Fragment>
-      <div className="text-center">
+      <div className="text-center articleBox">
         <Container>
           <h1 style={{ fontWeight: "bold" }}>Lets join our hands to remove air pollution</h1>
           <p

@@ -30,30 +30,31 @@ Our Partners    </h2>
          
           </div>
                           <div className="row">
-                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-6 col-lg-2 col-md-3 col-sm-4" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={esewa} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={ime} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={khalti} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={ime} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={khalti} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={esewa} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={khalti} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6" >                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={ime} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
-                <div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+                <div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={esewa} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
 
-<div className="col-lg-2 col-md-3 col-sm-4 col-6">                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
+
+<div className="col-lg-2 col-md-3 col-sm-4 col-6" style={{cursor:"pointer", height: "130px","alignItems": "center",display: "flex", justifyContent:"center"}}>                          <img src={global} style={{ width: "150px", marginBottom:"30px" }}></img>
 </div>
 
 

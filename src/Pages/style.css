@@ -976,3 +976,11 @@ visibility: hidden;
 .show:hover .videoDescription{
   visibility: visible;
 }
+
+.articleBox{
+  padding: 90px;
+}
+
+.articleHeader{
+  padding-top: 100px;
+}

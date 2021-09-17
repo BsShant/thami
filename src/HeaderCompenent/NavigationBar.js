@@ -43,7 +43,6 @@ useEffect(() => {
 console.log(window.pageYOffset)
 const scrollFunction = ()=>{
   handleScroll(window.pageYOffset)
-  console.log(scroll)
 }
 
 const onClose = () => {
