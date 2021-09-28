@@ -78,12 +78,7 @@ const VisionAndMission=()=>{
       >
         <Container>
           <div className="row">
-            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
-            <img
-                src={aboutcard4}
-                style={{ height: "100%", width: "100%" }}
-              ></img>
-            </div>
+           
             <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12" style={{ marginTop: "30px" }}>
               <h3
                             className="topTitle"
@@ -113,6 +108,12 @@ const VisionAndMission=()=>{
                 of place situated in a given geographical area or in virtual
                 space through communication platform.
               </p>
+            </div>
+            <div className="col-md-12 col-lg-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
+            <img
+                src={aboutcard4}
+                style={{ height: "100%", width: "100%" }}
+              ></img>
             </div>
           </div>
         </Container>

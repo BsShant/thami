@@ -1,0 +1,9 @@
+.site-adjust{
+    margin-left: 200px;
+  }
+  .ant-layout-sider-collapsed + .site-adjust{
+    margin-left: 80px!important;
+  }
+  .site-header-background{
+      background-color: white;
+  }

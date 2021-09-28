@@ -1058,3 +1058,12 @@ visibility: hidden;
 .articleHeader{
   padding-top: 50px;
 }
+  
+/* Nave styles */
+.ant-menu-submenu .ant-menu-item{
+  margin: 0 auto;
+}
+.ant-menu-submenu .ant-menu-item:hover {
+  /* color: pink !important; */
+  background: white!important;
+}

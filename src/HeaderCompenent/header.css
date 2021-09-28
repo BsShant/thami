@@ -191,3 +191,28 @@ border: #f6b745;
     bottom: 0;
     border-right: none;
 }
+
+/* Nave styles submenu */
+.ant-menu-submenu .ant-menu-item{
+    margin: 0 auto!important;
+    padding: 0 auto;
+  } .ant-menu-submenu .ant-menu-item:hover {
+    /* color: pink !important; */
+    background: white!important;
+    color: #f6b745!important;
+
+  }
+  .ant-menu-submenu .ant-menu-item-selected {
+    /* color: pink !important; */
+    background: white!important;
+    color: #f6b745!important;
+  }
+  .ant-menu-submenu .ant-menu-inline .ant-menu-item:hover{
+      background-color: black!important;
+  }
+  .ant-menu-submenu .ant-menu-inline .ant-menu-item-selected {
+    /* color: pink !important; */
+    background: black!important;
+    color: #f6b745!important;
+  }
+  

@@ -1,0 +1,11 @@
+
+.HeaderContainer {
+display: flex;
+justify-content: space-between;
+}
+.HeaderLeft{
+    display: flex;
+    width:50%;
+}
+
+

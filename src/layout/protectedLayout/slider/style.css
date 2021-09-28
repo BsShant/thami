@@ -1,0 +1,9 @@
+.ant-layout-sider{
+    min-height: 100vh!important;
+    background:hsl(167, 100%, 12%);
+     color:white;
+     width: 200px!important;
+}
+.ant-menu-submenu-arrow{
+    color:white
+}
