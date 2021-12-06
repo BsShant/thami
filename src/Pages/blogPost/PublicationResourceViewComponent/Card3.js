@@ -1,24 +1,51 @@
-import React from "react";
+import React,{useLayoutEffect} from "react";
 import { Container } from "react-bootstrap";
 import publicationcard3 from "../../../assests/publicationcard3.jpg";
-const Card3 = () => {
+import { useSelector } from 'react-redux';
+import Editor from "../../../component/editor/editor"
+import { EditorState,convertToRaw, convertFromRaw } from "draft-js";
+import draftToHtml from 'draftjs-to-html';
+const Card3 = (props) => {
+  const {postName, postId} = props.match.params
+
+  const blogsData= useSelector(state=>state.readerStore.blogsData)
+  const blogsSection= useSelector(state=>state.eventStore.blogsSection)
+//   const [editorState, setEditorState] = React.useState(
+//     blogsData? ()=>EditorState.createWithContent(convertFromRaw(JSON.parse(blogsData.detail))): () => EditorState.createEmpty()
+//    )
+//    useLayoutEffect(() => {
+//     return () => {
+//         setEditorState(()=>EditorState.createEmpty())
+//     }
+// }, [])
   return (
     <React.Fragment>
-      <div className="text-center articleBox">
+       <div className="text-center articleBox">
         <Container>
-          <h1 style={{ fontWeight: "bold" }}>Lets join our hands to remove air pollution</h1>
-          <p
+          <h1 style={{ fontWeight: "bold" }}>
+            {/* Air Pollution in news today */}  
+            {blogsSection && blogsSection.filter(
+                  (item) => item.id.toString() === postId.toString()
+                )[0]? blogsSection.filter(item=> item.id.toString() === postId.toString())[0].title : null}
+
+            </h1>
+            {blogsSection && blogsSection.filter(
+                  (item) => item.id.toString() === postId.toString()
+                )[0]?<Editor editorState={EditorState.createWithContent(convertFromRaw(JSON.parse(blogsSection.filter(item=> item.id.toString() === postId.toString())[0].detail)))} toolbarClassName='hideToolbar' readOnly/>:null}
+
+          {/* <p
             style={{ fontWeight: "bold", fontSize: "18px", marginTop: "25px" }}
           >
-            Particulate matter contains microscopic solids or liquid droplets
+            {blogsData? blogsData.detail : null} */}
+            {/* Particulate matter contains microscopic solids or liquid droplets
             that are so small that they can be inhaled and cause serious health
             problems. Some particles less than 10 micrometers in diameter can
             get deep into your lungs and some may even get into your
             bloodstream. Of these, particles less than 2.5 micrometers in
             diameter, also known as fine particles or PM2.5, pose the greatest
-            risk to health.
-          </p>
-          <p
+            risk to health. */}
+          {/* </p> */}
+          {/* <p
             style={{ fontWeight: "bold", fontSize: "18px", marginTop: "25px" }}
           >
             Fine particles are also the main cause of reduced visibility (haze)
@@ -59,7 +86,7 @@ const Card3 = () => {
             <br /> How small is 2.5 micrometers? Think about a single hair from
             your head. The average human hair is about 70 micrometers in
             diameter – making it 30 times larger than the largest fine particle.
-          </p>
+          </p> */}
         </Container>
       </div>
     </React.Fragment>

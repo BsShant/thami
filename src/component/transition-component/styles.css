@@ -1,0 +1,42 @@
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  background-color: #f6b745;
+  width: 100vw;
+}
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.spinnerDiv{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .spinnerDiv{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.spinnerDiv img{
+
+animation-name: example;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+opacity: 0;
+/* background-color: #f6b745; */
+
+/* border: 20px solid rgb(228, 211, 211); */
+/* border-width: 0 0 20px 20px; */
+/* border-radius: 50%; */
+}

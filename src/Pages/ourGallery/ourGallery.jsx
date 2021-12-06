@@ -17,10 +17,11 @@ import Box from "@material-ui/core/Box";
 import Photos from "./Photos";
 import Video from "./Video";
 import GoToTop from '../goToTop';
+import { useSelector } from 'react-redux';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-  
+    
     return (
       <div
         role="tabpanel"
@@ -58,6 +59,8 @@ function TabPanel(props) {
   }));
   
 const Gallery=()=>{
+    const galleryHeadingSection = useSelector(state=>state.aboutStore.galleryHeadingSection)
+    const galleryPageHeading = useSelector(state=>state.aboutStore.galleryPageHeading)
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
   
@@ -66,13 +69,19 @@ const Gallery=()=>{
     };
     return(
         <div>
-               <div className="ourGalleryBanner">
+               <div className="ourGalleryBanner" style={{backgroundImage:`url(${galleryPageHeading? galleryPageHeading.image:null})`}}>
 <Container>
 <div className="headerinfo col-md-12 col-sm-12">
                 <h2
                   style={{ fontWeight: "bold", color:"white" }}
                 >
- Our Gallery        </h2>
+ {/* Our Gallery         */}
+ {galleryPageHeading? galleryPageHeading.pageHeading:null}
+
+ </h2>
+ <p style={{color:"white"}}>
+     {galleryPageHeading? galleryPageHeading.subHeading : null}
+</p>
 
                
               </div>    
@@ -86,17 +95,25 @@ const Gallery=()=>{
               color: "#f6b745",
             }}
           >
-            Our Gallery
+                    {galleryHeadingSection? galleryHeadingSection.topTitle : null} 
+
+            {/* Our Gallery */}
           </h3>
+          <h2 className="text-center">
+          {galleryHeadingSection? galleryHeadingSection.heading : null} 
+
+          </h2>
           <p
             className="text-center"
             style={{
               fontSize: "18px",
             }}
           >
-            We are a social unit commonality such as norms, religion, values,
+                    {galleryHeadingSection? galleryHeadingSection.detail : null} 
+
+            {/* We are a social unit commonality such as norms, religion, values,
             custom or indentity.
-            <br /> Our communicaty communication platform.
+            <br /> Our communicaty communication platform. */}
           </p>
           <div className="align-middle" style={{marginTop:"50px"}}>
             <AppBar position="static" style={{ background: "#ffffff" }}>

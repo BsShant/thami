@@ -1,6 +1,9 @@
 import {
   START_FETCHING_HOME_CONTENT, FETCHING_HOME_CONTENT_FAILURE
-  , FETCHING_HOME_CONTENT_SUCCESS
+  , FETCHING_HOME_CONTENT_SUCCESS,
+  HOME_SPINNER_STARTS,
+  HOME_SPINNER_STOPS,
+  START_FETCHING_HOME_CONTENT_WITH_SPINNER
   
 } from "./homeActionTypes";
 
@@ -9,6 +12,12 @@ import {
 export const fetchingHomeContentStarts = () => {
   return {
     type: START_FETCHING_HOME_CONTENT,
+  };
+};
+
+export const fetchingHomeContentWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_HOME_CONTENT_WITH_SPINNER,
   };
 };
 
@@ -28,3 +37,13 @@ export const fetchingHomeContentFailure = (error) => {
 };
 
 
+export const homeSpinnerStarts = () => {
+  return {
+    type: HOME_SPINNER_STARTS,
+  };
+};
+export const homeSpinnerStops = () => {
+  return {
+    type: HOME_SPINNER_STOPS,
+  };
+};

@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 
 };
 
-export const spinner = (state = INITIAL_STATE, action) => {
+export const spinnerReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case START_FETCHING_SPINNER:
       return {

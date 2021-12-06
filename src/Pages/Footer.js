@@ -15,8 +15,15 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+
 const Footer = () => {
   let history = useHistory();
+  const getInvolvedSection = useSelector(state=>state.footerStore.getInvolvedSection)
+  const contactSection = useSelector(state=>state.footerStore.contactSection)
+  const aboutUsSection = useSelector(state=>state.footerStore.aboutUsSection)
+  const socialMediaSection = useSelector(state=>state.footerStore.socialMediaSection)
 
   return (
     <React.Fragment>
@@ -37,14 +44,15 @@ const Footer = () => {
                 <div className="widget fBox no-box" style={{ textAlign: "left" }}>
                   <img src={Logo} style={{ height: "12rem" }} />
                   <p style={{ fontSize: "20px" }}>
-                    We are a social unit with commonality <br /> such as norms,
-                    religion, values, customs, <br /> or identity.
+                    {aboutUsSection? aboutUsSection.detail : null}
+                    {/* We are a social unit with commonality <br /> such as norms,
+                    religion, values, customs, <br /> or identity. */}
                   </p>
                 </div>
                 <ul className="social-footer2">
                 <li className="socialIconList">
                   <a
-                    href="https://www.facebook.com/NepalThangmiSamaj"
+                    href={`${socialMediaSection? socialMediaSection.facebook : null}`}
                     target="_blank"
                     title="Facebook"
                   >
@@ -52,7 +60,10 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="socialIconList">
-                  <a href="https://twitter.com" target="_blank" title="Twitter">
+                  <a 
+                    href={`${socialMediaSection? socialMediaSection.twitter : null}`}
+                    target="_blank" 
+                    title="Twitter">
                     <img alt="Twitter" width="30" height="30" src={twitter} />
                   </a>
                 </li>
@@ -60,7 +71,7 @@ const Footer = () => {
                   <a
                     title="instagram"
                     target="_blank"
-                    href="https://www.instagram.com/"
+                    href={`${socialMediaSection? socialMediaSection.instagram : null}`}
                   >
                     <img
                       alt="instagram"
@@ -74,7 +85,7 @@ const Footer = () => {
                   <a
                     title="youtube"
                     target="_blank"
-                    href="https://www.youtube.com/"
+                    href={`${socialMediaSection? socialMediaSection.youtube : null}`}
                   >
                     <img alt="youtube" width="35" height="35" src={youtube} />
                   </a>
@@ -173,7 +184,8 @@ const Footer = () => {
                         className="thumb-content"
                         style={{ fontSize: "17px" }}
                       >
-                        Shamkhusi, kathmandu <br /> Nepal
+                        {contactSection? contactSection.address : null}
+                        {/* Shamkhusi, kathmandu <br /> Nepal */}
                       </div>
                     </li>
                     <br />
@@ -182,7 +194,9 @@ const Footer = () => {
                         className="thumb-content"
                         style={{ fontSize: "17px" }}
                       >
-                        +9779849724596
+                                                {contactSection? contactSection.phone : null}
+
+                        {/* +9779849724596 */}
                       </div>
                     </li>
                     <br />
@@ -191,7 +205,9 @@ const Footer = () => {
                         classname="thumb-content"
                         style={{ fontSize: "17px" }}
                       >
-                        thamisociety@gmail.com
+                                                {contactSection? contactSection.email : null}
+
+                        {/* thamisociety@gmail.com */}
                       </div>
                     </li>
 
@@ -207,17 +223,19 @@ const Footer = () => {
                   </h2>
                   <br />
                   <p style={{ fontSize: "1.2rem", fontSize: "17px" }}>
-                    An open community several of our sites were orginallly
-                    started by volunteers.
+                    {getInvolvedSection? getInvolvedSection.detail : null}
+                    {/* An open community several of our sites were orginallly
+                    started by volunteers. */}
                   </p>
                   <br />
                   <button
                     type="button"
                    className="buttonNormal"
-                   onClick={()=>history.push('/getinvolved/be-member')}
+                   onClick={()=>history.push('/getinvolved/be-a-member')}
 
                   >
-                    Be a Member
+                    {getInvolvedSection? getInvolvedSection.buttonName : null}
+                    {/* Be a Member */}
                   </button>
                 </div>
               </div>

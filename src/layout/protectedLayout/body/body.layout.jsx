@@ -6,6 +6,7 @@ import {
     Link,
     useRouteMatch,
 } from "react-router-dom";
+import './style.css'
 
 
 const BodyLayout = (props) => {
@@ -17,18 +18,15 @@ const BodyLayout = (props) => {
    
     return (
         <Layout >
-            
+            <div className="container">
             <Content
-                className="site-layout-background"
-                style={{
-                    margin: '24px 16px',
-                    padding: 24,
-                    backgroundColor: '#f0f2f5',
-                    minHeight: 280,
-                }}
+                className="adminBody"
+                
             >
                {props.children}
             </Content>
+            </div>
+            
         </Layout>
 
     )

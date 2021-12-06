@@ -1,11 +1,56 @@
 
-.HeaderContainer {
-display: flex;
-justify-content: space-between;
+.adminHead {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* padding: 0 55px; */
 }
-.HeaderLeft{
+.adminHeader {
+    height: 64px;
+    padding: 0px;
+    color: black;
+    line-height: 64px;
+    background: white;
+}
+
+/* .HeaderLeft{
     display: flex;
     width:50%;
+} */
+
+
+.trigger{
+    font-size: 20px;
+margin-left: 0px;
+cursor: pointer;
 }
+.headerDropdown{
+    width: 100px;
+    text-align: center;
+    padding: 0;
+}
+.headerDropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-only-child{
+    margin: 0;
+    padding: 10px 0;
+    background-color: #f6b745;
+    /* border-top:1px solid white ; */
 
+}
+.headerDropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-only-child:nth-child(odd){
+    border-bottom:1px solid white ;
 
+}
+.headerDropdown .ant-dropdown-menu-item-selected{
+background-color: white!important;
+color: initial;
+}
+.headerDropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-only-child:active,
+.headerDropdown .ant-dropdown-menu-item.ant-dropdown-menu-item-only-child:hover{
+  
+    background-color: white!important;
+}
+.headerDropdown .ant-dropdown-menu-item-active{
+  
+    background-color: white!important;
+}

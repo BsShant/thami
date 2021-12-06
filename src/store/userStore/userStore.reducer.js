@@ -1,9 +1,9 @@
 import {
   UPDATE_USER
 } from "./userStore.Types";
-
+const data = localStorage.getItem("thamiUser")
 const INITIAL_STATE = {
-  user: null,
+  user: data? JSON.parse(data): null
 
 };
 

@@ -15,28 +15,153 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
+import { useSelector } from "react-redux";
+import { List, Card } from "antd";
+import { server } from "../utils/fetch";
+import { isTSEnumMember } from "@babel/types";
 
 const SupportCommunity = () => {
+  const supportCommunitySection = useSelector(
+    (state) => state.getInvolvedStore.supportCommunitySection
+  );
+  const supportCommunityPageHeading = useSelector(
+    (state) => state.getInvolvedStore.supportCommunityPageHeading
+  );
+  const supportCommunityHeadingSection = useSelector(
+    (state) => state.getInvolvedStore.supportCommunityHeadingSection
+  );
   return (
     <React.Fragment>
       <div>
-      <div className="supportUsBanner">
-<Container>
-<div className="headerinfo col-md-12 col-sm-12">
-                <h2
-                  style={{ fontWeight: "bold", color:"white" }}
-                >
- Call for support     </h2>
-
-               
-              </div>    
-              </Container>
-              </div> 
-              <div style={{ }}>
-        <div className="text-center" style={{ padding: "50px" }}>
-          <h3 style={{color:"#f6b745"}}>Support a community</h3>
-        </div>
+        <div
+          className="supportUsBanner"
+          style={{
+            backgroundImage: `url(${
+              supportCommunityPageHeading
+                ? supportCommunityPageHeading.image
+                : null
+            })`,
+          }}
+        >
           <Container>
+            <div className="headerinfo col-md-12 col-sm-12">
+              <h2 style={{ fontWeight: "bold", color: "white" }}>
+                {supportCommunityPageHeading
+                  ? supportCommunityPageHeading.pageHeading
+                  : null}
+                {/* Call for support     */}
+              </h2>
+              <p style={{ color: "white" }}>
+                {supportCommunityPageHeading
+                  ? supportCommunityPageHeading.pageSubHeading
+                  : null}
+              </p>
+            </div>
+          </Container>
+        </div>
+        <div style={{}}>
+          <div className="text-center" style={{ padding: "50px 0px 0px" }}>
+            <h3 style={{ color: "#f6b745" }}>
+              {/* Support a community */}
+              {supportCommunityHeadingSection
+                ? supportCommunityHeadingSection.topTitle
+                : null}
+            </h3>
+            <h2>
+              {supportCommunityHeadingSection
+                ? supportCommunityHeadingSection.heading
+                : null}
+            </h2>
+            <p>
+              {supportCommunityHeadingSection
+                ? supportCommunityHeadingSection.detail
+                : null}
+            </p>
+          </div>
+        </div>
+        <div className="reversePagination">
+          <List
+            pagination={{
+              onChange: (page) => {
+                window.scrollTo(0, 0);
+                console.log(page);
+              },
+              pageSize: 9,
+              position: "bottom",
+            }}
+            dataSource={
+              supportCommunitySection
+                ? supportCommunitySection.sort((a, b) => a.sn - b.sn)
+                : []
+            }
+            renderItem={(item) => (
+              <List.Item>
+                <div
+                  style={{
+                    padding: "0",
+                    minHeight: "100vh",
+                    width: "100%",
+                    backgroundColor: `${
+                      item.sn % 2 === 0 ? "#f6b745" : "white"
+                    }`,
+                  }}
+                >
+                  {/* <div className="container">  */}
+                  <Container>
+                    <div
+                      className="row section"
+                      style={{ marginTop: "50px", padding: "0px 20px" }}
+                    >
+                      <div
+                        className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        style={{ marginBottom: "30px" }}
+                      >
+                        <div style={{backgroundImage:`url(${server}/${item.image})`
+              , backgroundSize:'cover'
+              , backgroundPosition:'center', backgroundRepeat:'no-repeat', width:'100%', height:'100%', minHeight:'400px'}}>
+
+              </div>
+                        {/* <img
+                          src={`${server}/${item.image}`}
+                          style={{ width: "100%", height: "400px" }}
+                        /> */}
+                      </div>
+
+                      <div
+                        className="col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        style={{ marginTop: "60px" }}
+                      >
+                        <h2 style={{ fontWeight: "bold" }}>
+                          {item.sn}. {item.heading}
+                        </h2>
+                        <p
+                          style={{
+                            marginBottom: "40px",
+                          }}
+                        >
+                          {item.detail}
+                          {/* A retailer or store is a business enterprise whose primary
+    source of selling comes from retailing. Retailing includes all
+    the activities involved in selling of goods or services
+    directly to final consumer for personal, non-business use */}
+                        </p>
+                        <h3 style={{ fontWeight: "bold" }}>
+                          Name : {item.name}
+                        </h3>
+                        <p style={{ fontSize: "30px" }}>
+                          {item.address} <br /> {item.phone}
+                        </p>
+                      </div>
+                    </div>
+                    {/* </div> */}
+                  </Container>
+                </div>
+              </List.Item>
+            )}
+          />
+        </div>
+        {/* <div> */}
+        {/* <Container>
               
             <div className="row section">
 
@@ -238,9 +363,9 @@ const SupportCommunity = () => {
               </div>
             </div>
           </Container>
-        </div>
+        </div> */}
 
-        <div className="d-flex justify-content-center mt-5">
+        {/* <div className="d-flex justify-content-center mt-5">
               <MDBRow>
                 <MDBCol>
                   <MDBPagination className="mb-5">
@@ -285,8 +410,8 @@ const SupportCommunity = () => {
                     </MDBPageItem>
                   </MDBPagination>
                 </MDBCol>
-              </MDBRow>
-              {/* <Pagination>
+              </MDBRow> */}
+        {/* <Pagination>
                 <Pagination.First />
                 <Pagination.Prev />
                 <Pagination.Item active>{1}</Pagination.Item>
@@ -303,7 +428,7 @@ const SupportCommunity = () => {
                 <Pagination.Next />
                 <Pagination.Last />
               </Pagination> */}
-            </div>
+        {/* </div> */}
       </div>
       <GoTOTop />
     </React.Fragment>

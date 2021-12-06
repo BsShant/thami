@@ -1,0 +1,10 @@
+
+.adminBody{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    background-color: #f0f2f5;
+    min-height: 280;
+}

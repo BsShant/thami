@@ -9,6 +9,7 @@ import aboutcard5 from "../../assests/aboutcard5.jpg";
 import GoTOTop  from '../goToTop';
 import card1image from "../../assests/fourthimg.jpeg";
 import card2image from "../../assests/card2image.jpg";
+import { useSelector } from 'react-redux';
 
 import {
   BrowserRouter as Router,
@@ -19,18 +20,28 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
+import { server } from '../../utils/fetch';
 const SupportCommunity=()=>{
+  const donateSection= useSelector(state=>state.getInvolvedStore.donateSection)
+  const donatePageHeading= useSelector(state=>state.getInvolvedStore.donatePageHeading)
     const history = useHistory();
 
     return(
         <div>
-               <div className="sponserBanner">
+               <div className="sponserBanner" style={{backgroundImage:`url(${donatePageHeading? donatePageHeading.image:null})`}}>
 <Container>
 <div className="headerinfo col-md-12 col-sm-12">
                 <h2
                   style={{ fontWeight: "bold", color:"white" }}
                 >
- Donation for community events      </h2>
+                  {donatePageHeading? donatePageHeading.pageHeading : null}
+ {/* Donation for community events      */}
+  </h2>
+  <p style={{color:"white" }}>
+       {donatePageHeading? donatePageHeading.pageSubHeading : null}
+
+       </p>
+
 
                
               </div>    
@@ -43,7 +54,7 @@ const SupportCommunity=()=>{
               className="col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{margin:"0 0 30px 0"}}
               
             >
-            <div style={{backgroundImage:`url(${card2image})`, width:"100%", height:"100%", minHeight:"440px",backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center center"}}></div>
+            <div style={{backgroundImage:`url(${donateSection? donateSection.image : null})`, width:"100%", height:"100%", minHeight:'400px',backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center center"}}></div>
               {/* <img
                 src={card2image}
                 style={{ height: "445px", width: "100%" }}
@@ -61,7 +72,8 @@ const SupportCommunity=()=>{
                   marginTop:"50px"
                 }}
               >
-                Donate to our community events
+                {donateSection? donateSection.topTitle : null}
+                {/* Donate to our community events */}
               </h3>
               <h2
                             className="middleTitle"
@@ -70,7 +82,9 @@ const SupportCommunity=()=>{
                   fontWeight: "bold",
                 }}
               >
-                You can now donate us
+                                {donateSection? donateSection.heading : null}
+
+                {/* You can now donate us */}
               </h2>
               <p
                             className="paragraph"
@@ -79,11 +93,13 @@ const SupportCommunity=()=>{
                   
                 }}
               >
-                Together, we can break the cycle of proverty, illiteracy, and
+                                {donateSection? donateSection.detail : null}
+
+                {/* Together, we can break the cycle of proverty, illiteracy, and
                 low expectations. Support our service learning and education
                 programs, serve with build on at home or abroad with your
                 company, school, or family; sign up for build on updates so you
-                never miss a chance to make difference.
+                never miss a chance to make difference. */}
               </p>
               
                 <Link
@@ -101,7 +117,9 @@ const SupportCommunity=()=>{
                     // paddingRight: "45px",
                   }}
                 >
-                  Donate Us
+                                  {donateSection? donateSection.buttonName : null}
+
+                  {/* Donate Us */}
                 </Link>
             </div>
           </div>

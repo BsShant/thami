@@ -1,14 +1,39 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import publicationcard2 from "../../../assests/publicationcard2.jpg";
-const Card2 = () => {
+import { useSelector } from "react-redux";
+import { server } from "../../../utils/fetch";
+const Card2 = (props) => {
+  const { postName, postId } = props.match.params;
+
+  const articlesData = useSelector((state) => state.readerStore.articlesData);
+  const ourArticlesSection = useSelector(
+    (state) => state.eventStore.ourArticlesSection
+  );
   return (
     <React.Fragment>
       <div className="articleHeader">
+        <Container>
+          {/* <div style={{backgroundImage:`url(${server}/${
+            ourArticlesSection && ourArticlesSection.filter(item => item.id.toString() === postId.toString())[0]? ourArticlesSection.filter(item => item.id.toString() === postId.toString())[0].image
+              : null
+          })`,backgroundRepeat:"no-repeat"
+          , backgroundSize:"cover"
+          , backgroundPosition:"top", width:"100%", height:"550px"}}></div> */}
           <img
-            src={publicationcard2}
-            style={{ height: "80%", width: "100%"}}
+            src={`${server}/${
+              ourArticlesSection &&
+              ourArticlesSection.filter(
+                (item) => item.id.toString() === postId.toString()
+              )[0]
+                ? ourArticlesSection.filter(
+                    (item) => item.id.toString() === postId.toString()
+                  )[0].image
+                : null
+            }`}
+            style={{ width: "100%", objectFit:'cover', maxHeight:'600px', aspectRatio:'8/5'  }}
           ></img>
+        </Container>
       </div>
     </React.Fragment>
   );

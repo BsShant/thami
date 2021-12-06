@@ -9,16 +9,23 @@
  }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... } */
+
+.ant-list-pagination {
+  margin: 30px auto 70px;
+  text-align: center;
+}
+
 .contactImage{
-  background-image: url('../assests/card4image.jpg');
+  /* background-image: url('../assests/card4image.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   border-bottom: 1px solid white;
   z-index: 1;
   background-position: center center;
+  /* background-color: #f6b745; */
 }
-.contactImage::after{
+/* .contactImage::after{
   content: '';
   position: absolute;
   z-index: -1;
@@ -26,8 +33,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
+  background-color: rgba(0, 0, 0, 0.9);
+} */
 .article-margin{
   margin-bottom: 50px;
 }
@@ -125,9 +132,9 @@ font-size: 16px;
   padding: 20px;
   }
   @media screen and (max-width:576px){
-    .newsContainerBox{
+    /* .newsContainerBox{
       padding: 0px 20px!important;
-      }
+      } */
       .newsContainerImage{
        
       width: 100%!important;
@@ -135,8 +142,17 @@ font-size: 16px;
 
       
       }
+      .newsContainerImage img{
+        width: 88%!important;
+        height: 200px!important;
+      }
       .articleExerpt{
-        padding: 0 20px!important;
+        padding: 0 15px!important;
+        text-align: left;
+      }
+      .article-margin{
+        margin: 0 !important;
+        padding: 0 !important;
       }
   }
 @media screen and (max-width: 768px) {
@@ -218,7 +234,7 @@ font-size: 26px !important;
   bottom: 0;
   right: 0;
   height: 100vh;
-  background-color: rgba(5, 5, 0, 0.8);
+  background-color: rgba(5, 5, 0, 0.6);
 }
 .navbar-overlay {
   top: 0;
@@ -804,7 +820,7 @@ margin-left: -7%;
 }
 .inputBox input{
   width: 100%!important;
-  background: #f6b745;
+  background: #f6b745!important;
   border: 1px solid black;
   padding: 5px;
 
@@ -818,7 +834,7 @@ margin-left: -7%;
 
 .inputBox textarea{
   width: 80%;
-  background: #f6b745;
+  background: #f6b745!important;
   border: 1px solid black;
   padding: 5px;
 
@@ -829,9 +845,14 @@ margin-left: -7%;
 .inputField{
   margin-bottom: 30px;
 }
+.inputField .ant-form-item-explain.ant-form-item-explain-error{
+  margin-top: 15px;
+}
 
 .inputBelow{
   font-size: 12px!important;
+  position: absolute;
+top: 35px;
 }
 
 .widget.no-box {
@@ -857,11 +878,11 @@ width: 230px;
 height: 350px;
 
 }
-.about-image::before{
+.aboutBefore{
   content: '';
   width: 220px;
 height: 350px;
-  background-image: url("../assests/longone.jpg");
+  /* background-image: url("../assests/longone.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -872,7 +893,7 @@ top: -75px;
 
 
 }
-.about-image::after{
+.aboutAfter{
   content: '';
 width: 220px;
 height: 350px;
@@ -883,7 +904,7 @@ position: absolute;
 left: 65px;
 top: 70px;
  
-  background-image: url("../assests/thirdimage.JPG");
+  /* background-image: url("../assests/thirdimage.JPG"); */
   
 
 }
@@ -969,7 +990,44 @@ z-index: 2;
 opacity: 0.8;
 cursor: pointer;
 }
+.videoBox{
+height: 220px!important;
+overflow: hidden!important;
+}
+.video-react-poster{
+  height: 220px!important;
+}
+.video-react-video{
+  height: 220px!important;
 
+}
+.video-react-controls-enabled.video-react-paused.video-react-fluid.video-react-user-inactive.video-react-workinghover.video-react.videoBox,
+.video-react-controls-enabled.video-react-paused.video-react-fluid.video-react-user-inactive.video-react-workinghover.video-react.videoBox,
+.video-react-controls-enabled.video-react-paused.video-react-fluid.video-react-user-active.video-react-workinghover.video-react.videoBox,
+.video-react-controls-enabled.video-react-has-started.video-react-playing.video-react-fluid.video-react-user-active.video-react-workinghover.video-react.videoBox,
+.video-react-controls-enabled.video-react-has-started.video-react-playing.video-react-fluid.video-react-user-inactive.video-react-workinghover.video-react.videoBox
+{
+  height: 220px!important;
+overflow: hidden!important;
+padding-top: 0!important;
+}
+.videoHeadingElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  /* height: 50px; */
+  overflow: hidden!important;
+}
+.videoDetailElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  font-size: 16px!important;
+  /* height: 60px; */
+  overflow: hidden!important;
+}
 .ant-modal{
   width: 600px;
 }
@@ -986,6 +1044,8 @@ width: 100%;
 
 .gridBox{
   width: "100%";
+  padding: 0;
+  margin: 0;
   height: 190px;
   border: 1px solid black;
   position: relative;
@@ -995,23 +1055,25 @@ background-size: cover !important;
 }
 
 .flatBox{
-  background-image: url("../assests/secondimage.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 380px;
+  padding: 0;
+  margin: 0;
   border: 1px solid black;
   position: relative;
  
 }
 
 .massiveBox{
-background-image: url("../assests/thirdimage.JPG");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding: 0;
+  margin: 0;
   height: 760px;
   width: 100%;
   border: 1px solid black;
@@ -1020,16 +1082,21 @@ background-image: url("../assests/thirdimage.JPG");
 }
 
 .lastBox{
-  background-image: url("../assests/video.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     height: 190px;
     width: 100%;
+    padding: 0;
+  margin: 0;
     border: 1px solid black;
 
     
+  }
+  .video-react-video{
+    width: 100%;
+    height: 100%;
   }
 
   .videoDescription{
@@ -1051,12 +1118,13 @@ visibility: hidden;
 }
 
 .articleBox{
-  padding: 30px 0 0;
+  padding: 30px 0 0 4px;
   text-align: left!important;
 }
 
 .articleHeader{
   padding-top: 50px;
+  padding-left: 4px;
 }
   
 /* Nave styles */
@@ -1066,4 +1134,148 @@ visibility: hidden;
 .ant-menu-submenu .ant-menu-item:hover {
   /* color: pink !important; */
   background: white!important;
+}
+
+
+.contactForm label{
+color: white;
+}
+.contactForm input{
+  border-radius: 5px;
+  }
+.contactForm .ant-form-item-explain.ant-form-item-explain-error{
+font-size: 12px!important;
+position: absolute!important;
+bottom: -21px!important;
+transition: none!important;
+}
+.contactForm .ant-form-item-explain.ant-form-item-explain-success{
+  font-size: 12px!important;
+  position: absolute!important;
+  bottom: -21px!important;
+  transition: none!important;
+  }
+
+.sendButton{
+  background:rgb(246, 183, 69) none repeat scroll 0% 0%!important;
+  border: medium none;
+  padding: 10px 15px;
+  color: black!important;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px rgb(246, 183, 69) solid!important;
+  height: auto !important;
+  width: 100% !important;
+}
+.sendButton:hover{
+  color:rgb(246, 183, 69)!important;
+  background:black!important;
+  border: 1px rgb(246, 183, 69) solid!important;
+}
+.sendButtonReverse{
+  background:black none repeat scroll 0% 0%!important;
+  border: medium none;
+  padding: 10px 15px;
+  color:rgb(246, 183, 69) !important;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px black solid!important;
+  height: auto !important;
+  width: 100% !important;
+}
+.sendButtonReverse:hover{
+  color:black!important;
+  background:rgb(246, 183, 69)!important;
+  border: 1px black solid!important;
+}
+.inputContainer{
+  padding-left: 15px;
+}
+
+.modalSubmitButton{
+  background: black!important;
+  color: rgb(246, 183, 69)!important;
+border: medium none;
+border: 1px black solid!important;
+padding: 10px 15px;
+cursor: pointer;
+font-weight: bold;
+font-size: 16px;
+height: auto;
+width: auto;
+}
+.modalSubmitButton:hover{
+  color:black!important;
+  border: 1px black solid!important;
+  background:rgb(246, 183, 69)!important;
+}
+
+.normalPagination .ant-pagination-item-link{
+  background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+color: rgb(246, 183, 69);
+}
+.normalPagination .ant-pagination-item{
+  background: rgb(246, 183, 69) none repeat scroll 0% 0%;
+color: rgb(0, 0, 0);
+}
+.normalPagination .ant-pagination-item-active{
+  border-color: black;
+  border-width: 2px;
+}
+.reversePagination .ant-pagination-item{
+  background: white;
+  color: rgb(0, 0, 0);
+}
+.reversePagination .ant-pagination-item-link{
+  background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+color: rgb(246, 183, 69);
+}
+.reversePagination .ant-pagination-item-active{
+  border-color: black;
+  border-width: 2px;
+}
+
+
+.headingElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden !important;
+}
+.bookHeadingElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden !important;
+}
+.contentElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  font-size: 16px !important;
+}
+.publicationElipsis{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+
+.rdw-link-decorator-icon{
+  display: none!important;
+}
+
+.aboutUsCardOneLineElipsis{
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    /* height: 50px; */
+    overflow: hidden!important;
 }

@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica.ttf")
+  /* /src/fonts/helvetica-compressed-5871d14b6903a.otf"); */
+  }
 * {
   margin: 0;
-font-family: 'Andika', sans-serif!important;
+/* font-family: 'Andika', sans-serif!important; */
+font-family: Helvetica!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,6 +37,7 @@ width: 100vw!important;
 #root{
   width: 100vw;
 overflow-x: hidden;
+white-space: pre-line;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas,

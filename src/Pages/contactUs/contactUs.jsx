@@ -6,24 +6,35 @@ import ime from "../../assests/ime-red.png";
 import khalti from "../../assests/khalti.jpeg";
 import global from "../../assests/global.png";
 import GoToTop from '../goToTop'; 
-import ContactForm from '../ContactUs';
-const ContactUs = ()=>{
+import { server} from'../../utils/fetch'
+import parsedToken from '../../utils/fetch';
+import { Form, Input, Button, Checkbox, message } from 'antd';
+import ContactForm from './contactForm'
+import { useSelector } from 'react-redux';
 
+
+
+const ContactUs = (props)=>{
+  
+  const contactPageHeading= useSelector(state=>state.contactStore.contactPageHeading)
     return(
-<div>
-               <div className="contactUsBanner">
-<Container>
-<div className="headerinfo col-md-12 col-sm-12">
+        <div>
+         <div className="contactUsBanner" style={{backgroundImage:`url(${contactPageHeading? contactPageHeading.image:null})`}}>
+          <Container>
+            <div className="headerinfo col-md-12 col-sm-12">
                 <h2
                   style={{ fontWeight: "bold", color:"white" }}
                 >
-Contact Us    </h2>
+                  {contactPageHeading? contactPageHeading.pageHeading:null}
+                 </h2>
+                <p  style={{ color:"white" }} >
+                {contactPageHeading? contactPageHeading.pageSubHeading:null}
 
-               
+                </p>
               </div>    
               </Container>
               </div> 
-              <ContactForm />
+    <ContactForm {...props}/>
               <GoToTop />
               </div>
     )}

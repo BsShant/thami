@@ -3,18 +3,41 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:#004537;
     height:100vh;
+      background: RGBA(246, 183, 69, 0.8);
+}
+.LoginBox .ant-form-item-explain ant-form-item-explain-error{
+color: white;
 }
 
-
+.buttonReverse{
+    background: black;
+    color: rgb(246, 183, 69);
+  border: medium none;
+  border: 1px black solid;
+  padding: 10px 15px;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  font-weight: bold;
+  font-size: 16px;
+  }
+  .buttonReverse:hover{
+    color:black;
+    background:rgb(246, 183, 69);
+  }
 
 .LoginBox{
 
-    width:300px;
-height:auto;
 border-radius:20px;
 box-shadow: 3px 3px 5px black;
-padding: 50px;
-background-color:#b6b2bd;
+padding: 50px 20px;
+background-color: #f6b745;
+}
+.LoginBox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: black;
+  border-color: black;
+}
+.LoginBox .ant-checkbox-inner:hover{
+border-color: black;
 }

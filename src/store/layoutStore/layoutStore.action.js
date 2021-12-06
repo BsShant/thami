@@ -7,3 +7,5 @@ export const triggerSliderCollapse = () => {
     type: TRIGGER_SLIDER_COLLAPSE,
   };
 };
+
+

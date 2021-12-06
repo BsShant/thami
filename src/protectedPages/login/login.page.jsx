@@ -1,18 +1,23 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useDispatch } from 'react-redux';
 import './styles.css';
 import { authProcessStarts } from '../../store/authStore/auth.action';
-// import { GoogleLogin } from 'react-google-login';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, Modal } from 'antd';
+import {
+    
+    useHistory,
+   
+} from "react-router-dom";
 const Login = () => {
-
+    const history = useHistory()
+const [loginError, setLoginError] = useState('')
     const dispatch = useDispatch();
     const layout = {
         labelCol: {
-            span: 8,
+            span: 24,
         },
         wrapperCol: {
-            span: 16,
+            span: 24,
         },
     };
     const tailLayout = {
@@ -25,7 +30,13 @@ const Login = () => {
 
 
     const onFinish = (values) => {
-        dispatch(authProcessStarts(values));
+        try{
+            dispatch(authProcessStarts(values));
+
+        }
+        catch(error){
+            console.log(error)
+        }
     };
 
     const onFinishFailed = (errorInfo) => {
@@ -34,7 +45,9 @@ const Login = () => {
 
     return (
         <div className="LoginWrapper">
-            <div className="LoginBox">
+            <div className="LoginBox row">
+                <div className="col-md-12">
+                    <h2>Login</h2>
                 <Form
                     {...layout}
                     name="basic"
@@ -42,10 +55,11 @@ const Login = () => {
                         remember: true,
                     }}
                     onFinish={onFinish}
+                    layout= 'vertical'
                     onFinishFailed={onFinishFailed}
                 >
                     <Form.Item
-                        label="username"
+                        label="Username"
                         name="username"
                         rules={[
                             {
@@ -70,17 +84,23 @@ const Login = () => {
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-                        <Checkbox>Remember me</Checkbox>
+                    <Form.Item>
+                 <Form.Item name="remember" valuePropName="checked" noStyle>
+                     <Checkbox>Remember me</Checkbox>
+                    </Form.Item>
+                    <a className="login-form-forgot"  onClick={()=>{history.push('/forgot-password')}}>
+                      Forgot password
+                    </a>
                     </Form.Item>
 
-                    <Form.Item {...tailLayout}>
-                        <Button type="primary" htmlType="submit">
+                    <Form.Item>
+                        <Button className="buttonReverse" htmlType="submit">
                             Submit
   </Button>
                     </Form.Item>
                 </Form>
-               
+               {/* <a onClick={()=>{history.pushState('/forgotPassword')}}>Forgot Password?</a> */}
+                </div>
             </div>
         </div>
 

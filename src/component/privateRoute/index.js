@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 
 const RouteSuperComponent = (props)=>{
     const user= useSelector(state=>state.userStore.user)
+	// const data = localStorage.getItem("user")
+	// const user = JSON.parse(data)
 	//const accessToken = useSelector((state) => state.auth.accessToken);
     const renderRoute=(p)=>React.createElement(props.noLayout? NoLayout: Layout, p, React.createElement(props.component, p))
 	;
@@ -40,9 +42,9 @@ const RouteSuperComponent = (props)=>{
 		// 	}
 
 		// }
-		// if(props.public){
-		// 	return <ReactRoute path={props.path} exact={props.exact} render={renderRoute} />
-		// }
+		if(props.public){
+			return <ReactRoute path={props.path} exact={props.exact} render={renderRoute} />
+		}
 		if(!user){
 			
 			return <Redirect to='/login' />;

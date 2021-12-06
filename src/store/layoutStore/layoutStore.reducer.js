@@ -3,7 +3,8 @@ import {
 } from "./layoutStore.Types";
 
 const INITIAL_STATE = {
-  sliderCollapse: false
+  sliderCollapse: false,
+  mobileCollapse: true,
 
 };
 
@@ -12,8 +13,10 @@ export const layoutReducer = (state = INITIAL_STATE, action) => {
     case TRIGGER_SLIDER_COLLAPSE:
       return {
         ...state,
-        sliderCollapse: !state.sliderCollapse
+        sliderCollapse: !state.sliderCollapse,
+        mobileCollapse: !state.mobileCollapse
       };
+     
         default:
       return state;
   }

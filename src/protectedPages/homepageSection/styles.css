@@ -1,0 +1,33 @@
+.adminPage{
+    background-color: white;
+    min-height: 100vh;
+    padding: 50px 30px;
+}
+.imageBefore{
+    margin-bottom: 40px;
+}
+.buttonNormal{
+    background: rgb(246, 183, 69) none repeat scroll 0% 0%;
+  border: medium none;
+  padding: 10px 15px;
+  color:black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px rgb(246, 183, 69) solid;
+  height: auto!important;
+  width: auto!important;
+  }
+
+  .heroSection{
+      margin-bottom: 150PX;
+  }
+  .aboutUsSection{
+    margin-bottom: 150PX;
+}
+.publicationSection{
+    margin-bottom: 150PX;
+}
+.eventsSection{
+    margin-bottom: 150PX;
+}

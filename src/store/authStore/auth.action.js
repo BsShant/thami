@@ -5,6 +5,10 @@ import {
   USER_AUTH_SUCCESS,
   USER_AUTH_FAILURE,
   START_USER_LOGOUT,
+  GET_USER_SUCCESS,
+  GET_USER_FAILURE,
+  GET_USER,
+  UPDATE_TOKEN,
   
 } from "./authActionTypes";
 
@@ -32,15 +36,16 @@ export const userAuthFailure = (error) => {
 };
 
 
-export const logoutProcessStarts = (emailandpassword) => {
+export const logoutProcessStarts = () => {
   return {
     type: START_USER_LOGOUT,
   };
 };
 
-export const userLogoutSuccess = () => {
+export const userLogoutSuccess = (user) => {
   return {
     type: USER_LOGOUT_SUCCESS,
+    payload: user
   };
 };
 export const userLogoutFailure = (error) => {
@@ -49,4 +54,31 @@ export const userLogoutFailure = (error) => {
     payload: error,
   };
 };
+
+
+export const getUser = () => {
+  return {
+    type: GET_USER
+  };
+};
+
+export const getUserSuccess = (user) => {
+  return {
+    type: GET_USER_SUCCESS,
+    payload: user
+  };
+};
+export const getUserFailure = (error) => {
+  return {
+    type: GET_USER_FAILURE,
+    payload: error,
+  };
+};
+
+export const updateToken = (token)=>{
+  return{
+    type: UPDATE_TOKEN,
+    payload: token
+  }
+}
 

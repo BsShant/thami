@@ -1,21 +1,23 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
 import {
     BrowserRouter as Router,
     Link,
     useRouteMatch,
 } from "react-router-dom";
+import { connect, useDispatch, useSelector } from 'react-redux';
 
 
 const BodyLayout = (props) => {
 
     const dispatch = useDispatch()
+    const mobileCollapse= useSelector(state=>state.layoutStore.mobileCollapse)
+
     let { url } = useRouteMatch();
     
    
     return (
        
-       <div>{props.children}</div>
+       <div style={{marginLeft:"0"}}>{props.children}</div>
     )
 }
 const mapStateToProps = state => ({

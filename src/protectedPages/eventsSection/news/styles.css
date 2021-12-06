@@ -1,0 +1,39 @@
+.uploadPhotoContainer{
+    height: 230px;
+width: 100%;
+background: gray;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+
+  @media only screen and (min-width: 992px) {
+    .tableLarge{
+    display: block!important;   
+ }
+ .tableSmall{
+     display: none!important;
+ }
+
+  } 
+
+  
+
+  @media only screen and (max-width: 992px) {
+    .tableLarge{
+      display: none!important;   
+   }
+   .tableSmall{
+       display: block!important;
+   }
+  } 
+
+  .tableSmallContainer{
+    display: flex;
+    flex-direction: row!important;
+  }
+
+  .errorEditor{
+font-size: 12px!important;
+  }

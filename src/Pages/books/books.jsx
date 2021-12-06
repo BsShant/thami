@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Container } from "react-bootstrap";
 import news1 from "../../assests/news1.jpg";
 import penpaper from "../../assests/penpaper.jpg";
@@ -11,7 +11,11 @@ import setodharti from "../../assests/setodharti.jpg";
 import karnalibluz from "../../assests/karnalibluz.jpg";
 import gulabiumer from "../../assests/gulabiumer.jpg";
 import { Pagination } from "react-bootstrap";
-import GoToTop from '../goToTop';
+import GoToTop from "../goToTop";
+import { useSelector } from "react-redux";
+import { List, Card } from "antd";
+import { saveAs } from "file-saver";
+import { server } from "../../utils/fetch";
 
 import {
   MDBPagination,
@@ -21,33 +25,164 @@ import {
   MDBRow,
 } from "mdbreact";
 
-const Books = ()=>{
+const Books = () => {
+ 
+  const booksSection = useSelector(
+    (state) => state.publicationStore.booksSection
+  );
+  const booksHeadingSection = useSelector(
+    (state) => state.publicationStore.booksHeadingSection
+  );
+  const booksPageHeading = useSelector(
+    (state) => state.publicationStore.booksPageHeading
+  );
+//  const saveFile = () => {
+//     saveAs(
+//       "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+//       "example.pdf"
+//     );
+//   };
+  return (
+    <div>
+      <div
+        className="booksBanner"
+        style={{
+          backgroundImage: `url(${
+            booksPageHeading ? booksPageHeading.image : null
+          })`,
+        }}
+      >
+        <Container>
+          <div className="headerinfo col-md-12 col-sm-12">
+            <h2 style={{ fontWeight: "bold", color: "white" }}>
+              {booksPageHeading ? booksPageHeading.pageHeading : null}
+              {/* We have collection of Books        */}
+            </h2>
+            <p style={{ color: "white" }}>
+              {booksPageHeading ? booksPageHeading.subHeading : null}
+            </p>
+          </div>
+        </Container>
+      </div>
+      <div className="text-center mt-5">
+        <h3 style={{ color: "#f6b745", fontWeight: "bold" }}>
+          {booksHeadingSection ? booksHeadingSection.topTitle : null}
 
-    return(
-        <div>
-          <div className="booksBanner">
-<Container>
-<div className="headerinfo col-md-12 col-sm-12">
-                <h2
-                  style={{ fontWeight: "bold", color:"white" }}
-                >
- We have collection of Books         </h2>
-
-               
-              </div>    
-              </Container>
-              </div> 
-              <div className="text-center mt-5">
-        <h3 style={{color: "#f6b745", fontWeight: "bold" }}>
-          Our Books
+          {/* Our Books */}
         </h3>
+        <h2>{booksHeadingSection ? booksHeadingSection.heading : null}</h2>
         <p style={{ margin: "-4px 0 30px 0" }}>
-          We are a social unit with commonality such as norms.
+          {booksHeadingSection ? booksHeadingSection.detail : null}
+
+          {/* We are a social unit with commonality such as norms. */}
         </p>
         <div>
           <Container>
-            <div className="row mt-5">
-              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
+            <div className="row normalPagination mt-5">
+              <List
+                style={{ width: "100%" }}
+                grid={{
+                  gutter: 16,
+                  xs: 1,
+                  sm: 1,
+                  md: 2,
+                  lg: 3,
+                  xl: 3,
+                  xxl: 3,
+                }}
+                pagination={{
+                  onChange: (page) => {
+                    window.scrollTo(0, 0);
+                    console.log(page);
+                  },
+                  pageSize: 6,
+                  position: "bottom",
+                }}
+                dataSource={booksSection ? booksSection : []}
+                renderItem={(item) => (
+                  <List.Item>
+                    <div className="" style={{ marginBottom: "30px" }}>
+                      <div className="row">
+                        <div className="col-7">
+                          <div
+                            style={{
+                              background: "#f6b745",
+                              height: "200px",
+                              width: "85%",
+                              padding: "20px",
+                              margin: "auto",
+                            }}
+                          >
+                            <img
+                              src={`${server}/${item.image}`}
+                              style={{ height: "160px", width: "80%" }}
+                            ></img>
+                          </div>
+                        </div>
+                        <div className="col-5 text-left align-middle">
+                          <h3
+                            style={{ fontWeight: "bold", paddingBottom: "2px" }}
+                            className="bookHeadingElipsis"
+                          >
+                            {item.title}
+                            {/* Muna Madan */}
+                          </h3>
+                          <p
+                            style={{ marginBottom: "10px" }}
+                            className="bookWriter headingElipsis"
+                          >
+                            {item.writer}
+                          </p>
+                          <p
+                            style={{
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                            }}
+                            className="bookWriter"
+                          >
+                            {item.type}
+                          </p>
+                          <a
+                            style={{
+                              border: "none",
+                              background: "#f6b745",
+                              fontSize: "16px",
+                              paddingLeft: "10px",
+                              fontWeight: "bold",
+                              paddingRight: "10px",
+                              cursor: "pointer",
+                              paddingTop: "7px",
+                              paddingBottom: "7px",
+                              color: "black",
+                            }}
+                            href={`${server}/${item.file}`}
+                            target="_blank"
+                            download
+                            
+                          >
+                            {item.buttonName}
+                          </a>
+                          {/* <button
+                      style={{
+                        border: "none",
+                        background: "#f6b745",
+                        fontSize: "16px",
+                        paddingLeft: "10px",
+                        fontWeight: "bold",
+                        paddingRight: "10px",
+                      }}
+                    >
+                      {item.buttonName}
+                    </button> */}
+                        </div>
+                      </div>
+                    </div>
+                  </List.Item>
+                )}
+              />
+
+              {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" style={{marginBottom:"30px"}}>
                 <div className="row">
                   <div className="col-7">
                     <div
@@ -288,10 +423,10 @@ const Books = ()=>{
                   </div>
                 </div>
               
-            </div>
+            </div> */}
             </div>
 
-            <div className="d-flex justify-content-center mt-5">
+            {/* <div className="d-flex justify-content-center mt-5">
               <MDBRow>
                 <MDBCol>
                   <MDBPagination className="mb-5">
@@ -336,8 +471,8 @@ const Books = ()=>{
                     </MDBPageItem>
                   </MDBPagination>
                 </MDBCol>
-              </MDBRow>
-              {/* <Pagination>
+              </MDBRow> */}
+            {/* <Pagination>
                 <Pagination.First />
                 <Pagination.Prev />
                 <Pagination.Item active>{1}</Pagination.Item>
@@ -354,12 +489,13 @@ const Books = ()=>{
                 <Pagination.Next />
                 <Pagination.Last />
               </Pagination> */}
-            </div>
+            {/* </div> */}
           </Container>
         </div>
       </div>
       <GoToTop />
-              </div>
-    )}
+    </div>
+  );
+};
 
-    export default Books;
+export default Books;

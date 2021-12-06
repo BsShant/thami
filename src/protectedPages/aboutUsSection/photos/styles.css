@@ -1,0 +1,51 @@
+.uploadPhotoContainer{
+    height: 230px;
+width: 100%;
+background: gray;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+@media only screen and (min-width: 992px) {
+  .tableLarge{
+  display: block!important;   
+}
+.tableSmall{
+   display: none!important;
+}
+.longPhotoContainer{
+  height: 721px!important;
+}
+.longBox{
+  height: 255px!important;
+}
+
+
+} 
+.longPhotoContainer{
+  height: 230px;
+}
+.longBox{
+  height: auto;
+}
+
+.tableLarge{
+  display: none;   
+}
+.tableSmall{
+   display: block;
+}
+/* @media only screen and (max-width: 992px) {
+   */
+/* }  */
+
+  .tableSmallContainer{
+    display: flex;
+    flex-direction: row!important;
+  }
+
+  .photoSmallContainer{
+    display: flex;
+    flex-direction: row!important;
+  }

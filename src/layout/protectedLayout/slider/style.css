@@ -1,9 +1,83 @@
-.ant-layout-sider{
+.adminSlider{
     min-height: 100vh!important;
-    background:hsl(167, 100%, 12%);
+    height: 100vh;
      color:white;
      width: 200px!important;
+     background-color: #f6b745;
+     z-index: 100;
+
 }
 .ant-menu-submenu-arrow{
     color:white
+}
+.sliderMenu{
+background-color: #f6b745!important;
+margin-top: 30px;
+}
+.sliderMenu .ant-menu-item,
+.sliderMenu .ant-menu-submenu,
+.sliderMenu .ant-menu-submenu-title{
+    border-top: 1px solid white;
+    margin: 0!important;
+    padding: 0 auto!important;
+}
+.adminLogo{
+    width: 100%;
+}
+
+.adminSlider .ant-layout-sider-children {
+    height: auto;
+    margin-top: -0.1px;
+    padding-top: 0.1px;
+    padding-bottom: 50px;
+}
+.adminSlider .ant-menu-sub .ant-menu-item.ant-menu-item-only-child:hover {
+    color: #f6b745 !important;
+}
+.adminSlider .ant-menu-sub .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+    color: #f6b745 !important;
+}
+/* .adminSlider .ant-menu-light .ant-menu-item:hover {
+    color:black !important;
+} */
+.adminSlider .ant-menu-submenu-selected{
+    color:black !important;
+}
+.adminSlider .ant-menu-submenu-title:hover{
+    color:black !important;
+}
+
+.adminSlider  .ant-menu-item.ant-menu-item-only-child:hover{
+    color: black !important;
+}
+
+.adminSlider .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+    color: black!important;
+}
+
+
+/* @media screen and (max-width: 768px) {
+    .bigSlider{
+        display: none!important;
+    }
+    .smallSlider{
+        display: block!important;
+        width:100vw!important;
+
+    }
+    
+}  */
+.smallSlider{
+    /* display: none; */
+    width:100vw!important;
+    z-index: 100;
+
+}
+/* .bigSlider{
+    display: block;
+} */
+.mobileLogo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }

@@ -8,6 +8,8 @@ import gralcier from "../../assests/gralcier.jpg";
 import landpolutation from "../../assests/landpolutation.jpg";
 import { Link, useHistory } from "react-router-dom";
 import GoTOTop from '../goToTop';
+import { List, Card } from 'antd';
+import { server } from '../../utils/fetch';
 import {
   MDBPagination,
   MDBPageItem,
@@ -15,33 +17,126 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { pushResourcesReaderPage } from '../../store/readerStore/readerStore.action';
+import draftToHtml from 'draftjs-to-html';
+
 
 const Resources = ()=>{
+  const dispatch = useDispatch()
+  const resourcesSection = useSelector(state=>state.publicationStore.resourcesSection)
+  const resourcesHeadingSection = useSelector(state=>state.publicationStore.resourcesHeadingSection)
+  const resourcesPageHeading = useSelector(state=>state.publicationStore.resourcesPageHeading)
+
 const history = useHistory()
     return(
         <div>
-          <div className="resourcesBanner">
+          <div className="resourcesBanner" style={{backgroundImage:`url(${resourcesPageHeading? resourcesPageHeading.image:null})`}}>
 <Container>
 <div className="headerinfo col-md-12 col-sm-12">
                 <h2
                   style={{ fontWeight: "bold", color:"white" }}
                 >
- We publish lots of resources        </h2>
+                                    {resourcesPageHeading? resourcesPageHeading.pageHeading:null}
+
+ {/* We publish lots of resources         */}
+ </h2>
+ <p style={{color:"white"}}>
+     {resourcesPageHeading? resourcesPageHeading.subHeading : null}
+</p>
 
                
               </div>    
               </Container>
               </div> 
               <div className="text-center pt-5" style={{ background: "#f6b745" }}>
-        <h3 style={{ marginBottom:"30px" }}>Our Resources</h3>
-        <h2 style={{ }}>Enviromental Studies</h2>
+        <h3 style={{ marginBottom:"30px" }}>
+        {resourcesHeadingSection? resourcesHeadingSection.topTitle : null} 
+
+          {/* Our Resources */}
+          </h3>
+        <h2 style={{ }}>
+        {resourcesHeadingSection? resourcesHeadingSection.heading : null} 
+
+          {/* Enviromental Studies */}
+          </h2>
         <p style={{ margin: "-4px 0 50px 0" }}>
-          We are a social unit with commonality such as norms.
+        {resourcesHeadingSection? resourcesHeadingSection.detail : null} 
+
+          {/* We are a social unit with commonality such as norms. */}
         </p>
         <div>
           <Container>
-            <div className="row mt-5">
-              <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
+            <div className="row mt-5 reversePagination">
+            <List
+                          style={{width:"100%"}}
+    grid={{
+      gutter: 16,
+      xs: 1,
+      sm: 1,
+      md: 2,
+      lg: 3,
+      xl: 3,
+      xxl: 3,
+    }}
+    pagination={{
+      onChange: page => {
+        window.scrollTo(0,0);
+        console.log(page);
+      },
+      pageSize: 6,
+      position:"bottom"
+    }}
+    dataSource={resourcesSection? resourcesSection: []}
+    renderItem={item => (
+      <List.Item >
+       <div className="article-margin" style={{marginBotton:"30px", paddingRight:"22px"}}>
+                <div className="row">
+                  <div className="col-12 col-sm-6 newsContainerBox">
+                    <div className="newsContainerImage" > 
+                    <img
+                      src={`${server}/${item.image}`}
+                    ></img>
+                    </div>
+                   
+                  </div>
+                  <div className="col-12 col-sm-6" >
+                    <div className="articleExerpt" style={{textAlign:'left'}}>
+                    <h3 style={{ fontWeight: "bold", height: "50px",overflow: "hidden",marginBottom: "5px" }} className="headingElipsis">
+                      {item.title}
+                      {/* Air Particles and Air Quality */}
+                    </h3>
+                    <p
+                      style={{height: "100px",
+                        overflow: "hidden"}} className="bookWriter publicationElipsis"
+                    >
+                      {/* {item.detail} */}{draftToHtml((JSON.parse(item.detail))).replace( /(<([^>]+)>)/ig, '')}                 
+
+                       {/* The air we breath has a lot to do with our health. As we
+                      breath in fresh air... */}
+                    </p>
+                    
+                      <button
+                        onClick={()=>{
+                          dispatch(pushResourcesReaderPage(item.id))
+                          return history.push(`/publication/resource-post/${item.id}/${item.title.split(" ").join('-')}`)}
+                          } 
+                        className="newsButton"
+
+                      >
+                        {item.buttonName}
+                        {/* Learn More */}
+                      </button>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+      </List.Item>
+    )}
+  />
+              {/* <div className="col-md-12 col-lg-4 col-sm-12 col-xs-12 article-margin" style={{marginBotton:"30px"}}>
                 <div className="row">
                   <div className="col-12 col-sm-6 newsContainerBox">
                     <div className="newsContainerImage"> <img
@@ -223,10 +318,10 @@ const history = useHistory()
                       </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
               
             </div>
-            <div className="d-flex justify-content-center mt-5">
+            {/* <div className="d-flex justify-content-center mt-5">
               <MDBRow>
                 <MDBCol>
                   <MDBPagination className="mb-5">
@@ -271,7 +366,7 @@ const history = useHistory()
                     </MDBPageItem>
                   </MDBPagination>
                 </MDBCol>
-              </MDBRow>
+              </MDBRow> */}
               {/* <Pagination>
                 <Pagination.First />
                 <Pagination.Prev />
@@ -289,7 +384,7 @@ const history = useHistory()
                 <Pagination.Next />
                 <Pagination.Last />
               </Pagination> */}
-            </div>
+            {/* </div> */}
           </Container>
         </div>
       </div>
