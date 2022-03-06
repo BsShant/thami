@@ -74,7 +74,7 @@ const Card4 = (props) => {
                        </div>
                        <button onClick={()=>{
                           dispatch(pushArticlesReaderPage(item.id))
-                          return history.push(`/event/article-post/${item.id}/${item.title.split(" ").join('-')}`)}
+                          return history.push(`/event/article-post/${item.id}`)}
                           } style={{marginTop:"-10px"}}  className="buttonNormal">
                           {/* Read More */}{item.buttonName}
                           </button>

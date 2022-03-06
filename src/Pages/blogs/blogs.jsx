@@ -161,9 +161,7 @@ const Blogs = () => {
                                 
                                 dispatch(pushBlogsReaderPage(item.id));
                               return history.push(
-                                `/event/blog-post/${item.id}/${item.title
-                                  .split(" ")
-                                  .join("-")}`
+                                `/event/blog-post/${item.id}`
                               );
                               }}
                               style={{ marginTop: "-10px" }}

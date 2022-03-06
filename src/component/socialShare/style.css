@@ -1,0 +1,6 @@
+.socialMediaShare{
+    transition: transform 250ms ease;
+}
+.socialMediaShare:hover{
+transform: scale(1.2);
+}

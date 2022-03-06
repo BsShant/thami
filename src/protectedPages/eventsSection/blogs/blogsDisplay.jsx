@@ -79,6 +79,9 @@ const OurTeamDisplay = ()=>{
                   <a href={`${server}/${record.image}`} target='_blank'>{record.image}</a>
 
                   </div>
+                  <div className="col-6 col-sm-6">
+                    {record.authorName}
+                  </div>
 
                   <div className="col-6 col-sm-6">
                     {record.date}
@@ -109,6 +112,13 @@ const OurTeamDisplay = ()=>{
         <a href={`${server}/${record.image}`} target='_blank'>{record.image}</a>
     ),
     responsive: ['lg']
+
+    },
+    {
+      title: 'Author Name',
+      dataIndex: 'authorName',
+      key: 'authorName',
+      responsive: ['lg']
 
     },
    

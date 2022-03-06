@@ -175,9 +175,7 @@ const OurArticles = () => {
                             onClick={() => {
                               dispatch(pushArticlesReaderPage(item.id));
                               return history.push(
-                                `/event/article-post/${item.id}/${item.title
-                                  .split(" ")
-                                  .join("-")}`
+                                `/event/article-post/${item.id}`
                               );
                             }}
                             style={{ marginTop: "-10px" }}

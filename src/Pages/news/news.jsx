@@ -168,9 +168,7 @@ const News = () => {
                             onClick={() => {
                               dispatch(pushNewsReaderPage(item.id));
                               return history.push(
-                                `/event/news-post/${item.id}/${item.title
-                                  .split(" ")
-                                  .join("-")}`
+                                `/event/news-post/${item.id}`
                               );
                             }}
                             style={{ marginTop: "-10px" }}

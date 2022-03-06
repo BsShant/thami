@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { server } from "../../utils/fetch";
 
 const OurTeam = (props) => {
-  const { memberName, memberId } = props.match.params;
+  const {memberId } = props.match.params;
 
   const ourTeamSection = useSelector(
     (state) => state.aboutStore.ourTeamSection
@@ -60,7 +60,7 @@ const OurTeam = (props) => {
                       )[0].memberImage
                     : null
                 }`}
-                style={{ width: "100%", objectFit:'cover', maxHeight:'600px', aspectRatio:'5/7' }}
+                style={{ width: "100%", objectFit:'cover', aspectRatio:'5/7' }}
               ></img>
             </div>
             <div className="col-12 pt-3 text-center">

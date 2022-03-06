@@ -89,7 +89,7 @@ const Card4 = (props) => {
                           // setEditorState(()=>EditorState.createEmpty())
                           // dispatch(pushNewsReaderPage(null))
                           dispatch(pushNewsReaderPage(item.id))
-                          return history.push(`/event/news-post/${item.id}/${item.title.split(" ").join('-')}`)}
+                          return history.push(`/event/news-post/${item.id}`)}
                           } style={{marginTop:"-10px"}}  className="buttonNormal">
                           {/* Read More */}{item.buttonName}
                           </button>

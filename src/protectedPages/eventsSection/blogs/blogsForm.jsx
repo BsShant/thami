@@ -1,154 +1,310 @@
-import React,{useState} from 'react';
-import { Form, Input, Button, Table, message, Modal } from 'antd';
-import FormItem from '../../../component/formItem/formItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import './styles.css';
-import ImagePlaceholder from '../../../assests/imagePlaceholder.jpg';
-import {server} from '../../../utils/fetch';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import React, { useState } from "react";
+import { Form, Input, Button, Table, message, Modal } from "antd";
+import FormItem from "../../../component/formItem/formItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import "./styles.css";
+import ImagePlaceholder from "../../../assests/imagePlaceholder.jpg";
+import { server } from "../../../utils/fetch";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { logoutProcessStarts } from "../../../store/authStore/auth.action";
-import Editor from '../../../component/editor/soleEditor';
-import { EditorState,convertToRaw, convertFromRaw } from "draft-js";
-import { fetchingEventContentStarts } from '../../../store/eventStore/event.action';
-const key = 'updatable';
-const newServer = `${server}/event/blogs`
+import Editor from "../../../component/editor/soleEditor";
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
+import AuthorHolder from "../../../assests/author.jpg";
 
-const OurPartnersForm = (props)=>{
-  const dispatch = useDispatch()
-  const parsedToken = useSelector(state=>state.authStore.userToken)
+import { fetchingEventContentStarts } from "../../../store/eventStore/event.action";
+import AuthorBox from "../../../component/authorBox/authorBox";
+const key = "updatable";
+const newServer = `${server}/event/blogs`;
 
-  let imageHolder= props.value? `${server}/${props.value.image}` : ImagePlaceholder
-  let importedImage = props.value? props.value.image:null
-  const urlToObject= async()=> {
+const OurPartnersForm = (props) => {
+  const dispatch = useDispatch();
+  const parsedToken = useSelector((state) => state.authStore.userToken);
+
+  let imageHolder = props.value
+    ? `${server}/${props.value.image}`
+    : ImagePlaceholder;
+  let authHolder = props.value
+    ? `${server}/${props.value.authorImage}`
+    : AuthorHolder;
+  let importedImage = props.value ? props.value.image : null;
+  const urlToObject = async () => {
     const response = await fetch(imageHolder);
     // here image is url/location of image
     const blob = await response.blob();
-    const file = new File([blob], 'image.jpg', {type: blob.type});
+    const file = new File([blob], "image.jpg", { type: blob.type });
     console.log(file);
-  }
-  
-    const [file, updateFile] = useState(imageHolder)
-    const [selectedFile, setSelectedFile] = useState(null)
-    const [editorState, setEditorState] = React.useState(
-      props.value? ()=>EditorState.createWithContent(convertFromRaw(JSON.parse(props.value.detail))): () => EditorState.createEmpty()
-     )
-    const fileChange=(e)=>{
-        setSelectedFile(e.target)
-        const reader = new FileReader()
-        reader.onload =()=>{
-            if(reader.readyState === 2){
-                updateFile(reader.result)
+  };
 
-            }
-        }
-        reader.readAsDataURL(e.target.files[0])
-    }
-    const onFinish = async(values)=>{
-      urlToObject()
-      const contentState = editorState.getCurrentContent();
+  const [file, updateFile] = useState(imageHolder);
+  const [authorFile, updateAuthorFile] = useState(authHolder);
 
-      if(!selectedFile && !props.value){
-        message.error({ content: 'Please select an image',duration: 2 });
-        return;
-
-    }
-      message.loading({ content: 'Loading...', key, duration: 2  });
-
-      const formData = new FormData()
-      Object.keys(values).map(data=>{
-        return formData.append(data,values[data])
-      })
-      formData.append('detail',JSON.stringify(convertToRaw(contentState)))
-      if(!selectedFile){
-        formData.append('filename',props.value.image)
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedAuthorFile, setSelectedAuthorFile] = useState(null);
+  const [editorState, setEditorState] = React.useState(
+    props.value
+      ? () =>
+          EditorState.createWithContent(
+            convertFromRaw(JSON.parse(props.value.detail))
+          )
+      : () => EditorState.createEmpty()
+  );
+  const fileChange = (e) => {
+    setSelectedFile(e.target);
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        updateFile(reader.result);
       }
-      else{
-        formData.append(selectedFile.name,selectedFile.files[0])
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  const AuthorFileChange = (e) => {
+    setSelectedAuthorFile(e.target);
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        updateAuthorFile(reader.result);
+      }
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  const onFinish = async (values) => {
+    const contentState = editorState.getCurrentContent();
+    if (!props.value) {
+      if (!selectedAuthorFile) {
+        message.error({
+          content: "Please select an author image",
+          duration: 2,
+        });
+        return;
+      }
+      if (!selectedFile) {
+        message.error({ content: "Please select an image", duration: 2 });
+        return;
+      }
+
+      message.loading({ content: "Loading...", key, duration: 2 });
+
+      const formData = new FormData();
+      Object.keys(values).map((data) => {
+        return formData.append(data, values[data]);
+      });
+      formData.append("detail", JSON.stringify(convertToRaw(contentState)));
+
+      formData.append(selectedFile.name, selectedFile.files[0]);
+      formData.append(selectedAuthorFile.name, selectedAuthorFile.files[0]);
+
+      try {
+        const res = await fetch(`${newServer}`, {
+          method: props.method,
+          body: formData,
+          headers: {
+            Accept: "multipart/form-data",
+            authorization: `Bearer ${parsedToken}`,
+          },
+        });
+        const data = await res.json();
+        if (data.hasOwnProperty("user")) {
+          message.error({ content: data.message, key, duration: 2 });
+          return dispatch(logoutProcessStarts(data.user));
+        }
+
+        console.log(data);
+        if (data) {
+          message.success({ content: data.message, key, duration: 2 });
+        }
+        dispatch(fetchingEventContentStarts());
+      } catch (error) {
+        console.log(error);
+        message.error({ content: "The operation failed", key, duration: 2 });
+      }
+    } else {
+      if (!selectedFile && !props.value) {
+        message.error({ content: "Please select an image", duration: 2 });
+        return;
+      }
+
+      message.loading({ content: "Loading...", key, duration: 2 });
+
+      const formData = new FormData();
+      Object.keys(values).map((data) => {
+        return formData.append(data, values[data]);
+      });
+      formData.append("detail", JSON.stringify(convertToRaw(contentState)));
+
+      if (!selectedFile) {
+        formData.append("filename", props.value.image);
+      } else {
+        formData.append(selectedFile.name, selectedFile.files[0]);
       }
 
       try {
         const res = await fetch(`${newServer}`, {
-          method: props.method, 
+          method: props.method,
           body: formData,
-          headers: { 'Accept': 'multipart/form-data','authorization': `Bearer ${parsedToken}` }
-        });   
-        const data = await res.json() 
-        if(data.hasOwnProperty('user')){
+          headers: {
+            Accept: "multipart/form-data",
+            authorization: `Bearer ${parsedToken}`,
+          },
+        });
+        const data = await res.json();
+        if (data.hasOwnProperty("user")) {
           message.error({ content: data.message, key, duration: 2 });
-          return dispatch(logoutProcessStarts(data.user))
+          return dispatch(logoutProcessStarts(data.user));
         }
-        console.log(data)
-        if(data){
+
+        console.log(data);
+        if (data) {
           message.success({ content: data.message, key, duration: 2 });
         }
-        dispatch(fetchingEventContentStarts())
-
+        dispatch(fetchingEventContentStarts());
       } catch (error) {
-        console.log(error)
-        message.error({ content: 'The operation failed', key, duration: 2 });
-      }         
-  }
-      const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
-      };
-    return(
-        <div className="row pageHeading">
-                  <h3 style={{paddingLeft:"15px"}}>{props.title}</h3>
-                  <div className="col-sm-12 col-md-12">
+        console.log(error);
+        message.error({ content: "The operation failed", key, duration: 2 });
+      }
+    }
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  return (
+    <div className="row pageHeading">
+      <h3 style={{ paddingLeft: "15px" }}>{props.title}</h3>
+      <div className="col-sm-12 col-md-12">
         <div className="imageBox">
           <h3>Featured Image</h3>
           <div>
-        <label for={props.imageId}  className="uploadPhotoContainer" style={{backgroundImage:`url(${file})`, backgroundSize:"cover",backgroundRepeat:"no-repeat", backgroundPosition:"center center"}}>
-        <FontAwesomeIcon icon ={faPlus} style={{color:"#f6b745", fontSize:"60px"}}/>
-             </label>
-        <input id={props.imageId} type="file" name='image' onChange={fileChange} style={{display:"none"}} accept='image/*'/>
+            <label
+              for={props.imageId}
+              className="uploadPhotoContainer"
+              style={{
+                backgroundImage: `url(${file})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faPlus}
+                style={{ color: "#f6b745", fontSize: "60px" }}
+              />
+            </label>
+            <input
+              id={props.imageId}
+              type="file"
+              name="image"
+              onChange={fileChange}
+              style={{ display: "none" }}
+              accept="image/*"
+            />
+          </div>
         </div>
-        </div>
-        </div>
-        <div className="col-sm-12 col-md-12">
+      </div>
+      <div className="col-sm-12 col-md-12">
         <Form
-         name="basic"
-         labelCol={{
+          name="basic"
+          labelCol={{
             span: 24,
-        }}
-        layout ='Vertical'
-        initialValues={props.value}
-        // initialValues={{
-        // remember: true,
-        // }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
+          }}
+          layout="Vertical"
+          initialValues={props.value}
+          // initialValues={{
+          // remember: true,
+          // }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
         >
-          {
-            props.value? <FormItem hidden='true' label='News Id' name='id'/> :null
+          {props.value ? (
+            <FormItem hidden="true" label="News Id" name="id" />
+          ) : null}
+          <FormItem
+            label="Blog title"
+            Textarea="TextArea"
+            height="70px"
+            name="title"
+          />
+          {/* <FormItem label='Blog Detail' name='detail' Textarea='Textarea' height='300px' /> */}
+          {/* <FormItem label='Date' name='date' /> */}
+          <h3>Detail</h3>
+          <p style={{ color: "red" }} className="errorEditor">
+            Please don't copy image from another website or text editor and
+            paste it. It will crash the editor.
+          </p>
+          <Editor
+            editorState={editorState}
+            setEditorState={setEditorState}
+            editorClassName="greyEditor"
+          />
 
-          }
-        <FormItem label='Blog title' Textarea='TextArea' height="70px" name='title' />
-        {/* <FormItem label='Blog Detail' name='detail' Textarea='Textarea' height='300px' /> */}
-        {/* <FormItem label='Date' name='date' /> */}
-        <h3>Detail</h3>
-        <p style={{color:"red"}} className="errorEditor">Please don't copy image from another website or text editor and paste it. It will crash the editor.</p>
-        <Editor  editorState={editorState} setEditorState={setEditorState} editorClassName="greyEditor" />
-
-        <FormItem label='Button Name' Textarea='TextArea' height="70px" name='buttonName' />
-
-        <Form.Item
-        wrapperCol={{
-          span: 16,
-        }}
-         >
-        <Button className="buttonNormal" htmlType="submit">
-          {props.value? 'Update':'Create'}
-        </Button>
-         </Form.Item>
+          <FormItem
+            label="Button Name"
+            Textarea="TextArea"
+            height="70px"
+            name="buttonName"
+          />
+          {!props.value ? (
+            <div>
+              <div className="imageBox">
+                <h3>Author Image</h3>
+                <div>
+                  <label
+                    for="createAuthorImage"
+                    className="uploadAuthorImage"
+                    style={{
+                      backgroundImage: `url(${authorFile})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center center",
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faPlus}
+                      style={{ color: "#f6b745", fontSize: "20px" }}
+                    />
+                  </label>
+                  <input
+                    id="createAuthorImage"
+                    type="file"
+                    name="authorImage"
+                    onChange={AuthorFileChange}
+                    style={{ display: "none" }}
+                    accept="image/*"
+                  />
+                </div>
+              </div>
+              <FormItem
+                label="Author Name"
+                // Textarea="Aextarea"
+                // height="70px"
+                name="authorName"
+              />
+              <FormItem
+                label="Author Description"
+                Textarea="Aextarea"
+                height="70px"
+                name="authorDescription"
+              />
+            </div>
+          ) : null}
+          <Form.Item
+            wrapperCol={{
+              span: 16,
+            }}
+          >
+            <Button className="buttonNormal" htmlType="submit">
+              {props.value ? "Update" : "Create"}
+            </Button>
+          </Form.Item>
         </Form>
-        </div>
-       
-        </div>
-    )
-}
+      </div>
+      {props.value ? (
+        <AuthorBox server={`${server}/event/blogs/authorBox`} {...props} />
+      ) : null}
+    </div>
+  );
+};
 
 export default OurPartnersForm;

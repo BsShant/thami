@@ -117,9 +117,7 @@ const Card4 = (props) => {
                       onClick={() => {
                         dispatch(pushPressReaderPage(item.id));
                         return history.push(
-                          `/publication/press-post/${item.id}/${item.title
-                            .split(" ")
-                            .join("-")}`
+                          `/publication/press-post/${item.id}`
                         );
                       }}
                       style={{ marginTop: "-10px" }}

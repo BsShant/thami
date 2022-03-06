@@ -152,9 +152,7 @@ const PressRelease = () => {
                             onClick={() => {
                               dispatch(pushPressReaderPage(item.id));
                               return history.push(
-                                `/publication/press-post/${item.id}/${item.title
-                                  .split(" ")
-                                  .join("-")}`
+                                `/publication/press-post/${item.id}`
                               );
                             }}
                             className="newsButton"

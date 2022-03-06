@@ -61,16 +61,16 @@ const PublicRoutes = () => {
           <SuperRoute path="/dummy" component={DummyPage} />
 
           <SuperRoute path="/event/news" component={News} />
-          <SuperRoute path="/event/news-post/:postId/:postName" component={NewsPost} />
-          <SuperRoute path="/event/blog-post/:postId/:postName" component={BlogPost} />
-          <SuperRoute path="/event/article-post/:postId/:postName" component={ArticlePost} />
+          <SuperRoute path="/event/news-post/:postId" component={NewsPost} />
+          <SuperRoute path="/event/blog-post/:postId" component={BlogPost} />
+          <SuperRoute path="/event/article-post/:postId" component={ArticlePost} />
           <SuperRoute path="/event/blogs" component={Blogs} />
           <SuperRoute path="/event/our-articles" component={OurArticles} />
 
           <SuperRoute path="/about/our-story" component={OurStory} />
           <SuperRoute path="/about/vision-and-mission" component={VisionAndMission} />
           <SuperRoute path="/about/our-team" component={OurTeam} />
-          <SuperRoute path="/about/team-member-detail/:memberId/:memberName" component={TeamMemberDetail} />
+          <SuperRoute path="/about/team-member-detail/:memberId" component={TeamMemberDetail} />
 
           <SuperRoute path="/about/our-gallery" component={OurGallery} />
           <SuperRoute path="/about/our-partners" component={OurPartners} />
@@ -84,8 +84,8 @@ const PublicRoutes = () => {
           <SuperRoute path="/publication/our-books" component={Books} />
           <SuperRoute path="/publication/our-resources" component={Resources} />
           <SuperRoute path="/publication/press-release" component={PressRelease} />
-          <SuperRoute path="/publication/resource-post/:postId/:postName" component={ResourcePreview} />
-          <SuperRoute path="/publication/press-post/:postId/:postName" component={PressPost} />
+          <SuperRoute path="/publication/resource-post/:postId" component={ResourcePreview} />
+          <SuperRoute path="/publication/press-post/:postId" component={PressPost} />
 
           <SuperRoute path="/editor" component={Editor} />
 

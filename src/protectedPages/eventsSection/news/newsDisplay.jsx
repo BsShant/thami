@@ -79,6 +79,9 @@ const OurTeamDisplay = ()=>{
                   <a href={`${server}/${record.image}`} target='_blank'>{record.image}</a>
 
                   </div>
+                  <div className="col-6 col-sm-6">
+                    {record.authorName}
+                  </div>
 
                   <div className="col-6 col-sm-6">
                     {record.date}
@@ -110,6 +113,13 @@ const OurTeamDisplay = ()=>{
     responsive: ['lg']
     
     },
+    {
+      title: 'Author Name',
+      dataIndex: 'authorName',
+      key: 'authorName',
+      responsive: ['lg']
+
+    },
     
     // {
     //   title: 'News Detail',
@@ -129,13 +139,7 @@ const OurTeamDisplay = ()=>{
 
 
     },
-    {
-      title: 'Button Name',
-      dataIndex: 'buttonName',
-      key: 'buttonName',
-      responsive: ['lg']
-
-    },
+   
     {
       title: 'Edit News',
       key: 'editNews',

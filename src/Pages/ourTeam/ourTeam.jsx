@@ -96,25 +96,30 @@ const OurTeam = () => {
                     <div className="mb-5">
                       <img
                         src={`${server}/${item.memberImage}`}
-                        style={{ width: "100%", maxHeight:"350px", aspectRatio:'5/7' }}
-
+                        style={{ width: "100%", aspectRatio: "5/7" , objectFit:'cover' }}
                       ></img>
                       <h3
                         className="mt-3 aboutUsCardOneLineElipsis"
                         style={{
                           fontWeight: "bold",
                           marginTop: "-7px",
-                          marginBottom:'15px',
+                          marginBottom: "15px",
                           // height: "30px",
                           overflow: "hidden",
                         }}
                       >
                         {item.memberName}
                       </h3>
-                      <p className='aboutUsCardOneLineElipsis' style={{ fontWeight: "bold", marginBottom:'7px'}}>
+                      <p
+                        className="aboutUsCardOneLineElipsis"
+                        style={{ fontWeight: "bold", marginBottom: "7px" }}
+                      >
                         {item.memberRole}
                       </p>
-                      <p className='aboutUsCardOneLineElipsis' style={{ fontWeight: "bold", marginBottom:'7px'}}>
+                      <p
+                        className="aboutUsCardOneLineElipsis"
+                        style={{ fontWeight: "bold", marginBottom: "7px" }}
+                      >
                         {item.phone}
                       </p>
                       <p
@@ -133,9 +138,7 @@ const OurTeam = () => {
                         onClick={() => {
                           dispatch(pushTeamReaderPage(item.memberId));
                           return history.push(
-                            `/about/team-member-detail/${item.memberId}/${item.memberName
-                              .split(" ")
-                              .join("-")}`
+                            `/about/team-member-detail/${item.memberId}`
                           );
                         }}
                       >

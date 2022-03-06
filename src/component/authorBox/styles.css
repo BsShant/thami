@@ -1,0 +1,14 @@
+.uploadAuthorImage{
+    height: 70px;
+width: 70px;
+border-radius: 50%;
+background: gray;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+border: 1px solid grey;
+}
+.authorImageHeading{
+    font-size: 15px;
+}

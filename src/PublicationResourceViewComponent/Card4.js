@@ -116,9 +116,7 @@ const Card4 = (props) => {
                       onClick={() => {
                         dispatch(pushResourcesReaderPage(item.id));
                         return history.push(
-                          `/publication/resource-post/${item.id}/${item.title
-                            .split(" ")
-                            .join("-")}`
+                          `/publication/resource-post/${item.id}`
                         );
                       }}
                       style={{ marginTop: "-10px" }}

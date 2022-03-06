@@ -120,7 +120,7 @@ const history = useHistory()
                       <button
                         onClick={()=>{
                           dispatch(pushResourcesReaderPage(item.id))
-                          return history.push(`/publication/resource-post/${item.id}/${item.title.split(" ").join('-')}`)}
+                          return history.push(`/publication/resource-post/${item.id}`)}
                           } 
                         className="newsButton"
 

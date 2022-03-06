@@ -1,0 +1,7 @@
+
+.featuredImage {
+  width: 100%!important;
+  object-fit: cover;
+  aspect-ratio: 9/5;
+  max-height: 600px;
+}
